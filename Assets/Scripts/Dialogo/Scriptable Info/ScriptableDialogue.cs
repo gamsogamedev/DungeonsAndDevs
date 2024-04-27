@@ -13,18 +13,22 @@ public class DialogueEvent
 
     [ShowIf("type", DialogueEventType.Dialogue)] [AllowNesting]
     public MyDialogueInfo textLine;
-
-    [FormerlySerializedAs("animationPlaceholder")]
+    
     [ShowIf("type", DialogueEventType.Animation)] [AllowNesting]
     public MyAnimationInfo animationInfo;
-
-    [FormerlySerializedAs("choicePlaceholder")]
+    
     [ShowIf("type", DialogueEventType.Choice)] [AllowNesting]
     public MyChoiceInfo choiceInfo;
+}
+
+[System.Serializable]
+public class DialogueBlock
+{
+    [AllowNesting] public List<DialogueEvent> dialogueBlock;
 }
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/New Dialogue")]
 public class ScriptableDialogue : ScriptableObject
 {
-    public List<DialogueEvent> dialogueSequence;
+    public List<DialogueBlock> dialogueBlocks;
 }

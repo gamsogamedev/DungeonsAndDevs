@@ -12,46 +12,262 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
   m_Name: Teste
   m_EditorClassIdentifier: 
-  dialogueSequence:
-  - type: 1
-    textLine:
-      textLine: AAAAA CARALHO
-      whosTalking: FULANO
-      whosTalkingIcon: {fileID: 0}
-    animationInfo:
-      animationSequence: []
-    choiceInfo:
-      choiceDescription: Isso e uma escolha
-      choiceA:
-        choiceText: Ir pra direita
-        jumpToIndex: 0
-      choiceB:
-        choiceText: Ir pra esquerda
-        jumpToIndex: 0
-      choiceC:
-        choiceText: Mortal pra tras
-        jumpToIndex: 0
-      choiceD:
-        choiceText: Morrer
-        jumpToIndex: 0
-  - type: 0
-    textLine:
-      textLine: AAAAA CARALHO
-      whosTalking: FULANO
-      whosTalkingIcon: {fileID: 0}
-    animationInfo:
-      animationSequence: []
-    choiceInfo:
-      choiceDescription: Isso e uma escolha
-      choiceA:
-        choiceText: A
-        jumpToIndex: 0
-      choiceB:
-        choiceText: A
-        jumpToIndex: 0
-      choiceC:
-        choiceText: A
-        jumpToIndex: 0
-      choiceD:
-        choiceText: A
-        jumpToIndex: 0
+  dialogueBlocks:
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Ola, Player! Bem-vindo a Guilda Gamso
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Nesta loca\xE7ao, neste jogo, no, os funcionarios desta loca\xE7ao,
+          realizamos, a realizal\xE7ao de videogames"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Voce, NPC Player, que nao faz nada, alem de vagar por este local,
+          falso e inexistente, nao tem proposito e nem no\xE7ao de escolha."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: Entao, eu, personagem Naga, resolvi te dar proposito. Trabalhando
+          na Game. Art. Music. And Software
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: ...GAMAS?
+        whosTalking: Player
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: HA... Ha
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: '*Nao*'
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: Venha! Venha! Vamos! Vamos entrar no Guilda Gamso
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: Venha! Venha! Vamos! Vamos entrar no Guilda Gamso
+        whosTalking: Player
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: IAI
+        choiceA:
+          choiceText: Seguir o Naga
+          jumpToIndex: 1
+        choiceB:
+          choiceText: Ficar por aqui
+          jumpToIndex: 2
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Voce e burro de seguir um cara que tu nao conhece
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Um Tarrasque chega e te mata
+        whosTalking: ...
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        animationSequence: []
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0

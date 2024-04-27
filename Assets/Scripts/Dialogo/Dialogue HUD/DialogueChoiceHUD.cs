@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogueChoiceHUD : MonoBehaviour
@@ -12,7 +8,7 @@ public class DialogueChoiceHUD : MonoBehaviour
     [SerializeField] private Button[] choice = new Button[4];
     private TextMeshProUGUI[] buttonName;
     
-    private void Start()
+    private void Awake()
     {
         DialogueManager.OnChoiceEvent.AddListener(SetupChoices);
 
@@ -26,22 +22,50 @@ public class DialogueChoiceHUD : MonoBehaviour
     private void SetupChoices(MyChoiceInfo choiceInfo)
     {
         choiceDescription.text = choiceInfo.choiceDescription;
+
+        var choiceA = choiceInfo.choiceA;
+        if (choiceA.choiceText.Equals("")) {
+            choice[0].gameObject.SetActive(false);
+        }
+        else {
+            choice[0].gameObject.SetActive(true);
+            buttonName[0].text = choiceA.choiceText;
+            choice[0].onClick.AddListener(() => CallJump(choiceA));            
+        }
+
+        var choiceB = choiceInfo.choiceB;
+        if (choiceB.choiceText.Equals("")) {
+            choice[1].gameObject.SetActive(false);
+        }
+        else {
+            choice[1].gameObject.SetActive(true);
+            buttonName[1].text = choiceB.choiceText;
+            choice[1].onClick.AddListener(() => CallJump(choiceB));            
+        }
         
-        buttonName[0].text = choiceInfo.choiceA.choiceText;
-        choice[0].onClick.AddListener(() => CallJump(choiceInfo.choiceA));
+        var choiceC= choiceInfo.choiceC;
+        if (choiceC.choiceText.Equals("")) {
+            choice[2].gameObject.SetActive(false);
+        }
+        else {
+            choice[2].gameObject.SetActive(true);
+            buttonName[2].text = choiceC.choiceText;
+            choice[2].onClick.AddListener(() => CallJump(choiceC));            
+        }
         
-        buttonName[1].text = choiceInfo.choiceB.choiceText;
-        choice[1].onClick.AddListener(() => CallJump(choiceInfo.choiceB));
-        
-        buttonName[2].text = choiceInfo.choiceC.choiceText;
-        choice[2].onClick.AddListener(() => CallJump(choiceInfo.choiceC));
-        
-        buttonName[3].text = choiceInfo.choiceD.choiceText;
-        choice[3].onClick.AddListener(() => CallJump(choiceInfo.choiceD));
+        var choiceD = choiceInfo.choiceD;
+        if (choiceD.choiceText.Equals("")) {
+            choice[3].gameObject.SetActive(false);
+        }
+        else {
+            choice[3].gameObject.SetActive(true);
+            buttonName[3].text = choiceD.choiceText;
+            choice[3].onClick.AddListener(() => CallJump(choiceD));            
+        }
     }
 
     private void CallJump(MyChoiceInfo.Choice choice)
     {
-        DialogueManager.LoadDialogue(choice.jumpToIndex);
+        DialogueManager.OnStartDialogue?.Invoke(choice.jumpToIndex);
     }
 }

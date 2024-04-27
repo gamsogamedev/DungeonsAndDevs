@@ -8,9 +8,10 @@ public class DialogueTextHUD : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogueTextBox;
     [SerializeField] private TextMeshProUGUI dialogueTextName;
-    private void Start()
+    private void Awake()
     {
         DialogueManager.OnDialogueEvent.AddListener(WriteText);
+        dialogueTextName.text = "";
         dialogueTextBox.text = "";
     }
 

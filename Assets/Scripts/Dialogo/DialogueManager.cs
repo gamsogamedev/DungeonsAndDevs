@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,11 +13,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private List<ScriptableDialogue> dialogues;
     private Queue<DialogueEvent> dialogueQueue;
 
-    public static readonly UnityEvent OnStartDialogue = new(), OnFinishDialogue = new();
+    public static readonly UnityEvent<int> OnStartDialogue = new();
+    public static readonly UnityEvent OnFinishDialogue = new();
+    
     public static readonly UnityEvent OnNextDialogue = new();
+    
     public static readonly DialogueInfoEvent OnDialogueEvent = new();
     public static readonly AnimationInfoEvent OnAnimationEvent = new();
     public static readonly ChoiceInfoEvent OnChoiceEvent = new();
+    
+    [SerializeField] private GameObject dialogueHUD,choiceHUD;
     
     private void Awake()
     {
@@ -25,40 +31,54 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        OnStartDialogue.AddListener(LoadDialogue);
+        OnNextDialogue.AddListener(ProcessDialogue);
+        
+        dialogueHUD.SetActive(false);
+        choiceHUD.SetActive(false);
+        
+        OnStartDialogue?.Invoke(0);
+    }
+    
+    public void LoadDialogue(int startingIndex)
+    {
+        var curDialogue = dialogues[0];
+        var curBlock = curDialogue.dialogueBlocks[startingIndex];
+        
         dialogueQueue = new();
-        var dialogue = dialogues[0];
-        foreach (var dio in dialogue.dialogueSequence) {
+        foreach (var dio in curBlock.dialogueBlock) {
             dialogueQueue.Enqueue(dio);
             if (dio.type == DialogueEvent.DialogueEventType.Choice) break;
         }
-
-        OnNextDialogue.AddListener(ProcessDialogue);
+        
         ProcessDialogue();
-    }
-
-    public static void LoadDialogue(int startingIndex)
-    {
-        Debug.Log("Jumping to " + startingIndex);
     }    
 
     private void ProcessDialogue()
     {
         if (dialogueQueue.Count == 0)
         {
-            //TODO Lógica de fechar o prompt de diálogo
+            dialogueHUD.SetActive(false);
+            choiceHUD.SetActive(false);
+            OnFinishDialogue?.Invoke();
             return;
         }
+        
         var dialogueEvent = dialogueQueue.Dequeue();
-
         switch (dialogueEvent.type)
         {
             case DialogueEvent.DialogueEventType.Dialogue:
+                choiceHUD.SetActive(false);
+                dialogueHUD.SetActive(true);
+                Debug.Log(dialogueEvent.textLine.textLine);
                 OnDialogueEvent?.Invoke(dialogueEvent.textLine);
                 break;
             case DialogueEvent.DialogueEventType.Animation:
                 OnAnimationEvent?.Invoke(dialogueEvent.animationInfo);
                 break;
             case DialogueEvent.DialogueEventType.Choice:
+                dialogueHUD.SetActive(false);
+                choiceHUD.SetActive(true);
                 OnChoiceEvent?.Invoke(dialogueEvent.choiceInfo);
                 break;
             default:
