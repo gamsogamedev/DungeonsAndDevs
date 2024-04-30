@@ -1,0 +1,778 @@
+fileFormatVersion: 2
+guid: c04684d7001c11745b87016362c64d93
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 124
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tile_map_grama_escura_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 640
+        width: 124
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f01e5c88347b3e449092f4e8bd8c11c
+      internalID: 2071832416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 640
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87582cad8516064438eb7547ef4d46ce
+      internalID: 310143385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_2
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 640
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97eacc56061571438d208e94857e90c
+      internalID: -1155244236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 640
+        width: 135
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb699c7eca24f045846fa35088ae144
+      internalID: 1623011129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60240ed7dbfc70345ad87288e25b7ac0
+      internalID: 2065834212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_6
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61479eaa66bb82642b70893a6b823ad3
+      internalID: 908649236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b9dc6599c761b448b203e083f07ac2
+      internalID: 1977562801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_8
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0841858dc24b594b92e5cda096c03ec
+      internalID: -1443356835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07c800b3af8083418b5424efc56a0e5
+      internalID: -1538955149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_10
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807c5a8b1f9fc064ebddef907412a154
+      internalID: 1490762360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d1c26aa01c6d948acde456803d24ad
+      internalID: 1118473070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800827343dd811d4681d8b27756f25dd
+      internalID: -691906318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96318fd2ff3d4bb43a7aaa9f814a326d
+      internalID: 1803434005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_16
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f74c920868d8743b9b18661ff57557
+      internalID: 1106637873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279e75e9d9c25504fb220a2eda64f0c6
+      internalID: -1279811095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20bc55a4dda6104b8e040d682ecc58b
+      internalID: 1590950105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_21
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89494be9316e6624685fe645dbe24795
+      internalID: 1006615464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_22
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623648133d2b988459e65d0b527e731d
+      internalID: 882726585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67794c4f16bebd54eb6265fcf3f75224
+      internalID: 46691574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_24
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4360862e190115e4bbb110bf909b7438
+      internalID: -86346741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_25
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb68150f747ffe43af940dac1c0b88c
+      internalID: -158789148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_26
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058883a3ce7bfa647a0b17a4dc906d26
+      internalID: 1995163426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5aa3c699ed9f544b251bc54e004913
+      internalID: -1331692284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_28
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952e1f3cd7978bc448ef7da8e5a270fb
+      internalID: -1913532238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9d1cab2e353fb4a98bd3772ff6616f
+      internalID: -1258649331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_30
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891418e5575b38c4bbe1ac804e004ad1
+      internalID: 1565956046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_31
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d6326109188d9499f4624c8f24e101
+      internalID: -1966741804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_32
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 0
+        width: 135
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595e5112355536b45b481e6008a56388
+      internalID: 1964509987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_escura_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 256
+        width: 251
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303fb6ac57929543818d615d0fdd4e5
+      internalID: -305457624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tile_map_grama_escura_1: 310143385
+      tile_map_grama_escura_11: 1118473070
+      tile_map_grama_escura_19: 2095511833
+      tile_map_grama_escura_26: 1995163426
+      tile_map_grama_escura_13: -1803457849
+      tile_map_grama_escura_12: -691906318
+      tile_map_grama_escura_10: 1490762360
+      tile_map_grama_escura_31: -1966741804
+      tile_map_grama_escura_22: 882726585
+      tile_map_grama_escura_20: 1102264374
+      tile_map_grama_escura_3: 1623011129
+      tile_map_grama_escura_15: 1803434005
+      tile_map_grama_escura_25: -158789148
+      tile_map_grama_escura_8: -1443356835
+      tile_map_grama_escura_6: 908649236
+      tile_map_grama_escura_4: -305457624
+      tile_map_grama_escura_24: -86346741
+      tile_map_grama_escura_5: 2065834212
+      tile_map_grama_escura_27: -1331692284
+      tile_map_grama_escura_16: 1106637873
+      tile_map_grama_escura_23: 46691574
+      tile_map_grama_escura_17: -1279811095
+      tile_map_grama_escura_32: 1964509987
+      tile_map_grama_escura_9: -1538955149
+      tile_map_grama_escura_30: 1565956046
+      tile_map_grama_escura_2: -1155244236
+      tile_map_grama_escura_28: -1913532238
+      tile_map_grama_escura_7: 1977562801
+      tile_map_grama_escura_21: 1006615464
+      tile_map_grama_escura_33: -2068994781
+      tile_map_grama_escura_18: 1590950105
+      tile_map_grama_escura_0: 2071832416
+      tile_map_grama_escura_14: 1440333914
+      tile_map_grama_escura_29: -1258649331
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

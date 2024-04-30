@@ -1,0 +1,778 @@
+fileFormatVersion: 2
+guid: f8022d7a58951db4199c8a727e3de099
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tile_map_grama_clara_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 124
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650e87f6368c7a4cb17f7d13d5a5337
+      internalID: 125296706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 640
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c00cb600c301843a5451dd0da19292
+      internalID: -2137337713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_2
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 640
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de499c68050ab346b1f74063ff281c5
+      internalID: 303956753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 640
+        width: 135
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1935d653bd5e64e865e05bf69e7dc3
+      internalID: 1383663368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee124bcfe295d246805ea5ab5ee1af0
+      internalID: -1127606601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_6
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88ed425cc5a82242b537a407c2742fe
+      internalID: 2008352176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93bd91538ecd6942b6d2b17cd41fad3
+      internalID: -967296986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_8
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076fda06316df3e4da17ae88195d99a0
+      internalID: -2103529997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 512
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12277abec40853449749c1cf22c86b3
+      internalID: -818006298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_10
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 512
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b6dcc7482b4f245910e88ae417d272
+      internalID: 640081233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3e5683d8e19f64c918d87a699ba674
+      internalID: 715017323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad766f84f6a7a4748bb6e22c11065af4
+      internalID: 1513386364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 384
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a4454f8953b4444b9ec727732fbd22
+      internalID: -1533216622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_16
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 384
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f4abbf80844bd4cbeb01bfaa8c66f7
+      internalID: 871055936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a280929487e614a8614ceb6968a603
+      internalID: 397460290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef85cb8ceb6860b47b6d8eb13cd32cb1
+      internalID: 256528320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_21
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 256
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc94c2005853944aa2b6f8c1dacd123
+      internalID: -648137020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_22
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 256
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ed1a77c7b0ee240b9450eb546e8946
+      internalID: -1202929482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808b0b7866592ec4e981276ed0f06e45
+      internalID: -1803710715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_24
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29463aa9f5c0d9d4b88270674cdbdd8a
+      internalID: 749265334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_25
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441944d08426ba541aa3116d346632da
+      internalID: 276200714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_26
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2566545b8dcf9549ad964aa84075222
+      internalID: -827306574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 128
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df273b272ce7d944e87dd9ea7af0186e
+      internalID: 411798714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_28
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 128
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e722d3bce6551541bf1f74ab204feb0
+      internalID: 1157274221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 124
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089a0278e39be73448ac53ae4137337a
+      internalID: 1166828974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_30
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24eb1aacf9f847b478932d909f5b99ae
+      internalID: -2010790985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_31
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 126.666664
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714c61471297509489ecf86ee5ba7258
+      internalID: 1464501132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_32
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 136
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8fdb61f15627f48bc18741dea66bef
+      internalID: 435999886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_map_grama_clara_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 256
+        width: 249
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48428c894cda6747a279ca9c0931d29
+      internalID: 959911982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tile_map_grama_clara_32: 435999886
+      tile_map_grama_clara_20: -1411116016
+      tile_map_grama_clara_15: -1533216622
+      tile_map_grama_clara_0: 125296706
+      tile_map_grama_clara_10: 640081233
+      tile_map_grama_clara_5: -1127606601
+      tile_map_grama_clara_12: 1513386364
+      tile_map_grama_clara_13: -1283125176
+      tile_map_grama_clara_21: -648137020
+      tile_map_grama_clara_26: -827306574
+      tile_map_grama_clara_6: 2008352176
+      tile_map_grama_clara_16: 871055936
+      tile_map_grama_clara_9: -818006298
+      tile_map_grama_clara_18: 256528320
+      tile_map_grama_clara_29: 1166828974
+      tile_map_grama_clara_3: 1383663368
+      tile_map_grama_clara_14: -172367404
+      tile_map_grama_clara_2: 303956753
+      tile_map_grama_clara_1: -2137337713
+      tile_map_grama_clara_25: 276200714
+      tile_map_grama_clara_30: -2010790985
+      tile_map_grama_clara_7: -967296986
+      tile_map_grama_clara_23: -1803710715
+      tile_map_grama_clara_31: 1464501132
+      tile_map_grama_clara_4: 959911982
+      tile_map_grama_clara_33: 2096989768
+      tile_map_grama_clara_11: 715017323
+      tile_map_grama_clara_19: -1884706983
+      tile_map_grama_clara_22: -1202929482
+      tile_map_grama_clara_8: -2103529997
+      tile_map_grama_clara_27: 411798714
+      tile_map_grama_clara_28: 1157274221
+      tile_map_grama_clara_17: 397460290
+      tile_map_grama_clara_24: 749265334
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
