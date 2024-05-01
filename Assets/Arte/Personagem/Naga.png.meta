@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc6b4ad61c21e4e43a632879c7d8e3f2
+guid: d5ec25b01439e1448833e981b72577ed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,91 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: little_mary__andando_de_frente_0
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 664
-        width: 191
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3479c0277357f304bb202a8330b16917
-      internalID: 1867329196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: little_mary__andando_de_frente_1
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 664
-        width: 192
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8de9bce9b7136c4b83698760f2e6fc2
-      internalID: 628392213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: little_mary__andando_de_frente_2
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 150
-        width: 192
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fe604567a7ba8d48810ad36cbf3f2f0
-      internalID: -1400488786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: little_mary__andando_de_frente_3
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 150
-        width: 192
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b51b7dacc84f9d4ba14bedb8cea7f6a
-      internalID: -1764505265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -210,11 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      little_mary__andando_de_frente_2: -1400488786
-      little_mary__andando_de_frente_1: 628392213
-      little_mary__andando_de_frente_3: -1764505265
-      little_mary__andando_de_frente_0: 1867329196
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
