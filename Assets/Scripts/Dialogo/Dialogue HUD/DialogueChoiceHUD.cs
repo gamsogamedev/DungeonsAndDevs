@@ -11,16 +11,23 @@ public class DialogueChoiceHUD : MonoBehaviour
     private void Awake()
     {
         DialogueManager.OnChoiceEvent.AddListener(SetupChoices);
+        DialogueManager.OnDialogueEvent.AddListener(Disable);
+        DialogueManager.OnFinishDialogue.AddListener(() => gameObject.SetActive(false));
 
         buttonName = new TextMeshProUGUI[choice.Length];
         for (var i = 0; i < choice.Length; i++)
         {
             buttonName[i] = choice[i].GetComponentInChildren<TextMeshProUGUI>();
         }
+        
+        this.gameObject.SetActive(false);
     }
+    
+    private void Disable(MyDialogueInfo info) => this.gameObject.SetActive(false);
 
     private void SetupChoices(MyChoiceInfo choiceInfo)
     {
+        this.gameObject.SetActive(true);
         choiceDescription.text = choiceInfo.choiceDescription;
 
         var choiceA = choiceInfo.choiceA;

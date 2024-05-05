@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,7 +9,7 @@ public class DialogueInfoEvent : UnityEvent<MyDialogueInfo>{}
 [System.Serializable]
 public class MyDialogueInfo
 {
-    [TextArea] public string textLine;
+    [ResizableTextArea] public string textLine;
     
     public string whosTalking;
     public Sprite whosTalkingIcon;

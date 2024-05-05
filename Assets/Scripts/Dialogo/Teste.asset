@@ -20,7 +20,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -42,7 +42,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -64,7 +64,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -86,7 +86,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -107,7 +107,7 @@ MonoBehaviour:
         whosTalking: Player
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -128,7 +128,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -149,7 +149,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -170,7 +170,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -191,7 +191,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -212,7 +212,7 @@ MonoBehaviour:
         whosTalking: Player
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: IAI
         choiceA:
@@ -234,7 +234,7 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -256,7 +256,28 @@ MonoBehaviour:
         whosTalking: ...
         whosTalkingIcon: {fileID: 0}
       animationInfo:
-        animationSequence: []
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 2
+      textLine:
+        textLine: Um Tarrasque chega e te mata
+        whosTalking: ...
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 0cb800e4094609cc1bb973d069d5c674, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:

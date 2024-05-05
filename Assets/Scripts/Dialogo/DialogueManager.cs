@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     
     [SerializeField] private List<ScriptableDialogue> dialogues;
-    private Queue<DialogueEvent> dialogueQueue;
+    private Queue<DialogueEvent> _dialogueQueue;
 
     public static readonly UnityEvent<int> OnStartDialogue = new();
     public static readonly UnityEvent OnFinishDialogue = new();
@@ -21,8 +18,8 @@ public class DialogueManager : MonoBehaviour
     public static readonly DialogueInfoEvent OnDialogueEvent = new();
     public static readonly AnimationInfoEvent OnAnimationEvent = new();
     public static readonly ChoiceInfoEvent OnChoiceEvent = new();
-    
-    [SerializeField] private GameObject dialogueHUD,choiceHUD;
+
+    private bool _canInteract;
     
     private void Awake()
     {
@@ -33,11 +30,6 @@ public class DialogueManager : MonoBehaviour
     {
         OnStartDialogue.AddListener(LoadDialogue);
         OnNextDialogue.AddListener(ProcessDialogue);
-        
-        dialogueHUD.SetActive(false);
-        choiceHUD.SetActive(false);
-        
-        OnStartDialogue?.Invoke(0);
     }
     
     public void LoadDialogue(int startingIndex)
@@ -45,9 +37,9 @@ public class DialogueManager : MonoBehaviour
         var curDialogue = dialogues[0];
         var curBlock = curDialogue.dialogueBlocks[startingIndex];
         
-        dialogueQueue = new();
+        _dialogueQueue = new();
         foreach (var dio in curBlock.dialogueBlock) {
-            dialogueQueue.Enqueue(dio);
+            _dialogueQueue.Enqueue(dio);
             if (dio.type == DialogueEvent.DialogueEventType.Choice) break;
         }
         
@@ -56,20 +48,16 @@ public class DialogueManager : MonoBehaviour
 
     private void ProcessDialogue()
     {
-        if (dialogueQueue.Count == 0)
+        if (_dialogueQueue.Count == 0)
         {
-            dialogueHUD.SetActive(false);
-            choiceHUD.SetActive(false);
             OnFinishDialogue?.Invoke();
             return;
         }
         
-        var dialogueEvent = dialogueQueue.Dequeue();
+        var dialogueEvent = _dialogueQueue.Dequeue();
         switch (dialogueEvent.type)
         {
             case DialogueEvent.DialogueEventType.Dialogue:
-                choiceHUD.SetActive(false);
-                dialogueHUD.SetActive(true);
                 Debug.Log(dialogueEvent.textLine.textLine);
                 OnDialogueEvent?.Invoke(dialogueEvent.textLine);
                 break;
@@ -77,13 +65,32 @@ public class DialogueManager : MonoBehaviour
                 OnAnimationEvent?.Invoke(dialogueEvent.animationInfo);
                 break;
             case DialogueEvent.DialogueEventType.Choice:
-                dialogueHUD.SetActive(false);
-                choiceHUD.SetActive(true);
                 OnChoiceEvent?.Invoke(dialogueEvent.choiceInfo);
                 break;
             default:
                 Debug.Log("dialogueEvent not recognized");
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(!other.CompareTag("Player")) return;
+
+        _canInteract = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(!other.CompareTag("Player")) return;
+
+        _canInteract = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && _canInteract) {
+            OnStartDialogue?.Invoke(0);
         }
     }
 }
