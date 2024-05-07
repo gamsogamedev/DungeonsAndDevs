@@ -1,20 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
-{
-   public Animator anim;
-   public float speed;
-   
+{ 
+    public SpriteRenderer spriteRenderer; 
+    public Animator anim; 
+    public float speed;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+        var movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+        spriteRenderer.flipX = movement.x < 0f;
+        
         anim.SetFloat("Horizontal", movement.x);
         anim.SetFloat("Vertical", movement.y);
         anim.SetFloat("Speed", movement.magnitude);
-
-        transform.position = transform.position + movement * speed * Time.deltaTime;
+        
+        transform.position = transform.position + movement * (speed * Time.deltaTime);
     }
     
 }

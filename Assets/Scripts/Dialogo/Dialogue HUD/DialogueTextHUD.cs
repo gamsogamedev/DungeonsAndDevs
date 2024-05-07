@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueTextHUD : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogueTextBox;
     [SerializeField] private TextMeshProUGUI dialogueTextName;
+    [SerializeField] private Image dialogueIcon; 
     private void Awake()
     {
-        Debug.Log("BBBB");
         DialogueManager.OnDialogueEvent.AddListener(WriteText);
-        DialogueManager.OnDialogueEvent.AddListener((MyDialogueInfo info) => Debug.Log("Event call"));
         DialogueManager.OnChoiceEvent.AddListener(Disable);
         DialogueManager.OnFinishDialogue.AddListener(() => gameObject.SetActive(false));
         
@@ -26,11 +26,14 @@ public class DialogueTextHUD : MonoBehaviour
 
     private void WriteText(MyDialogueInfo textToWrite)
     {
-        Debug.Log("AAA");
         this.gameObject.SetActive(true);
+
+        dialogueIcon.color = Color.white;
+        dialogueIcon.sprite = textToWrite.whosTalkingIcon;
+        if(dialogueIcon.sprite == null) dialogueIcon.color = Color.clear;
         
         dialogueTextName.text = textToWrite.whosTalking;
-        dialogueTextBox.text = textToWrite.textLine;
+        dialogueTextBox.text = textToWrite.textLine; // letter by letter
     }
 
     public void CallNextDialogue()

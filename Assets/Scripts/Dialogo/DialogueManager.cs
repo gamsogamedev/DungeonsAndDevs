@@ -58,7 +58,6 @@ public class DialogueManager : MonoBehaviour
         switch (dialogueEvent.type)
         {
             case DialogueEvent.DialogueEventType.Dialogue:
-                Debug.Log(dialogueEvent.textLine.textLine);
                 OnDialogueEvent?.Invoke(dialogueEvent.textLine);
                 break;
             case DialogueEvent.DialogueEventType.Animation:

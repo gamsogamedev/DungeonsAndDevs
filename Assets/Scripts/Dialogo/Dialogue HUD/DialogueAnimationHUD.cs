@@ -19,5 +19,4 @@ public class DialogueAnimationHUD : MonoBehaviour
         timelineManager.playableAsset = animationInfo.cutscene;
         timelineManager.Play();
     }
-    
 }

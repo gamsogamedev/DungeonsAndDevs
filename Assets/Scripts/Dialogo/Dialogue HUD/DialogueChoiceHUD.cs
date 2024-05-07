@@ -1,10 +1,15 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueChoiceHUD : MonoBehaviour
 {
+    [SerializeField] private GridLayoutGroup choiceGrid;
+    private Vector2 slotDim;
+    
     [SerializeField] private TextMeshProUGUI choiceDescription;
+    
     [SerializeField] private Button[] choice = new Button[4];
     private TextMeshProUGUI[] buttonName;
     
@@ -19,7 +24,8 @@ public class DialogueChoiceHUD : MonoBehaviour
         {
             buttonName[i] = choice[i].GetComponentInChildren<TextMeshProUGUI>();
         }
-        
+
+        slotDim = choiceGrid.cellSize;
         this.gameObject.SetActive(false);
     }
     
@@ -51,10 +57,13 @@ public class DialogueChoiceHUD : MonoBehaviour
         }
         
         var choiceC= choiceInfo.choiceC;
-        if (choiceC.choiceText.Equals("")) {
+        if (choiceC.choiceText.Equals(""))
+        {
+            choiceGrid.cellSize = new Vector2(slotDim.x, 2 * slotDim.y);
             choice[2].gameObject.SetActive(false);
         }
         else {
+            choiceGrid.cellSize = new Vector2(slotDim.x, slotDim.y);
             choice[2].gameObject.SetActive(true);
             buttonName[2].text = choiceC.choiceText;
             choice[2].onClick.AddListener(() => CallJump(choiceC));            
