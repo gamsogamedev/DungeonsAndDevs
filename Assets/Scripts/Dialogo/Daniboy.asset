@@ -10,34 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
-  m_Name: Teste
+  m_Name: Daniboy
   m_EditorClassIdentifier: 
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Aquele \xE9 o personagem \u201CDaniboy\u201D [classe: Roteirista]."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: 21300000, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Que? O que t\xE1 acontecendo?"
+        textLine: Ola, Player! Bem-vindo a Guilda Gamso
         whosTalking: Daniel
         whosTalkingIcon: {fileID: 21300000, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -58,8 +37,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: Dito isso, explore a <title>guilda gamso<title> e me encontre na
-          <title>sala#5<title>.
+        textLine: "Nesta loca\xE7ao, neste jogo, no, os funcionarios desta loca\xE7ao,
+          realizamos, a realizal\xE7ao de videogames"
         whosTalking: Naga
         whosTalkingIcon: {fileID: 21300000, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -80,10 +59,32 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "N\xE3o, pera\xED, isso aqui t\xE1 muito ruim. Que merda \xE9 essa?\r\n
-          \r\n"
-        whosTalking: Daniel
-        whosTalkingIcon: {fileID: 21300000, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+        textLine: "Voce, NPC Player, que nao faz nada, alem de vagar por este local,
+          falso e inexistente, nao tem proposito e nem no\xE7ao de escolha."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 21300000, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: Entao, eu, personagem Naga, resolvi te dar proposito. Trabalhando
+          na Game. Art. Music. And Software
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: 21300000, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:
