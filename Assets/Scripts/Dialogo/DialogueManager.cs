@@ -6,11 +6,10 @@ using UnityEngine.Events;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    
-    [SerializeField] private List<ScriptableDialogue> dialogues;
     private Queue<DialogueEvent> _dialogueQueue;
 
-    public static readonly UnityEvent<int> OnStartDialogue = new();
+    public static readonly UnityEvent<ScriptableDialogue> OnStartDialogue = new();
+    public static readonly UnityEvent<int> OnNextDialogueBlock = new();
     public static readonly UnityEvent OnFinishDialogue = new();
     
     public static readonly UnityEvent OnNextDialogue = new();
@@ -19,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public static readonly AnimationInfoEvent OnAnimationEvent = new();
     public static readonly ChoiceInfoEvent OnChoiceEvent = new();
 
-    private bool _canInteract;
+    private ScriptableDialogue _currentDialogue;
     
     private void Awake()
     {
@@ -28,14 +27,20 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        OnStartDialogue.AddListener(LoadDialogue);
+        OnStartDialogue.AddListener(InitDialogue);
         OnNextDialogue.AddListener(ProcessDialogue);
+        OnNextDialogueBlock.AddListener(LoadBlock);
     }
     
-    public void LoadDialogue(int startingIndex)
+    public void InitDialogue(ScriptableDialogue dialogueToParse)
     {
-        var curDialogue = dialogues[0];
-        var curBlock = curDialogue.dialogueBlocks[startingIndex];
+        _currentDialogue = dialogueToParse;
+        OnNextDialogueBlock?.Invoke(0);
+    }
+    
+    public void LoadBlock(int blockIdx)
+    {
+        var curBlock = _currentDialogue.dialogueBlocks[blockIdx];
         
         _dialogueQueue = new();
         foreach (var dio in curBlock.dialogueBlock) {
@@ -44,7 +49,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         ProcessDialogue();
-    }    
+    }
 
     private void ProcessDialogue()
     {
@@ -72,24 +77,5 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(!other.CompareTag("Player")) return;
-
-        _canInteract = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if(!other.CompareTag("Player")) return;
-
-        _canInteract = false;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && _canInteract) {
-            OnStartDialogue?.Invoke(0);
-        }
-    }
+    
 }

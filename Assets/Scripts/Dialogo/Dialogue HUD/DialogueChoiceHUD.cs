@@ -82,6 +82,6 @@ public class DialogueChoiceHUD : MonoBehaviour
 
     private void CallJump(MyChoiceInfo.Choice choice)
     {
-        DialogueManager.OnStartDialogue?.Invoke(choice.jumpToIndex);
+        DialogueManager.OnNextDialogueBlock?.Invoke(choice.jumpToIndex);
     }
 }
