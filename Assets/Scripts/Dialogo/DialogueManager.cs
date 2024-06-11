@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance;
-    
     [SerializeField] private List<ScriptableDialogue> dialogues;
     private Queue<DialogueEvent> _dialogueQueue;
 
@@ -20,11 +19,6 @@ public class DialogueManager : MonoBehaviour
     public static readonly ChoiceInfoEvent OnChoiceEvent = new();
 
     private bool _canInteract;
-    
-    private void Awake()
-    {
-        instance ??= this;
-    }
 
     private void Start()
     {
