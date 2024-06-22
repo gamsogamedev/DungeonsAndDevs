@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0dfbc6820a9b742468f07d153ce66dda
+guid: a6f4c29db27b2f447b4dac4a16ae1981
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,43 +117,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chao_e_parede_da_guilda_0
+      name: daniboywritesheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 624
-        height: 376
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e47e8cd165ff24b8dfe9178995061b
-      internalID: 237881828
+      spriteID: 03602c3d0f0435f4aabac06b6f989950
+      internalID: -491889708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_e_parede_da_guilda_1
+      name: daniboywritesheet_1
       rect:
         serializedVersion: 2
-        x: 7
-        y: 398
-        width: 626
-        height: 219
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa1e5a7e67d56324483b2cf10e5d8a07
-      internalID: -116216672
+      spriteID: a9bc32835bff6d243be65ddad52a045e
+      internalID: -1231186635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daniboywritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6619b3923e49d42a4407c44dcac88a
+      internalID: -1245173932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daniboywritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29dd48214091d446b9fc6b9440d2deb
+      internalID: 1683884388
       vertices: []
       indices: 
       edges: []
@@ -169,8 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chao_e_parede_da_guilda_0: 237881828
-      chao_e_parede_da_guilda_1: -116216672
+      daniboywritesheet_3: 1683884388
+      daniboywritesheet_1: -1231186635
+      daniboywritesheet_0: -491889708
+      daniboywritesheet_2: -1245173932
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0dfbc6820a9b742468f07d153ce66dda
+guid: 3d2c64476c5e963469d952412e7afb64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chao_e_parede_da_guilda_0
+      name: lareira_mais_foda-Sheet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 624
-        height: 376
+        x: 0
+        y: 0
+        width: 520
+        height: 504
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e47e8cd165ff24b8dfe9178995061b
-      internalID: 237881828
+      spriteID: 05892bde2b5d0ff40b34c40ddfdc58d3
+      internalID: 1187039487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chao_e_parede_da_guilda_1
+      name: lareira_mais_foda-Sheet_1
       rect:
         serializedVersion: 2
-        x: 7
-        y: 398
-        width: 626
-        height: 219
+        x: 536
+        y: 0
+        width: 520
+        height: 504
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa1e5a7e67d56324483b2cf10e5d8a07
-      internalID: -116216672
+      spriteID: 144907fb2058ef54fa6ad6b27f62f81e
+      internalID: 2036080715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lareira_mais_foda-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 0
+        width: 520
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db9a68c52f66474ebd40b4ebf0aa798
+      internalID: -970737674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lareira_mais_foda-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 0
+        width: 520
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea35a09125954f4db8575c17db620e3
+      internalID: 231705191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lareira_mais_foda-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 0
+        width: 520
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1073640e498add347ad1cf580e67828f
+      internalID: -1796545510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lareira_mais_foda-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 0
+        width: 520
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85481a4cb5952e64d9ab4cf96e83e731
+      internalID: 1568957428
       vertices: []
       indices: 
       edges: []
@@ -169,8 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chao_e_parede_da_guilda_0: 237881828
-      chao_e_parede_da_guilda_1: -116216672
+      lareira_mais_foda-Sheet_5: 1568957428
+      lareira_mais_foda-Sheet_3: 231705191
+      lareira_mais_foda-Sheet_4: -1796545510
+      lareira_mais_foda-Sheet_1: 2036080715
+      lareira_mais_foda-Sheet_2: -970737674
+      lareira_mais_foda-Sheet_0: 1187039487
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
