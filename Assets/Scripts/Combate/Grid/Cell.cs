@@ -10,6 +10,7 @@ public class Cell : MonoBehaviour
     public enum CellState {Idle, Hover, Selected}
     
     private CellState _currentState;
+    [HideInInspector] public BaseEntity _entityInCell;
     
     [SerializeField, Foldout("State Indicators")]
     private GameObject hoveredInd, selectedInd;
@@ -27,6 +28,9 @@ public class Cell : MonoBehaviour
     {
         if (_currentState == CellState.Selected) return;
 
+        if(_entityInCell is not null)
+            Debug.Log(_entityInCell.entityName + " in this space!");
+            
         _currentState = CellState.Hover;
         hoveredInd.SetActive(true);
     }
