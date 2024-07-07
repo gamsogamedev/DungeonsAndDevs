@@ -13,7 +13,9 @@ public class Cell : MonoBehaviour
     [HideInInspector] public BaseEntity _entityInCell;
     
     [SerializeField, Foldout("State Indicators")]
-    private GameObject hoveredInd, selectedInd;
+    private GameObject hoveredInd, selectedInd, walkableInd;
+
+    private bool _canBeWalked;
     
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
     
@@ -21,15 +23,18 @@ public class Cell : MonoBehaviour
     {
         CellSelected.AddListener(SelectCell);
         CellDeselected.AddListener(DeselectCell);
+
+        GridManager.OnSelect.AddListener((x) => _canBeWalked = false);
+        GridManager.GridClear.AddListener(ClearCell);
+        BaseEntity.OnEntityMove.AddListener(() => _canBeWalked = false);
+        
         _currentState = CellState.Idle;
+        _canBeWalked = false;
     }
     
     private void OnMouseEnter()
     {
         if (_currentState == CellState.Selected) return;
-
-        if(_entityInCell is not null)
-            Debug.Log(_entityInCell.entityName + " in this space!");
             
         _currentState = CellState.Hover;
         hoveredInd.SetActive(true);
@@ -45,12 +50,14 @@ public class Cell : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        GridManager.GridClear?.Invoke();
         hoveredInd.SetActive(false);
         switch (_currentState)
         {
             case CellState.Hover:
             case CellState.Idle:
-                CellSelected?.Invoke();
+                if (_entityInCell is null || _canBeWalked) CellSelected?.Invoke();
+                else _entityInCell?.EntitySelected?.Invoke();
                 break;
             case CellState.Selected:
                 CellDeselected?.Invoke();
@@ -58,18 +65,41 @@ public class Cell : MonoBehaviour
         }
     }
 
+    public void MarkCellAsWalkable()
+    {
+        if (_entityInCell is null) _canBeWalked = true;
+        walkableInd.SetActive(true);
+    }
+    
     public void SelectCell()
     {
+        if (_canBeWalked)
+        {
+            Debug.Log($"Walking towards {this.name}");
+            CombatManager.SelectedEntity.MoveTowards(this);
+            return;
+        }
+        
         _currentState = CellState.Selected;
         selectedInd.SetActive(true);
         
         GridManager.OnSelect?.Invoke(this);
     }
+    
     public void DeselectCell()
+    {
+        if (_entityInCell is not null) _entityInCell.isSelected = false;
+        _currentState = CellState.Idle;
+        selectedInd.SetActive(false);
+        
+        GridManager.OnDeselect?.Invoke(this);
+    }
+
+    private void ClearCell()
     {
         _currentState = CellState.Idle;
         selectedInd.SetActive(false);
-
-        GridManager.OnDeselect?.Invoke(this);
+        
+        walkableInd.SetActive(false);
     }
 }

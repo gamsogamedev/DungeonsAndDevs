@@ -7,18 +7,25 @@ public class PlayableEntity : BaseEntity
 {
     // TODO -- stat de destreza influencia o range de movimento
     private Vector3 positionBeforeDrag;
-    private bool isDragging;
-
+    private bool isDragging, dragEnabled;
+    
     private void Start()
     {
         isDragging = false;
+        dragEnabled = true;
         positionBeforeDrag = transform.position;
+        
+        ResetMovement();
+        
+        EntitySelected.AddListener(SelectEntity);
+        OnEntityMove.AddListener(() => isSelected = false); // Refactor this later (won't work for multiple entities)
     }
 
     #region Temporary
     private void OnMouseUp()
     {
         if (!isDragging) return;
+        
         var hit = Physics2D.OverlapBox(transform.position, Vector3.one / 20f, 0);
         this.GetComponent<Collider2D>().enabled = true;
         
@@ -39,12 +46,17 @@ public class PlayableEntity : BaseEntity
             transform.SetParent(tileHit.transform);
             transform.localPosition = Vector3.zero;
             currentCell = tileHit;
+            tileHit._entityInCell = this;
+
+            positionBeforeDrag = transform.position;
+            this.GetComponent<Collider2D>().enabled = false;
         }
-        
     }
 
     private void OnMouseDrag()
     {
+        if (!dragEnabled) return;
+        
         if (!isDragging)
         {
             transform.SetParent(null);
@@ -57,9 +69,21 @@ public class PlayableEntity : BaseEntity
     }
     
     #endregion
-
-    private void OnMouseDown()
+    
+    private void SelectEntity()
     {
-        CombatManager.OnEntitySelected?.Invoke(this);
+        if (!isSelected) CombatManager.OnEntitySelected?.Invoke(this);
+        isSelected = !isSelected;
+    }
+    
+    public override void MoveTowards(Cell cellToMove)
+    {
+        transform.SetParent(cellToMove.transform);
+        transform.localPosition = Vector3.zero;
+        currentCell = cellToMove;
+        cellToMove._entityInCell = this;
+
+        currentMovement--;
+        OnEntityMove?.Invoke();
     }
 }
