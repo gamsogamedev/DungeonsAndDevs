@@ -17,6 +17,7 @@ public class DialogueChoiceHUD : MonoBehaviour
     {
         DialogueManager.OnChoiceEvent.AddListener(SetupChoices);
         DialogueManager.OnDialogueEvent.AddListener(Disable);
+        DialogueManager.OnAnimationEvent.AddListener(Disable);
         DialogueManager.OnFinishDialogue.AddListener(() => gameObject.SetActive(false));
 
         buttonName = new TextMeshProUGUI[choice.Length];
@@ -30,7 +31,9 @@ public class DialogueChoiceHUD : MonoBehaviour
     }
     
     private void Disable(MyDialogueInfo info) => this.gameObject.SetActive(false);
+    private void Disable(MyAnimationInfo info) => this.gameObject.SetActive(false);
 
+    
     private void SetupChoices(MyChoiceInfo choiceInfo)
     {
         this.gameObject.SetActive(true);
