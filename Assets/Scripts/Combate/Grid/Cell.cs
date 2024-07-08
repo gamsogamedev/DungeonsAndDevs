@@ -13,12 +13,17 @@ public class Cell : MonoBehaviour
     [HideInInspector] public BaseEntity _entityInCell;
     
     [SerializeField, Foldout("State Indicators")]
-    private GameObject hoveredInd, selectedInd, walkableInd;
+    private GameObject hoveredInd, selectedInd, walkableInd, pathInd;
 
-    private bool _canBeWalked;
+    public Cell previousCell;
+    public int gCost, hCost;
+    public int fCost => gCost + hCost;
+    
+
+    public bool _canBeWalked;
     
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
-    
+
     public void InitCell()
     {
         CellSelected.AddListener(SelectCell);
@@ -26,16 +31,24 @@ public class Cell : MonoBehaviour
 
         GridManager.OnSelect.AddListener((x) => _canBeWalked = false);
         GridManager.GridClear.AddListener(ClearCell);
-        BaseEntity.OnEntityMove.AddListener(() => _canBeWalked = false);
+        BaseEntity.OnEntityMove.AddListener(delegate
+        {
+            _canBeWalked = false;
+            previousCell = null;
+            gCost = Int32.MaxValue;
+        });
+
+        _canBeWalked = false;
+        gCost = Int32.MaxValue;
         
         _currentState = CellState.Idle;
-        _canBeWalked = false;
     }
-    
+
+
     private void OnMouseEnter()
     {
         if (_currentState == CellState.Selected) return;
-            
+        
         _currentState = CellState.Hover;
         hoveredInd.SetActive(true);
     }
@@ -43,7 +56,7 @@ public class Cell : MonoBehaviour
     private void OnMouseExit()
     {
         if (_currentState != CellState.Hover) return;
-
+        
         _currentState = CellState.Idle;
         hoveredInd.SetActive(false);
     }
@@ -70,12 +83,17 @@ public class Cell : MonoBehaviour
         if (_entityInCell is null) _canBeWalked = true;
         walkableInd.SetActive(true);
     }
+
+    public void MarkCellAsPath()
+    {
+        if (!_canBeWalked) return; 
+        pathInd.SetActive(true);
+    }
     
     public void SelectCell()
     {
         if (_canBeWalked)
         {
-            Debug.Log($"Walking towards {this.name}");
             CombatManager.SelectedEntity.MoveTowards(this);
             return;
         }
@@ -100,6 +118,7 @@ public class Cell : MonoBehaviour
         _currentState = CellState.Idle;
         selectedInd.SetActive(false);
         
+        pathInd.SetActive(false);
         walkableInd.SetActive(false);
     }
 }
