@@ -21,7 +21,7 @@ public class DialogueInteraction : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && _canInteract) {
-            DialogueManager.OnStartDialogue?.Invoke(dialogues[0]);
+            DialogueManager.OnStartDialogue?.Invoke(0);
         }
     }
 }
