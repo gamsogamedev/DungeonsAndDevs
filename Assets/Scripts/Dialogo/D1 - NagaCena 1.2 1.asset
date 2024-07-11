@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
-  m_Name: D1 - NagaCena 1.2
+  m_Name: D1 - NagaCena 1.2 1
   m_EditorClassIdentifier: 
   dialogueBlocks:
   - dialogueBlock:
@@ -62,7 +62,28 @@ MonoBehaviour:
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
-        cutscene: {fileID: 0}
+        cutscene: {fileID: 11400000, guid: dea6bd31ecf21de4e94317f6f13ca5fa, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: ...
+        whosTalking: 
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -100,11 +121,32 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Que?? Que t\xE1 acontecendo?\n"
+        textLine: Falow
         whosTalking: Daniel
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 2
+      textLine:
+        textLine: Falow
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
