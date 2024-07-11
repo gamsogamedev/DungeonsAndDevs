@@ -12,7 +12,14 @@ public class DialogueAnimationHUD : MonoBehaviour
     {
         timelineManager = GetComponent<PlayableDirector>();
         DialogueManager.OnAnimationEvent.AddListener(PlayAnimation);
+        timelineManager.stopped += OnPlayerDirectorStopped;
     }
+
+    void OnPlayerDirectorStopped(PlayableDirector director)
+    {
+        DialogueManager.OnNextDialogue?.Invoke();
+    }
+    
 
     private void PlayAnimation(MyAnimationInfo animationInfo)
     {
