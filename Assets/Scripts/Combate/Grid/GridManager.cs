@@ -16,7 +16,7 @@ public class GridManager : MonoBehaviour
     private Dictionary<Vector2Int, Cell> _coordToCell;
     private Dictionary<Cell, Vector2Int> _cellToCoord;
     
-    public Cell _activeCell;
+    public Cell _activeCell { get; private set; }
 
     public static readonly UnityEvent<Cell> OnSelect = new(), OnDeselect = new();
     public static readonly UnityEvent GridClear = new();
@@ -56,7 +56,7 @@ public class GridManager : MonoBehaviour
             return;
         }
             
-        Camera.main.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, -10);
+        Camera.main.transform.position = new Vector3((width / 2f) - 0.5f, (height / 2f) - 1.5f, -10);
 
         // USE LATER (MAYBE)
         // var entities = Resources.LoadAll<ScriptableEntity>("Teste");

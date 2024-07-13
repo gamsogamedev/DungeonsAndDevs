@@ -9,8 +9,10 @@ public class ScriptableEntity : ScriptableObject
     public BaseEntity entityPrefab;
 }
 
+
+
 public enum EntityType
 {
     Playable,
     Hostile
-}
+} 
