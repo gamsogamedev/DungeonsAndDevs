@@ -14,6 +14,7 @@ public class DialogueTextHUD : MonoBehaviour
     {
         DialogueManager.OnDialogueEvent.AddListener(WriteText);
         DialogueManager.OnChoiceEvent.AddListener(Disable);
+        DialogueManager.OnAnimationEvent.AddListener(Disable);
         DialogueManager.OnFinishDialogue.AddListener(() => gameObject.SetActive(false));
         
         dialogueTextName.text = "";
@@ -23,6 +24,7 @@ public class DialogueTextHUD : MonoBehaviour
     }
 
     private void Disable(MyChoiceInfo info) => this.gameObject.SetActive(false);
+    private void Disable(MyAnimationInfo info) => this.gameObject.SetActive(false);
 
     private void WriteText(MyDialogueInfo textToWrite)
     {

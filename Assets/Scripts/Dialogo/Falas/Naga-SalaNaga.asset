@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
+  m_Name: Naga-SalaNaga
+  m_EditorClassIdentifier: 
+  dialogueBlocks:
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Conseguiu decidir o que quer fazer no gamso?
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: Escolha sua classe
+        choiceA:
+          choiceText: Programador
+          jumpToIndex: 1
+        choiceB:
+          choiceText: Artista
+          jumpToIndex: 0
+        choiceC:
+          choiceText: GameDesigner
+          jumpToIndex: 0
+        choiceD:
+          choiceText: "M\xFAsico"
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "Programadores s\xE3o conjuradores no campo de batalha. Alterar
+          as leis do mundo para que as coisas funcionem direito"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 2
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: e17f8e518a087dd4c9eef9bc61ed8a2b, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0

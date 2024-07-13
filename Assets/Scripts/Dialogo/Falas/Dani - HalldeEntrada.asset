@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
+  m_Name: Dani - HalldeEntrada
+  m_EditorClassIdentifier: 
+  dialogueBlocks:
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Fale com o Naga primeiro NPC
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
