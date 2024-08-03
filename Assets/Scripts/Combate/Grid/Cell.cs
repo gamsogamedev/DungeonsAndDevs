@@ -4,30 +4,40 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Cell : MonoBehaviour
 {
+    public Vector2Int cellCoord { get; private set; }
+ 
     public enum CellState {Idle, Hover, Selected}
-    
     private CellState _currentState;
+
+    [SerializeField, Foldout("State Indicators")]
+    private GameObject cellState_Idle,
+        cellState_Hover, 
+        cellState_Selected, 
+        cellState_Walkable, 
+        cellState_Path;
+    private GameObject currentState;
+
     [HideInInspector] public BaseEntity _entityInCell;
     
-    [SerializeField, Foldout("State Indicators")]
-    private GameObject hoveredInd, selectedInd, walkableInd, pathInd;
-
+    // ---- PATHFINDING -----
     public Cell previousCell;
     public int gCost, hCost;
     public int fCost => gCost + hCost;
     
 
     public bool _canBeWalked;
-    
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
 
-    public void InitCell()
+    public void InitCell(int xCoord, int yCoord)
     {
-        CellSelected.AddListener(SelectCell);
-        CellDeselected.AddListener(DeselectCell);
+        cellCoord = new Vector2Int(xCoord, yCoord);
+        
+        CellSelected.AddListener(SetCellAsSelected);
+        CellDeselected.AddListener(SetCellAsIdle);
 
         GridManager.OnSelect.AddListener((x) => _canBeWalked = false);
         GridManager.GridClear.AddListener(ClearCell);
@@ -43,28 +53,23 @@ public class Cell : MonoBehaviour
         
         _currentState = CellState.Idle;
     }
-
-
+    
     private void OnMouseEnter()
     {
         if (_currentState == CellState.Selected) return;
-        
-        _currentState = CellState.Hover;
-        hoveredInd.SetActive(true);
+        SetCellAsHover();
     }
 
     private void OnMouseExit()
     {
         if (_currentState != CellState.Hover) return;
-        
-        _currentState = CellState.Idle;
-        hoveredInd.SetActive(false);
+        ClearCell();
     }
 
     private void OnMouseUpAsButton()
     {
         GridManager.GridClear?.Invoke();
-        hoveredInd.SetActive(false);
+        cellState_Hover.SetActive(false);
         switch (_currentState)
         {
             case CellState.Hover:
@@ -78,19 +83,17 @@ public class Cell : MonoBehaviour
         }
     }
 
-    public void MarkCellAsWalkable()
+    public void SetCellAsWalkable()
     {
         if (_entityInCell is null) _canBeWalked = true;
-        walkableInd.SetActive(true);
+        cellState_Walkable.SetActive(true);
     }
-
-    public void MarkCellAsPath()
+    public void SetCellAsPath()
     {
         if (!_canBeWalked) return; 
-        pathInd.SetActive(true);
+        cellState_Path.SetActive(true);
     }
-    
-    public void SelectCell()
+    public void SetCellAsSelected()
     {
         if (_canBeWalked)
         {
@@ -99,26 +102,28 @@ public class Cell : MonoBehaviour
         }
         
         _currentState = CellState.Selected;
-        selectedInd.SetActive(true);
+        cellState_Selected.SetActive(true);
         
         GridManager.OnSelect?.Invoke(this);
     }
-    
-    public void DeselectCell()
+    public void SetCellAsIdle()
     {
-        if (_entityInCell is not null) _entityInCell.isSelected = false;
         _currentState = CellState.Idle;
-        selectedInd.SetActive(false);
-        
-        GridManager.OnDeselect?.Invoke(this);
+        cellState_Idle.SetActive(true); 
+    }
+    public void SetCellAsHover()
+    {
+        _currentState = CellState.Hover;
+        cellState_Hover.SetActive(true);
     }
 
     private void ClearCell()
     {
-        _currentState = CellState.Idle;
-        selectedInd.SetActive(false);
+        cellState_Hover.SetActive(false);
+        cellState_Selected.SetActive(false);
+        cellState_Path.SetActive(false);
+        cellState_Walkable.SetActive(false);
         
-        pathInd.SetActive(false);
-        walkableInd.SetActive(false);
+        SetCellAsIdle();
     }
 }

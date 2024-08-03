@@ -102,7 +102,7 @@ public class PlayableEntity : BaseEntity
 
     private IEnumerator Move(Cell cellToMove)
     {
-        var path = GridManager.Instance.GetPath(currentCell, cellToMove);
+        var path = GridController.GetPath(currentCell, cellToMove);
 
         foreach (var cell in path)
         {

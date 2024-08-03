@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3109732218205696783}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &543128550
 SpriteRenderer:
@@ -114,7 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3109732218205696783}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &915832993
 SpriteRenderer:
@@ -284,10 +284,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3109732217836230907}
-  - {fileID: 3598805095341366036}
-  - {fileID: 7705221544380583187}
   - {fileID: 543128549}
   - {fileID: 915832992}
+  - {fileID: 7705221544380583187}
+  - {fileID: 3598805095341366036}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -381,11 +381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df87c8777ece98689bafa30d3fce0ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellState_Idle: {fileID: 3109732217836230906}
+  cellState_Hover: {fileID: 543128548}
+  cellState_Selected: {fileID: 915832991}
+  cellState_Walkable: {fileID: 7218007323282046288}
+  cellState_Path: {fileID: 3124207330013408867}
   _entityInCell: {fileID: 0}
-  hoveredInd: {fileID: 543128548}
-  selectedInd: {fileID: 915832991}
-  walkableInd: {fileID: 7218007323282046288}
-  pathInd: {fileID: 3124207330013408867}
   previousCell: {fileID: 0}
   gCost: 0
   hCost: 0
@@ -420,7 +421,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3109732218205696783}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5461587700582709247
 SpriteRenderer:
@@ -504,7 +505,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3109732218205696783}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1510178283535649430
 SpriteRenderer:
