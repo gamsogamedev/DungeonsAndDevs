@@ -8,11 +8,9 @@ public enum EntityType
     Hostile
 } 
 
-[CreateAssetMenu(menuName = "Entity/New Entity", fileName = "Entity")]
 public class ScriptableEntity : ScriptableObject
 {
     public EntityType entityType;
     public BaseEntity entityPrefab;
-    
     
 }

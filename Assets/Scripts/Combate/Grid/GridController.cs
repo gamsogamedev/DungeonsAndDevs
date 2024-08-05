@@ -44,7 +44,39 @@ public class GridController
 
         cellsInRadius.Remove(center);
         return cellsInRadius;
-    }    
+    }
+
+    public static List<Cell> GetLine(Cell center, int range, Vector2Int direction)
+    {
+        List<Cell> cells = new List<Cell>();
+        if (range <= 0) return null;
+
+        var lineCenter = center.cellCoord;
+
+        for (int i = 0; i < range; i++) 
+        { 
+            var cellCoord = lineCenter + (direction * i);
+            if (cellCoord.x < 0 || cellCoord.x > grid.GetGridDimensions().x) continue;
+            if (cellCoord.y < 0 || cellCoord.y > grid.GetGridDimensions().y) continue;
+            
+            cells.Add(grid.getCellAtCoord(cellCoord.x, cellCoord.y));
+        }
+        
+        return cells;
+    }
+    
+    public static List<Cell> GetCross(Cell center, int range)
+    {
+        List<Cell> cells = new List<Cell>();
+        if (range <= 0) return null;
+        
+        cells.AddRange(GetLine(center, range, Vector2Int.up));
+        cells.AddRange(GetLine(center, range, Vector2Int.right));
+        cells.AddRange(GetLine(center, range, Vector2Int.down));
+        cells.AddRange(GetLine(center, range, Vector2Int.left));
+        
+        return cells;
+    }
     
     #region Pathfinding
     public static List<Cell> GetPath(Cell startPoint, Cell finishPoint)

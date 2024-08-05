@@ -77,28 +77,7 @@ public class PlayableEntity : BaseEntity
         isSelected = !isSelected;
     }
     
-    public override void MoveTowards(Cell cellToMove)
-    {
-        // var path = GridManager.Instance.GetPath(currentCell, cellToMove);
-        //
-        // foreach (var cell in path)
-        // {
-        //     Debug.Log(cell.name);
-        //     var moveSequence = DOTween.Sequence();
-        //     moveSequence.AppendCallback(() => transform.SetParent(cell.transform));
-        //     moveSequence.Append(transform.DOLocalMove(Vector3.zero, .2f));
-        //     moveSequence.AppendCallback(delegate
-        //     {
-        //         currentCell = cell;
-        //         cell._entityInCell = this;
-        //         currentMovement--;
-        //     });
-        // }
-        //
-        // OnEntityMove?.Invoke();
-
-        StartCoroutine(Move(cellToMove));
-    }
+    public override void MoveTowards(Cell cellToMove) => StartCoroutine(Move(cellToMove));
 
     private IEnumerator Move(Cell cellToMove)
     {
