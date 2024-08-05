@@ -67,8 +67,8 @@ public class GridController
 
             foreach(Cell neighbor in GetRadius(currentCell, 1))
             {
-                if(closedList.Contains(neighbor)) continue;
-                if (!neighbor._canBeWalked) continue;
+                if (closedList.Contains(neighbor)) continue;
+                if (!neighbor._currentState.HasFlag(CellState.Walkable)) continue;
                 
                 
                 var newGcost = currentCell.gCost + 1;

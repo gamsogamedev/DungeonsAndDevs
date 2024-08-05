@@ -61,7 +61,10 @@ public class GridManager : MonoBehaviour
     {
         _activeCell?.SetCellAsIdle();
         _activeCell = cell;
+        
+        _activeCell.CellDeselected.AddListener(() => _activeCell = null);
     }
+    
     
     public void ShowRadius(Cell center, int radius)
     {
