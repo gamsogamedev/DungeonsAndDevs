@@ -8,9 +8,19 @@ public enum EntityType
     Hostile
 } 
 
-public class ScriptableEntity : ScriptableObject
+public abstract class ScriptableEntity : ScriptableObject
 {
-    public EntityType entityType;
     public BaseEntity entityPrefab;
+
+    public string entityName;
+    public EntityType entityType;
+
+    public abstract ScriptableEntity_Playable ToPlayable(); 
+    //public abstract HostileEntity ToHostile();
     
+    public virtual void GenerateEntity()
+    {
+        var entity = Instantiate(entityPrefab);
+        entity.InitializeEntity(this);
+    }
 }

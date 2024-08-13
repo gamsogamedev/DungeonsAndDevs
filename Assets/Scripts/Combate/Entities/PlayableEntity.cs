@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class PlayableEntity : BaseEntity
 {
+    public new ScriptableEntity_Playable EntityInfo => base.EntityInfo.ToPlayable();
+
+    //public ScriptableEntity_Playable testeEntity;
+    
     // TODO -- stat de destreza influencia o range de movimento
     private Vector3 positionBeforeDrag;
     private bool isDragging, dragEnabled;
@@ -17,7 +21,6 @@ public class PlayableEntity : BaseEntity
         positionBeforeDrag = transform.position;
         
         ResetMovement();
-        
         EntitySelected.AddListener(SelectEntity);
         OnEntityMove.AddListener(() => isSelected = false); // Refactor this later (won't work for multiple entities)
     }
@@ -76,9 +79,9 @@ public class PlayableEntity : BaseEntity
         if (!isSelected) CombatManager.OnEntitySelected?.Invoke(this);
         isSelected = !isSelected;
     }
-    
-    public override void MoveTowards(Cell cellToMove) => StartCoroutine(Move(cellToMove));
 
+    public override void MoveTowards(Cell cellToMove) => StartCoroutine(Move(cellToMove));
+    
     private IEnumerator Move(Cell cellToMove)
     {
         var path = GridController.GetPath(currentCell, cellToMove);

@@ -28,16 +28,22 @@ public class CombatAction
     [AllowNesting, OnValueChanged(nameof(EditAction))] public ActionType actionType = ActionType.None;
     [SerializeReference] public ICombatAction action;
 
-    public void ExecuteAction() => action.ExecuteAction();
+    public void ExecuteAction(ITarget target) => action.ExecuteAction(target);
+
+    public List<Cell> PreviewRange(Cell center) => action.PreviewRange(center);
 }
 
 [System.Serializable]
 public class ICombatAction
 {
-    public static readonly UnityEvent StepComplete = new UnityEvent();
-
-    public virtual void ExecuteAction()
+    public static readonly UnityEvent OnActionComplete = new();
+    public virtual void ExecuteAction(ITarget target)
     {
-        StepComplete?.Invoke();
+        OnActionComplete?.Invoke();
+    }
+
+    public virtual List<Cell> PreviewRange(Cell center)
+    {
+        return new List<Cell>();
     }
 }

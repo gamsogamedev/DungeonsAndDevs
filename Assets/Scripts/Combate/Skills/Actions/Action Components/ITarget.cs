@@ -45,6 +45,9 @@ public class CellTarget : ITarget
 {
     public Cell target;
 
+    public CellTarget() => target = null;
+    public CellTarget(Cell cell) => target = cell; 
+    
     public override Cell GetCell() => target;
     public override BaseEntity GetEntity() => target._entityInCell;
 }
@@ -52,6 +55,9 @@ public class CellTarget : ITarget
 public class EntityTarget : ITarget
 {
     public BaseEntity target;
+
+    public EntityTarget() => target = null;
+    public EntityTarget(BaseEntity entity) => target = entity;
     
     public override Cell GetCell() => target.currentCell;
     public override BaseEntity GetEntity() => target;

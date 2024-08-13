@@ -6,7 +6,7 @@ using UnityEngine;
 public class GridController
 {
     private static GridManager grid;
-    public static void SetGrid(GridManager manager) => grid = manager; 
+    public static void SetGrid(GridManager manager) => grid = manager;
     
     public static List<Cell> GetRadius(Cell center, int radius)
     {
@@ -43,7 +43,7 @@ public class GridController
         }
 
         cellsInRadius.Remove(center);
-        return cellsInRadius;
+        return cellsInRadius.Distinct().ToList();
     }
 
     public static List<Cell> GetLine(Cell center, int range, Vector2Int direction)
@@ -53,8 +53,8 @@ public class GridController
 
         var lineCenter = center.cellCoord;
 
-        for (int i = 0; i < range; i++) 
-        { 
+        for (int i = 1; i <= range; i++) 
+        {
             var cellCoord = lineCenter + (direction * i);
             if (cellCoord.x < 0 || cellCoord.x > grid.GetGridDimensions().x) continue;
             if (cellCoord.y < 0 || cellCoord.y > grid.GetGridDimensions().y) continue;
@@ -92,7 +92,17 @@ public class GridController
             Cell currentCell = openList.OrderBy(node => node.fCost).First();
 
             if (currentCell == finishPoint)
-                return RetrievePath(finishPoint);
+            {
+                var path = RetrievePath(finishPoint);
+                
+                var cellsRead = new List<Cell>();
+                cellsRead.AddRange(openList);
+                cellsRead.AddRange(closedList);
+                foreach (var c in cellsRead) 
+                    c.ClearPath();
+                
+                return path;
+            }
 
             openList.Remove(currentCell);
             closedList.Add(currentCell);

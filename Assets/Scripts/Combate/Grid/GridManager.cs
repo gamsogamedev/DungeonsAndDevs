@@ -66,7 +66,7 @@ public class GridManager : MonoBehaviour
     }
     
     
-    public void ShowRadius(Cell center, int radius)
+    public static void ShowRadiusAsWalkable(Cell center, int radius)
     {
         var cellInRadius = GridController.GetRadius(center, radius);
         if (cellInRadius is null || !cellInRadius.Any()) return;
@@ -74,6 +74,28 @@ public class GridManager : MonoBehaviour
         foreach (var cell in cellInRadius)
         {
             cell.SetCellAsWalkable();
+        }
+    }
+
+    public static void ShowRadiusAsRange(Cell center, Range range)
+    {
+        var cellInRadius = range.GetRange(center);
+        if (cellInRadius is null || !cellInRadius.Any()) return;
+        
+        foreach (var cell in cellInRadius)
+        {
+            cell.SetCellAsRange();
+        }
+    }
+    
+    public static void ShowRadiusAsPreview(Cell center, int radius)
+    {
+        var cellInRadius = GridController.GetRadius(center, radius);
+        if (cellInRadius is null || !cellInRadius.Any()) return;
+        
+        foreach (var cell in cellInRadius)
+        {
+            cell.SetCellAsTarget();
         }
     }
 }

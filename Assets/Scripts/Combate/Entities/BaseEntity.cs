@@ -9,9 +9,9 @@ using UnityEngine.Serialization;
 public abstract class BaseEntity : MonoBehaviour
 {
     // ------ BASIC INFO
-    [Foldout("--- Base Info ---")] public string entityName;
-    [Foldout("--- Base Info ---")] public EntityType entityType;
-    
+    public ScriptableEntity EntityInfo; // { get; set; }
+    public void InitializeEntity(ScriptableEntity entityInfo) => EntityInfo = entityInfo;
+        
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
     [HideInInspector] public bool isSelected;
@@ -27,5 +27,4 @@ public abstract class BaseEntity : MonoBehaviour
     public abstract void MoveTowards(Cell cellToMove);
 
     public void ResetMovement() => currentMovement = movementRange;
-
 }

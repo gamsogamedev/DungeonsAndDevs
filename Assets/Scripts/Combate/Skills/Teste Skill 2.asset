@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6c1283828e7986ba15af30cf54842d, type: 3}
+  m_Name: Teste Skill 2
+  m_EditorClassIdentifier: 
+  skillName: Bola de dano 2
+  skillIcon: {fileID: 0}
+  skillActions:
+  - actionDescription: Da 10 de dano
+    actionType: 1
+    action:
+      rid: 1059906237440196616
+  skillRange:
+    rangeType: 1
+    range:
+      rid: 1059906430684889089
+  cooldownTime: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 1059906237440196616
+      type: {class: DamageAction, ns: , asm: Assembly-CSharp}
+      data:
+        areaOfEffect:
+          rangeType: 3
+          range:
+            rid: 1059906272979058688
+        damage: 10
+    - rid: 1059906272979058688
+      type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
+      data:
+        range: 1
+    - rid: 1059906430684889089
+      type: {class: Range_Line, ns: , asm: Assembly-CSharp}
+      data:
+        range: 3
+        direction: {x: 1, y: 0}

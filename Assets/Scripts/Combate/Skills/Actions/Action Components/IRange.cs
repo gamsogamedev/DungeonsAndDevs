@@ -48,7 +48,7 @@ public class IRange
 [System.Serializable]
 public class Range_Line : IRange
 {
-    [Dropdown(nameof(GetVectorValues))] public Vector2Int direction;
+    [Dropdown(nameof(GetVectorValues)), AllowNesting] public Vector2Int direction;
     private DropdownList<Vector2Int> GetVectorValues()
     {
         return new DropdownList<Vector2Int>()
