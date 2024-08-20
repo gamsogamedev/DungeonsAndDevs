@@ -9,8 +9,7 @@ using UnityEngine.Serialization;
 public abstract class BaseEntity : MonoBehaviour
 {
     // ------ BASIC INFO
-    public ScriptableEntity EntityInfo; // { get; set; }
-    public void InitializeEntity(ScriptableEntity entityInfo) => EntityInfo = entityInfo;
+    public ScriptableEntity EntityInfo; // { get; protected set; }
         
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
@@ -23,8 +22,13 @@ public abstract class BaseEntity : MonoBehaviour
     // ------- EVENTS
     public readonly UnityEvent EntitySelected = new();
     public static readonly UnityEvent OnEntityMove = new();
-
+    
+    // ------- MOVEMENT
     public abstract void MoveTowards(Cell cellToMove);
-
     public void ResetMovement() => currentMovement = movementRange;
+}
+
+public interface IEntity
+{
+    void InitializeEntity(ScriptableEntity entityInfo);
 }

@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[System.Serializable]
-public class DamageAction : ICombatAction
+public class HealAction : ICombatAction
 {
     public Range areaOfEffect;
     
-    public float damage;
+    public float heal;
     
     public Cell ExecuteAction(BaseEntity caster, Cell target)
     {
@@ -18,7 +16,7 @@ public class DamageAction : ICombatAction
         
         foreach (var cell in aoe)
         {
-            Debug.Log($"Aplicando {damage} de dano em {cell.name}");
+            Debug.Log($"Aplicando {heal} de cura em {cell.name}");
             if ((entity = cell._entityInCell) is not null)
             {
                 // Deal Damage Here

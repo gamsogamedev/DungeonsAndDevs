@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76f4bff29441ac5180153209f35177a, type: 3}
   m_Name: Playable
   m_EditorClassIdentifier: 
-  entityPrefab: {fileID: 0}
-  entityName: Teste
+  entityName: Jogador Teste
   entityType: 0
   skill1: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
   skill2: {fileID: 11400000, guid: cb8c05088e35f42d0befeea7f0b6de42, type: 2}

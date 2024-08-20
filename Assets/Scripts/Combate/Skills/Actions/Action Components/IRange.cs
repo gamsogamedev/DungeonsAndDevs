@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public enum RangeType
 {
     None,
+    Self,
     Line,
     Cross,
     Radius
@@ -43,6 +44,15 @@ public class IRange
     public int range;
     
     public virtual List<Cell> GetRange(Cell center) =>  null;
+}
+
+[System.Serializable]
+public class Range_Single : IRange
+{
+    public override List<Cell> GetRange(Cell center)
+    {
+        return new List<Cell>() {center};
+    }
 }
 
 [System.Serializable]

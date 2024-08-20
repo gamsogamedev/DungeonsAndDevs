@@ -7,14 +7,16 @@ using UnityEngine.Events;
 public enum ActionType
 {
     None,
-    Damage
+    Damage,
+    Heal,
+    Move,
+    Desloc
 }
 
 [System.Serializable]
 public class CombatAction
 {
     public string actionDescription;
-
     public void EditAction()
     {
         switch (actionType)
@@ -23,27 +25,33 @@ public class CombatAction
             case ActionType.Damage:
                 action = new DamageAction();
                 break;
+            case ActionType.Heal:
+                action = new HealAction();
+                break;
+            case ActionType.Move:
+                action = new MoveAction();
+                break;
+            case ActionType.Desloc:
+                action = new DeslocAction();
+                break;
         }
     }
     [AllowNesting, OnValueChanged(nameof(EditAction))] public ActionType actionType = ActionType.None;
     [SerializeReference] public ICombatAction action;
-
-    public void ExecuteAction(ITarget target) => action.ExecuteAction(target);
-
+    
+    // ----- EVENTOS
+    public static readonly UnityEvent<Cell> OnActionComplete = new();
+    
+    public void ExecuteAction(BaseEntity caster, Cell target)
+    {
+        Cell nextTarget = action.ExecuteAction(caster, target);
+        OnActionComplete?.Invoke(nextTarget);
+    }
     public List<Cell> PreviewRange(Cell center) => action.PreviewRange(center);
 }
 
-[System.Serializable]
-public class ICombatAction
+public interface ICombatAction
 {
-    public static readonly UnityEvent OnActionComplete = new();
-    public virtual void ExecuteAction(ITarget target)
-    {
-        OnActionComplete?.Invoke();
-    }
-
-    public virtual List<Cell> PreviewRange(Cell center)
-    {
-        return new List<Cell>();
-    }
+    Cell ExecuteAction(BaseEntity caster, Cell target);
+    List<Cell> PreviewRange(Cell center);
 }

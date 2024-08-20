@@ -16,19 +16,19 @@ public class PlayableHUD : MonoBehaviour
         public Image icon;
         public Image cooldownOverlay;
 
-        public void SetupVisual(ScriptableSkill skill)
+        public void SetupVisual(Skill skill)
         {
-            icon.sprite = skill.skillIcon;
+            icon.sprite = skill.skillInfo.skillIcon;
             cooldownOverlay.fillAmount = 0;
             
             button.onClick.AddListener(() => skill.OnSkillSelected?.Invoke());
         }
     }
     
-    [SerializeField] private SkillVisual skill1;
-    [SerializeField] private SkillVisual skill2;
-    [SerializeField] private SkillVisual skill3;
-    [SerializeField] private SkillVisual skill4;
+    [FormerlySerializedAs("skill1")] [SerializeField] private SkillVisual skill1Visual;
+    [FormerlySerializedAs("skill2")] [SerializeField] private SkillVisual skill2Visual;
+    [FormerlySerializedAs("skill3")] [SerializeField] private SkillVisual skill3Visual;
+    [FormerlySerializedAs("skill4")] [SerializeField] private SkillVisual skill4Visual;
 
     private void Start()
     {
@@ -38,19 +38,23 @@ public class PlayableHUD : MonoBehaviour
     private void UpdateHUD(BaseEntity entity)
     {
         // TEMPORARY !!!
-        if (CombatManager.Instance.currentStage != CombatState.PlayerAttack) return;
-        
-        var playableEntity = entity.EntityInfo.ToPlayable();
-        if (playableEntity.entityType != EntityType.Playable)
+        if (CombatManager.Instance.currentStage != CombatState.PlayerAttack)
         {
             HideUI();
             return;
         }
         
-        skill1.SetupVisual(playableEntity.skill1);
-        skill2.SetupVisual(playableEntity.skill2);
-        skill3.SetupVisual(playableEntity.skill3);
-        skill4.SetupVisual(playableEntity.skill4);
+        if (entity.EntityInfo.entityType != EntityType.Playable)
+        {
+            HideUI();
+            return;
+        }
+        
+        var playableEntity = (PlayableEntity) entity;
+        skill1Visual.SetupVisual(playableEntity.skill1);
+        skill2Visual.SetupVisual(playableEntity.skill2);
+        skill3Visual.SetupVisual(playableEntity.skill3);
+        skill4Visual.SetupVisual(playableEntity.skill4);
         ShowUI();
     }
 

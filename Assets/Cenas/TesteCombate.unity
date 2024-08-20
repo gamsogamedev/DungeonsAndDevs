@@ -2016,6 +2016,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2c40536c00551a5858fe44001cb7aa10, type: 2}
     - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
+      propertyPath: PlayableInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c40536c00551a5858fe44001cb7aa10, type: 2}
+    - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
       propertyPath: movementRange
       value: 3
       objectReference: {fileID: 0}

@@ -14,16 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Bola de dano 1
   skillIcon: {fileID: 0}
+  skillRange:
+    rangeType: 4
+    range:
+      rid: 1059906575392309249
   skillActions:
   - actionDescription: Da 10 de dano
     actionType: 1
     action:
       rid: 1059906237440196616
-  skillRange:
-    rangeType: 1
-    range:
-      rid: 1059906430684889089
-  cooldownTime: 1
   references:
     version: 2
     RefIds:
@@ -39,8 +38,7 @@ MonoBehaviour:
       type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
       data:
         range: 1
-    - rid: 1059906430684889089
-      type: {class: Range_Line, ns: , asm: Assembly-CSharp}
+    - rid: 1059906575392309249
+      type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
       data:
         range: 3
-        direction: {x: 1, y: 0}

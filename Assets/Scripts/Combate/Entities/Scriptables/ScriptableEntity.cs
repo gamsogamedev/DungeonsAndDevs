@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,17 +11,22 @@ public enum EntityType
 
 public abstract class ScriptableEntity : ScriptableObject
 {
-    public BaseEntity entityPrefab;
-
+    [Header("Entity Info")] // ------ Basic Info
     public string entityName;
     public EntityType entityType;
 
-    public abstract ScriptableEntity_Playable ToPlayable(); 
-    //public abstract HostileEntity ToHostile();
+    // ------ Prefab
+    protected BaseEntity entityPrefab;
     
+    // ------ Converters
+    public abstract ScriptableEntity_Playable ToPlayable(); 
+    public abstract ScriptableEntity_Hostile ToHostile();
+    
+    // ------ Instance
+    public BaseEntity EntityInstance { get; private set; }
     public virtual void GenerateEntity()
     {
-        var entity = Instantiate(entityPrefab);
-        entity.InitializeEntity(this);
+        EntityInstance = Instantiate(entityPrefab);
+        
     }
 }

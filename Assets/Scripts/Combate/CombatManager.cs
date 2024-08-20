@@ -17,12 +17,10 @@ public class CombatManager : MonoBehaviour
     public static BaseEntity SelectedEntity;
     public static readonly UnityEvent<BaseEntity> OnEntitySelected = new();
 
-    public static ScriptableSkill SelectedSkill;
+    public static Skill SelectedSkill;
 
     private void Awake() => Instance = this;
     
-    // private Image cooldownOverlay;
-
     private void Start()
     {
         OnEntitySelected.AddListener(SelectEntity);
@@ -32,30 +30,29 @@ public class CombatManager : MonoBehaviour
     private void SelectEntity(BaseEntity entity)
     {
         SelectedEntity = entity;
-        
-        var playableEntity = SelectedEntity.EntityInfo.ToPlayable();
-        //var hostileEntity = SelectedEntity.EntityInfo.To
-        
+
+        PlayableEntity playable = (PlayableEntity) SelectedEntity;
+         
         switch (currentStage)
         {
-            case CombatState.PlayerWalk when playableEntity is not null:
+            case CombatState.PlayerWalk:
                 GridManager.ShowRadiusAsWalkable(SelectedEntity.currentCell, SelectedEntity.currentMovement);
                 break;
-            case CombatState.PlayerAttack when playableEntity is not null:
+            case CombatState.PlayerAttack:
                 Debug.Log($"Setting up {SelectedEntity.gameObject.name}'s skills");
-                playableEntity.skill1.OnSkillSelected.AddListener(() => SetupSkill(playableEntity.skill1));
-                playableEntity.skill2.OnSkillSelected.AddListener(() => SetupSkill(playableEntity.skill2));
-                playableEntity.skill3.OnSkillSelected.AddListener(() => SetupSkill(playableEntity.skill3));
-                playableEntity.skill4.OnSkillSelected.AddListener(() => SetupSkill(playableEntity.skill4));
+                playable.skill1.OnSkillSelected.AddListener(() => SetupSkill(playable.skill1));
+                playable.skill2.OnSkillSelected.AddListener(() => SetupSkill(playable.skill2));
+                playable.skill3.OnSkillSelected.AddListener(() => SetupSkill(playable.skill3));
+                playable.skill4.OnSkillSelected.AddListener(() => SetupSkill(playable.skill4));
                 break;
         }
     }
 
-    private void SetupSkill(ScriptableSkill skill)
+    private void SetupSkill(Skill skill)
     {
         SelectedSkill = skill;
         
-        SelectedSkill.OnSkillUse.AddListener((cell) => SelectedSkill.CastSkill(new CellTarget(cell)));
+        SelectedSkill.OnSkillUse.AddListener((cell) => SelectedSkill.CastSkill(cell));
         SelectedSkill.OnSkillComplete.AddListener(delegate
         {
             GridManager.GridClear?.Invoke();
@@ -66,7 +63,7 @@ public class CombatManager : MonoBehaviour
             SelectedSkill = null;
         });
         
-        GridManager.ShowRadiusAsRange(SelectedEntity.currentCell, skill.skillRange);
+        GridManager.ShowRadiusAsRange(SelectedEntity.currentCell, skill.SkillRange);
     }
     
     private void ClearSelectedEntity(Cell selectedCell)
