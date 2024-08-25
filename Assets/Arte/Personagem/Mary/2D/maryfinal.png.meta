@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c66ea10ffe3f9842a786251fcc5751b
+guid: 215c4d37a2aff5748a8616b729da79af
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,22 +117,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerBase_2D_0
+      name: maryfinal_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 15
-        width: 881
-        height: 1470
+        x: 218
+        y: 134
+        width: 601
+        height: 1239
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e259b9fe30bf41f9b7c6d5ddda096f
-      internalID: -854613324
+      spriteID: d7af6382866095e98803c057089a29a6
+      internalID: -389104783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maryfinal_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1368
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db358e5fe2164d3acad8847bc6ce9684
+      internalID: -497647273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maryfinal_2
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1368
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b2baffda8f67ff28f20ac0678adab0
+      internalID: 540859546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maryfinal_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1372
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a4bfda5fc7005e8a785d8ec1c6d5e8
+      internalID: 1433121130
       vertices: []
       indices: 
       edges: []
@@ -148,8 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerBase_2D_1: 1401363620
-      PlayerBase_2D_0: -854613324
+      maryfinal_1: -497647273
+      maryfinal_0: -389104783
+      maryfinal_2: 540859546
+      maryfinal_3: 1433121130
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

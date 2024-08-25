@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c66ea10ffe3f9842a786251fcc5751b
+guid: 31e7c010b0f435549850af880d9fe2f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerBase_2D_0
+      name: ganso2idlesheet_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 15
-        width: 881
-        height: 1470
+        x: 0
+        y: 0
+        width: 801
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e259b9fe30bf41f9b7c6d5ddda096f
-      internalID: -854613324
+      spriteID: 21962982752761b43aed2ea783f2c2ba
+      internalID: 173122122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ganso2idlesheet_1
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 0
+        width: 793
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a820cd237986de43a6460acb1033281
+      internalID: -502365894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ganso2idlesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 801
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9f2590eaa7dd44ba9fecf4dd3bb4a3
+      internalID: 1502108828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ganso2idlesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 800
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b96018c4cc883844afa902a79b64ad0
+      internalID: 1483350754
       vertices: []
       indices: 
       edges: []
@@ -148,8 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerBase_2D_1: 1401363620
-      PlayerBase_2D_0: -854613324
+      ganso2idlesheet_3: 1483350754
+      ganso2idlesheet_0: 173122122
+      ganso2idlesheet_1: -502365894
+      ganso2idlesheet_2: 1502108828
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
