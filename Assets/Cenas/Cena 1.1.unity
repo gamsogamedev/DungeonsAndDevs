@@ -11440,10 +11440,10 @@ PrefabInstance:
     - target: {fileID: 3687916146468212444, guid: 4331493beec69bce6b61e24eea9e6649, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      objectReference: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
     - target: {fileID: 3687916146468212445, guid: 4331493beec69bce6b61e24eea9e6649, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 647.25
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3687916146468212445, guid: 4331493beec69bce6b61e24eea9e6649, type: 3}
       propertyPath: m_LocalScale.x
