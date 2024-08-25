@@ -34,8 +34,6 @@ public class Skill
     /// <param name="target"></param>
     public void CastSkill(Cell target)
     {
-        skillTarget = target;
-        
         actionsToDo = new Queue<CombatAction>();
         foreach (var action in skillInfo.skillActions)
         {
@@ -43,7 +41,7 @@ public class Skill
         }
         
         CombatAction.OnActionComplete.AddListener(UpdateTarget);
-        ProccessAction();
+        UpdateTarget(target);
     }
 
     private void UpdateTarget(Cell newTarget)

@@ -100,13 +100,28 @@ public class PlayableEntity : BaseEntity, IEntity
         isSelected = !isSelected;
     }
 
-    public override void MoveTowards(Cell cellToMove) => StartCoroutine(Move(cellToMove));
+    public override void MoveTowards(Cell cellToMove, bool blink = false) 
+    {
+        if (blink)
+        {
+            var moveSequence = DOTween.Sequence();
+            moveSequence.AppendCallback(() => transform.SetParent(cellToMove.transform));
+            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .5f));
+            moveSequence.AppendCallback(delegate
+            {
+                currentCell = cellToMove;
+                cellToMove._entityInCell = this;
+                currentMovement--;
+            });
+            return;
+        }
+        StartCoroutine(Move(cellToMove));
+    }
     
     private IEnumerator Move(Cell cellToMove)
     {
         Debug.Log(cellToMove);
         var path = GridController.GetPath(currentCell, cellToMove);
-        
         foreach (var cell in path)
         {
             var moveSequence = DOTween.Sequence();

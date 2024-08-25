@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -53,7 +54,6 @@ public class Cell : MonoBehaviour
         GridManager.OnSelect.AddListener((x) => ResetState(CellState.Walkable));
         GridManager.GridClear.AddListener(SetCellAsIdle);
         BaseEntity.OnEntityMove.AddListener(ResetPathing);
-
         
         ResetPathing();
         SetCellAsIdle();
@@ -130,7 +130,6 @@ public class Cell : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        
         if (_entityInCell is not null)
         {
             GridManager.GridClear?.Invoke();
@@ -208,5 +207,28 @@ public class Cell : MonoBehaviour
         ResetState(CellState.Path);
         previousCell = null;
         gCost = Int32.MaxValue;
+    }
+
+    
+    // VISUALS -------------------------------------------------------------------------------------------
+    [Space(10), SerializeField] private Animator fxAnimator;
+    public void ActivateVisual(AnimatorOverrideController skillVisual, bool play, int rotation = 0)
+    {
+        if (!play) return;
+
+        fxAnimator.gameObject.SetActive(true);
+        fxAnimator.transform.Rotate(Vector3.forward, rotation);
+        
+        fxAnimator.runtimeAnimatorController = skillVisual;
+        fxAnimator.Play("_FX");
+        
+        Invoke(nameof(ResetVisual), .5f);
+    }
+
+    public void ResetVisual()
+    {
+        fxAnimator.runtimeAnimatorController = null;
+        fxAnimator.transform.rotation = Quaternion.identity;
+        fxAnimator.gameObject.SetActive(false);
     }
 }

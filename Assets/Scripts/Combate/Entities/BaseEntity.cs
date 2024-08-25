@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -24,7 +25,7 @@ public abstract class BaseEntity : MonoBehaviour
     public static readonly UnityEvent OnEntityMove = new();
     
     // ------- MOVEMENT
-    public abstract void MoveTowards(Cell cellToMove);
+    public abstract void MoveTowards(Cell cellToMove, bool blink = false);
     public void ResetMovement() => currentMovement = movementRange;
 }
 

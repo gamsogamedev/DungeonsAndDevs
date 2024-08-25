@@ -41,10 +41,16 @@ public class GridManager : MonoBehaviour
             for (var y = 0; y < height; y++)
             {
                 var cell = Instantiate(cellPrefab, new Vector3(x, y), Quaternion.identity, this.transform);
+                
                 cell.name = $"Cell {x} {y}";
                 cell.InitCell(x, y);
-                
                 _coordToCell.Add(cell.cellCoord, cell);
+                
+                var cellBounds = cell.GetComponent<SpriteRenderer>().sprite.bounds.size;
+                var cellPos = new Vector3(x * (cellBounds.x - (cellBounds.x - cellBounds.y) * .8f) * cell.transform.localScale.x, 
+                                    y * cellBounds.y * cell.transform.localScale.y);
+                cell.transform.position = cellPos;
+                cell.transform.position += (Vector3.right * y * (cellBounds.x / 4.7f) * cell.transform.localScale.x);
             }
         }
 
@@ -54,7 +60,7 @@ public class GridManager : MonoBehaviour
             return;
         }
             
-        Camera.main.transform.position = new Vector3((width / 2f) - 0.5f, (height / 2f) - 1.5f, -10);
+        Camera.main.transform.position = new Vector3((width / 2f) + .7f, (height / 2f) - 1.5f, -10);
     }
 
     private void SetActiveCell(Cell cell) 

@@ -63,6 +63,7 @@ public class CombatManager : MonoBehaviour
             SelectedSkill = null;
         });
         
+        GridManager.GridClear?.Invoke();
         GridManager.ShowRadiusAsRange(SelectedEntity.currentCell, skill.SkillRange);
     }
     

@@ -19,7 +19,7 @@ public class MoveAction : ICombatAction
         }
 
         if (cellToMove != caster.currentCell)
-            caster.MoveTowards(cellToMove);
+            caster.MoveTowards(cellToMove, blink: true);
 
         return cellToMove;
     }

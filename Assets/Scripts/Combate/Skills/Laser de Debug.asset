@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6c1283828e7986ba15af30cf54842d, type: 3}
+  m_Name: Laser de Debug
+  m_EditorClassIdentifier: 
+  skillName: Laser de debug
+  skillIcon: {fileID: 21300000, guid: 968c7d6af52c34dfd9da28dd6079fcee, type: 3}
+  skillRange:
+    rangeType: 3
+    range:
+      rid: 1059906688252641280
+  skillActions:
+  - actionDescription: Da 10 de dano
+    actionType: 1
+    action:
+      rid: 1059906237440196616
+  references:
+    version: 2
+    RefIds:
+    - rid: 1059906237440196616
+      type: {class: DamageAction, ns: , asm: Assembly-CSharp}
+      data:
+        areaOfEffect:
+          rangeType: 1
+          range:
+            rid: 1059906688252641286
+        damage: 10
+        useDirection: 1
+        collides: 1
+        skillVisuals:
+          singleCellFX: {fileID: 0}
+          manyCellFX_midway: {fileID: 22100000, guid: 397ad6dce79c83c08beba5a9662188f2, type: 2}
+          manyCellFX_nearTarget: {fileID: 22100000, guid: cbe948eccdc5ba7c6b82f1ccaa4346db, type: 2}
+          manyCellFX_nearCaster: {fileID: 22100000, guid: 0f646d8b6c528d04db878bdeb852b884, type: 2}
+          entityCasterFX: {fileID: 0}
+          entityTargetFX: {fileID: 0}
+    - rid: 1059906688252641280
+      type: {class: Range_Cross, ns: , asm: Assembly-CSharp}
+      data:
+        range: 5
+    - rid: 1059906688252641286
+      type: {class: Range_Single, ns: , asm: Assembly-CSharp}
+      data:
+        range: 1

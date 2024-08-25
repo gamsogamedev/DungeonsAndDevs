@@ -7,42 +7,52 @@ public class GridController
 {
     private static GridManager grid;
     public static void SetGrid(GridManager manager) => grid = manager;
+
+    public static List<Cell> GetRing(Cell center, int radius)
+    {
+        List<Cell> cellsInRing = new List<Cell>();
+        if (radius < 0) return cellsInRing;
+
+        var ringCenter = center.cellCoord;
+        for (var j = 0; j <= radius; j++)
+        {
+            var coordXPositive = ringCenter.x + j;
+            var coordYPositive = ringCenter.y + (radius - j);
+            var coordXNegative = ringCenter.x - j;
+            var coordYNegative = ringCenter.y - (radius - j);
+
+            var validXPositive = coordXPositive < grid.GetGridDimensions().x;
+            var validYPositive = coordYPositive < grid.GetGridDimensions().y;
+            var validXNegative = coordXNegative >= 0;
+            var validYNegative = coordYNegative >= 0;
+
+            if (validXPositive && validYPositive)
+                cellsInRing.Add(grid.getCellAtCoord(coordXPositive, coordYPositive));
+                
+            if(validXNegative && validYPositive) 
+                cellsInRing.Add(grid.getCellAtCoord(coordXNegative, coordYPositive));
+
+            if (validXPositive && validYNegative) 
+                cellsInRing.Add(grid.getCellAtCoord(coordXPositive, coordYNegative));
+
+            if (validXNegative && validYNegative) 
+                cellsInRing.Add(grid.getCellAtCoord(coordXNegative, coordYNegative));
+        }
+        
+        return cellsInRing.Distinct().ToList();
+    }
     
     public static List<Cell> GetRadius(Cell center, int radius)
     {
         List<Cell> cellsInRadius = new List<Cell>();
-        if (radius <= 0) return null;
+        if (radius < 0) return cellsInRadius;
         
         var radiusCenter = center.cellCoord;
         for (var i = 0; i <= radius; i++)
         {
-            for (var j = 0; j <= i; j++)
-            {
-                var coordXPositive = radiusCenter.x + j;
-                var coordYPositive = radiusCenter.y + (i - j);
-                var coordXNegative = radiusCenter.x - j;
-                var coordYNegative = radiusCenter.y - (i - j);
-
-                var validXPositive = coordXPositive < grid.GetGridDimensions().x;
-                var validYPositive = coordYPositive < grid.GetGridDimensions().y;
-                var validXNegative = coordXNegative >= 0;
-                var validYNegative = coordYNegative >= 0;
-
-                if (validXPositive && validYPositive)
-                    cellsInRadius.Add(grid.getCellAtCoord(coordXPositive, coordYPositive));
-                
-                if(validXNegative && validYPositive) 
-                    cellsInRadius.Add(grid.getCellAtCoord(coordXNegative, coordYPositive));
-
-                if (validXPositive && validYNegative) 
-                    cellsInRadius.Add(grid.getCellAtCoord(coordXPositive, coordYNegative));
-
-                if (validXNegative && validYNegative) 
-                    cellsInRadius.Add(grid.getCellAtCoord(coordXNegative, coordYNegative));
-            }
+            cellsInRadius.AddRange(GetRing(center, i));
         }
-
-        cellsInRadius.Remove(center);
+        
         return cellsInRadius.Distinct().ToList();
     }
 
@@ -50,14 +60,14 @@ public class GridController
     {
         List<Cell> cells = new List<Cell>();
         if (range <= 0) return null;
-
+        
         var lineCenter = center.cellCoord;
 
         for (int i = 1; i <= range; i++) 
         {
             var cellCoord = lineCenter + (direction * i);
-            if (cellCoord.x < 0 || cellCoord.x > grid.GetGridDimensions().x) continue;
-            if (cellCoord.y < 0 || cellCoord.y > grid.GetGridDimensions().y) continue;
+            if (cellCoord.x < 0 || cellCoord.x > grid.GetGridDimensions().x - 1) continue;
+            if (cellCoord.y < 0 || cellCoord.y > grid.GetGridDimensions().y - 1) continue;
             
             cells.Add(grid.getCellAtCoord(cellCoord.x, cellCoord.y));
         }
@@ -77,9 +87,14 @@ public class GridController
         
         return cells;
     }
+
+    public static Cell GetNeighbor(Cell center, Vector2Int neighborDirection)
+    {
+        return GetLine(center, 1, neighborDirection)[0];
+    }
     
     #region Pathfinding
-    public static List<Cell> GetPath(Cell startPoint, Cell finishPoint)
+    public static List<Cell> GetPath(Cell startPoint, Cell finishPoint, CellState stateFilter = CellState.Walkable)
     {
         var openList = new List<Cell> { startPoint };
         var closedList = new List<Cell>();
@@ -110,7 +125,7 @@ public class GridController
             foreach(Cell neighbor in GetRadius(currentCell, 1))
             {
                 if (closedList.Contains(neighbor)) continue;
-                if (!neighbor._currentState.HasFlag(CellState.Walkable)) continue;
+                if (!neighbor._currentState.HasFlag(stateFilter)) continue;
                 
                 
                 var newGcost = currentCell.gCost + 1;

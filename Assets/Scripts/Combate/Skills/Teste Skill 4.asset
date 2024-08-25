@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: Teste Skill 4
   m_EditorClassIdentifier: 
   skillName: Bola de dano 4
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: 84445264929eb15ae9fa43b25ad6d997, type: 3}
+  skillRange:
+    rangeType: 1
+    range:
+      rid: 1059906430684889089
   skillActions:
   - actionDescription: Da 10 de dano
     actionType: 1
     action:
       rid: 1059906237440196616
-  skillRange:
-    rangeType: 1
-    range:
-      rid: 1059906430684889089
-  cooldownTime: 1
   references:
     version: 2
     RefIds:

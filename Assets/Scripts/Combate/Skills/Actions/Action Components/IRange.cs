@@ -21,6 +21,9 @@ public class Range
         switch (rangeType)
         {
             default:
+            case RangeType.Self:
+                range = new Range_Single();
+                break;
             case RangeType.Line:
                 range = new Range_Line();
                 break;
