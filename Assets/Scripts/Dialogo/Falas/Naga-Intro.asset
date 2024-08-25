@@ -107,7 +107,7 @@ MonoBehaviour:
       textLine:
         textLine: ...GAMAS?
         whosTalking: Player
-        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
+        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:

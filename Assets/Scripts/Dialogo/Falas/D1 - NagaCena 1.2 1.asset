@@ -914,7 +914,8 @@ MonoBehaviour:
       textLine:
         textLine: "Vou deixar voc\xEA dar uma volta por a\xED. Aqui tem um mapa.
           Temos \xE1reas de Arte, Game Design, Som e Programa\xE7\xE3o. Quando decidir
-          onde vai "
+          onde vai querer trabalhar, \xE9 s\xF3 dar um toque l\xE1 na minha sala.
+          Entendido?"
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:

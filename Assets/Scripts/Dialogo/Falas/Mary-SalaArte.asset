@@ -52,8 +52,8 @@ MonoBehaviour:
           choiceText: 
           jumpToIndex: 0
         choiceC:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: Ir embora
+          jumpToIndex: 2
         choiceD:
           choiceText: 
           jumpToIndex: 0
@@ -156,13 +156,13 @@ MonoBehaviour:
         choiceDescription: 
         choiceA:
           choiceText: O Daniboy?
-          jumpToIndex: 4
+          jumpToIndex: 3
         choiceB:
           choiceText: Ir embora
-          jumpToIndex: 3
+          jumpToIndex: 2
         choiceC:
           choiceText: O Naga?
-          jumpToIndex: 5
+          jumpToIndex: 4
         choiceD:
           choiceText: 
           jumpToIndex: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
       textLine:
         textLine: O Ast?
         whosTalking: Player
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:
@@ -387,7 +387,7 @@ MonoBehaviour:
         textLine: Depois que viemos parar aqui, o Naga tretou com ele. O que, certo,
           a culpa foi toda do Ast mesmo.
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:
@@ -504,10 +504,10 @@ MonoBehaviour:
         choiceDescription: 
         choiceA:
           choiceText: Quer ajuda?
-          jumpToIndex: 6
+          jumpToIndex: 5
         choiceB:
           choiceText: Ir embora
-          jumpToIndex: 3
+          jumpToIndex: 2
         choiceC:
           choiceText: 
           jumpToIndex: 0

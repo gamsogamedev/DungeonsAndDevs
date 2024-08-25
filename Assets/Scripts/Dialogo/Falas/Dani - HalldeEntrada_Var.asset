@@ -258,8 +258,7 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "Eu poderia ajudar ela, mas eu estou fazendo um trabalho mais importante.
-          Voc\xEA nunca entenderia\u2026ta, sabe? S\xF3 que ultimamente ela tem sido
-          mais um faz-tudo. "
+          Voc\xEA nunca entenderia\u2026"
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
