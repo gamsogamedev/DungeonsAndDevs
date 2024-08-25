@@ -349,7 +349,7 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "Mas n\xE3o fala isso pra ele. Eu t\xF4 assim de conseguir a minha
-          pr\xF3pria sala.\r\n"
+          pr\xF3pria sala."
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -593,29 +593,7 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "N\xF3s, da Gamso, somos devs que criaram essa realidade na qual
-          voc\xEA vive. Mas algo deu errado."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Um dia, testando o jogo, l\xE1 no mundo exterior, alguma coisa
-          aconteceu e fomos sugados. E c\xE1 temos estado desde ent\xE3o."
+          voc\xEA vive. Mas algo deu errado. Fomos sugados pra c\xE1. "
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -725,30 +703,9 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "E um dos nossos membros, o Ast, era\u2026 am\u2026 o nosso\u2026
-          cocheiro. \r\n"
+        textLine: "E o Ast, am\u2026 o nosso\u2026 cocheiro, ele perdeu\u2026 a chave
+          da nossa\u2026 carro\xE7a."
         whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "E a\xED ele perdeu\u2026 a chave da nossa\u2026 carro\xE7a.\r\n"
-        whosTalking: Daniel
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}

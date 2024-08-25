@@ -381,7 +381,7 @@ MonoBehaviour:
       textLine:
         textLine: ....
         whosTalking: Player
-        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
+        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -509,7 +509,7 @@ MonoBehaviour:
       textLine:
         textLine: "Am\u2026que- an?"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -551,7 +551,7 @@ MonoBehaviour:
       textLine:
         textLine: "Pera, que? Pra que voc\xEA me chamou?"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -616,7 +616,7 @@ MonoBehaviour:
           ningu\xE9m aqui pra formatar os computadores, limpar os banheiros, alimentar
           o- aquilo\u2026. "
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -659,7 +659,7 @@ MonoBehaviour:
         textLine: "Eu assustei. Tava trocando uma l\xE2mpada agora! Voc\xEA sabe
           o quanto isso foi perigoso?"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -701,7 +701,7 @@ MonoBehaviour:
       textLine:
         textLine: "Naga, voc\xEA trouxe outro NPC? Denovo?"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -744,7 +744,7 @@ MonoBehaviour:
         textLine: "Voc\xEA sabe que eles s\xE3o completamente incompetentes n\xE9?
           Sem ofensa. "
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -765,7 +765,7 @@ MonoBehaviour:
       textLine:
         textLine: ...
         whosTalking: Player
-        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
+        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -808,7 +808,7 @@ MonoBehaviour:
       textLine:
         textLine: "Naga. \xC9 um NPC. Eles nem conseguem pensar por si mesmos.\r\n"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -851,7 +851,7 @@ MonoBehaviour:
         textLine: "T\xE1. Quer saber? Fa\xE7am o que voc\xEAs quiserem a\xED. Eu
           vou voltar pra l\xE1. Tanta coisa\u2026 tanta coisa\u2026"
         whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:

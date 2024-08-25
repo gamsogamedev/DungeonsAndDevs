@@ -70,10 +70,10 @@ MonoBehaviour:
           jumpToIndex: 1
         choiceB:
           choiceText: Artista
-          jumpToIndex: 0
+          jumpToIndex: 2
         choiceC:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: OIA O GAMSO
+          jumpToIndex: 3
         choiceD:
           choiceText: 
           jumpToIndex: 0
@@ -128,6 +128,92 @@ MonoBehaviour:
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: e17f8e518a087dd4c9eef9bc61ed8a2b, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Artistas combinam suas habilidades para liberar efeitos poderosos.
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 2
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: bb2d24b43e3ecdb459b192a13f301ac0, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 2
+      textLine:
+        textLine: Artistas combinam suas habilidades para liberar efeitos poderosos.
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
