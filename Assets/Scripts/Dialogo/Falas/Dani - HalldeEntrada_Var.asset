@@ -10,141 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
-  m_Name: D1 - NagaCena 1.2 1
+  m_Name: Dani - HalldeEntrada_Var
   m_EditorClassIdentifier: 
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Bem-Vindo, [INSERIR NOME DO PLAYER AQUI]. Esta \xE9 a<title>sala#1<title>."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Aquele \xE9 o personagem \u201CDaniboy\u201D [classe: Roteirista].\r\n"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: "Aquele \xE9 o personagem \u201CDaniboy\u201D [classe: Roteirista].\r\n"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: dea6bd31ecf21de4e94317f6f13ca5fa, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: ...
-        whosTalking: 
-        whosTalkingIcon: {fileID: 0}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Que?? Que t\xE1 acontecendo?\n"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Dito isso, explore a <title>guilda gamso<title> e me encontre na
-          <title>sala#5<title>.
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "N\xE3o, pera\xED, esses di\xE1logos est\xE3o muito estranhos.
-          Me deixa arrumar."
+        textLine: "Ah, voc\xEA t\xE1 aqui ainda? O que voc\xEA quer? N\xE3o v\xEA
+          que eu to ocupado?"
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -152,7 +25,7 @@ MonoBehaviour:
       choiceInfo:
         choiceDescription: 
         choiceA:
-          choiceText: 
+          choiceText: Como assim NPC?
           jumpToIndex: 0
         choiceB:
           choiceText: 
@@ -163,372 +36,33 @@ MonoBehaviour:
         choiceD:
           choiceText: 
           jumpToIndex: 0
-    - type: 0
+    - type: 1
       textLine:
-        textLine: TEXTO ATUALIZADO
-        whosTalking: Sistema
-        whosTalkingIcon: {fileID: 0}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Meu Deus do c\xE9u. Eu n\xE3o aguentava mais. Parecia que essa
-          parte do roteiro nem tinha sido escrita direito ainda."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "\u2026\r\n"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Daniel, voc\xEA tinha terminado o roteiro da introdu\xE7\xE3o\u2026
-          n\xE3o?"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "\u2026bom mas eu consertei agora, n\xE3o??"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: ...
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: eu-
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Voc\xEA sabe que eu nunca vou te dar aquela sala, n\xE9?"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Eu sei\u2026"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "ENFIM! Como eu ia dizendo, bem-vindo \xE0 GAMSO! A desenvolvedora
-          de jogos mais famosa do vale. Como voc\xEA deve ter visto por a\xED, estamos
-          contratando. Voc\xEA se interessa por alguma \xE1rea espec\xEDfica? "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: ....
-        whosTalking: Player
-        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Sem problemas! Temos muitas op\xE7\xF5es de trabalho (quatro).
-          S\xF3 n\xE3o temos muitos funcion\xE1rios no pr\xE9dio hoje. S\xF3 o Daniboy
-          al\xED e Mary, que deve estar por a\xED reparando alguma coisa.  "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Quer que eu traga ela pra c\xE1? "
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "N\xE3o, n\xE3o preci-"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: OH MARYYY!!
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: Falow
+        textLine: "Ah, voc\xEA t\xE1 aqui ainda? O que voc\xEA quer? N\xE3o v\xEA
+          que eu to ocupado?"
         whosTalking: Daniel
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: b1fffbab22e5a9548977744ae507ae09, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Am\u2026que- an?"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: Como assim NPC?
+          jumpToIndex: 1
         choiceB:
           choiceText: 
           jumpToIndex: 0
         choiceC:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: "T\xE1 bom, n\xE3o precisa ser grosso."
+          jumpToIndex: 2
         choiceD:
           choiceText: 
           jumpToIndex: 0
+  - dialogueBlock:
     - type: 0
       textLine:
-        textLine: Olha ela aqui.
+        textLine: "*Suspiro, n\xE3o acredito que vou ter que explicar isso pra um
+          NPC. "
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -549,9 +83,10 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Pera, que? Pra que voc\xEA me chamou?"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        textLine: "Olha s\xF3, voc\xEA n\xE3o existe. Sabe livre arb\xEDtrio? Voc\xEA
+          n\xE3o tem isso."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -570,7 +105,229 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "O Naga queria que voc\xEA viesse aqui se apresentar."
+        textLine: "Tal qual como ningu\xE9m nesse lugar tem. Exceto n\xF3s, os Devs. 
+          \r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: 'Nossa. Como eu sinto falta de conversar com pessoas de verdade. '
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: 'Nossa. Como eu sinto falta de conversar com pessoas de verdade. '
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: E a Mary?
+          jumpToIndex: 3
+        choiceB:
+          choiceText: Ir embora
+          jumpToIndex: 2
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: ...
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "A Mary? Ah ela \xE9 uma chata. "
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Desde que todo mundo vazou ela ficou sem ningu\xE9m pra mandar.
+          Despirocou completamente. "
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ela \xE9 uma artista, sabe? S\xF3 que ultimamente ela tem sido
+          mais um faz-tudo. "
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Eu poderia ajudar ela, mas eu estou fazendo um trabalho mais importante.
+          Voc\xEA nunca entenderia\u2026ta, sabe? S\xF3 que ultimamente ela tem sido
+          mais um faz-tudo. "
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: "Ela \xE9 uma artiEu poderia ajudar ela, mas eu estou fazendo um
+          trabalho mais importante. Voc\xEA nunca entenderia\u2026ta, sabe? S\xF3
+          que ultimamente ela tem sido mais um faz-tudo. "
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: E o Naga?
+          jumpToIndex: 4
+        choiceB:
+          choiceText: Ir embora
+          jumpToIndex: 2
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "O Naga? Esse t\xE1 mais preocupado em arranjar novos lacai\u2026
+          oper\xE1r\u2026 esc\u2026 membros."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ao inv\xE9s de recuperar os que ele j\xE1 perdeu, parece que ele
+          est\xE1 s\xF3 ignorando tudo e focando em moldar novas pessoas. "
         whosTalking: Daniel
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -591,51 +348,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Eu literalmente n\xE3o-"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Voc\xEAs tem no\xE7\xE3o o quanto eu estou ocupada?? N\xE3o tem
-          ningu\xE9m aqui pra formatar os computadores, limpar os banheiros, alimentar
-          o- aquilo\u2026. "
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mary\u2026"
+        textLine: "Mas n\xE3o fala isso pra ele. Eu t\xF4 assim de conseguir a minha
+          pr\xF3pria sala.\r\n"
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -656,29 +370,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Eu assustei. Tava trocando uma l\xE2mpada agora! Voc\xEA sabe
-          o quanto isso foi perigoso?"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mary\u2026 olha ali, n\xF3s temos visita."
+        textLine: Tenho certeza que se eu terminar esse roteiro ele vai ficar orgulhoso
+          de mim.
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -697,203 +390,34 @@ MonoBehaviour:
         choiceD:
           choiceText: 
           jumpToIndex: 0
-    - type: 0
+    - type: 1
       textLine:
-        textLine: "Naga, voc\xEA trouxe outro NPC? Denovo?"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Esse \xE9 diferente!"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Voc\xEA sabe que eles s\xE3o completamente incompetentes n\xE9?
-          Sem ofensa. "
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: ...
-        whosTalking: Player
-        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Eu tenho certeza que se eu ensinar direitinho, eles podem ser
-          \xFAteis! E n\xE3o \xE9 como se estiv\xE9ssemos com EXCESSO de contingente. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Naga. \xC9 um NPC. Eles nem conseguem pensar por si mesmos.\r\n"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mas eles s\xE3o t\xE3o obedientes\u2026"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "T\xE1. Quer saber? Fa\xE7am o que voc\xEAs quiserem a\xED. Eu
-          vou voltar pra l\xE1. Tanta coisa\u2026 tanta coisa\u2026"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: Falow
+        textLine: Tenho certeza que se eu terminar esse roteiro ele vai ficar orgulhoso
+          de mim.
         whosTalking: Daniel
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: d69d88fff5ac65646ae21f911bfe7d91, type: 2}
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: Como assim presos?
+          jumpToIndex: 5
         choiceB:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: Ir embora
+          jumpToIndex: 2
         choiceC:
           choiceText: 
           jumpToIndex: 0
         choiceD:
           choiceText: 
           jumpToIndex: 0
+  - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "\u2026Enfim."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "Veja s\xF3, voc\xEA tem duas op\xE7\xF5es."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -912,11 +436,9 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Vou deixar voc\xEA dar uma volta por a\xED. Aqui tem um mapa.
-          Temos \xE1reas de Arte, Game Design, Som e Programa\xE7\xE3o. Quando decidir
-          onde vai "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "*Daniboy pega uma p\xEDlula Azul e uma p\xEDlula Vermelha."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:
@@ -933,13 +455,343 @@ MonoBehaviour:
         choiceD:
           choiceText: 
           jumpToIndex: 0
-    - type: 2
+    - type: 0
       textLine:
-        textLine: "Vou deixar voc\xEA dar uma volta por a\xED. Aqui tem um mapa.
-          Temos \xE1reas de Arte, Game Design, Som e Programa\xE7\xE3o. Quando decidir
-          onde vai "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "Se tomar essa p\xEDlula azul, nada muda. Voc\xEA continua sua
+          vida normal. Eu te dou uma resposta simples, que n\xE3o vai esmigalhar
+          a sua percep\xE7\xE3o de realidade, e voc\xEA pode voltar para o seu cotidiano
+          comum, feliz e ignorante.\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ou, voc\xEA toma essa daqui, e as verdades sobre a vida e o universo
+          se desdobrar\xE3o \xE0 sua vontade. Por\xE9m, pode ser que voc\xEA nunca
+          se recupere."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: "Ou, voc\xEA toma essa daqui, e as verdades sobre a vida e o universo
+          se desdobrar\xE3o \xE0 sua vontade. Por\xE9m, pode ser que voc\xEA nunca
+          se recupere."
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: Pilula Azul
+          jumpToIndex: 7
+        choiceB:
+          choiceText: Pilula Vermelha
+          jumpToIndex: 6
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: :0
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Voc\xEA\u2026 voc\xEA tomou uma decis\xE3o. Hm\u2026 bem, certo."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Sabe tudo que nos rodeia? Essas paredes, papel, a lareira. \xC9
+          tudo falso. Vivemos em uma simula\xE7\xE3o."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "N\xF3s, da Gamso, somos devs que criaram essa realidade na qual
+          voc\xEA vive. Mas algo deu errado."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Um dia, testando o jogo, l\xE1 no mundo exterior, alguma coisa
+          aconteceu e fomos sugados. E c\xE1 temos estado desde ent\xE3o."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "E eu sinto que estou muito perto de entender como sair daqui....
+          \r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "\xC9 isto. Agora pode ter sua crise existencial na sala ali do
+          lado, sim?\r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "Ah. Hm, isso \xE9 decepcionante. Achava que\u2026 Parece que me
+          enganei."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Am\u2026 err\u2026 n\xF3s, da GAMSO viemos de um reino muito muito
+          distante.\r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "E um dos nossos membros, o Ast, era\u2026 am\u2026 o nosso\u2026
+          cocheiro. \r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "E a\xED ele perdeu\u2026 a chave da nossa\u2026 carro\xE7a.\r\n"
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "E agora j\xE1 era, a gente n\xE3o consegue voltar mais. \xC9 isso."
+        whosTalking: Daniel
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: 'Agora defenestre-se daqui. '
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
         cutscene: {fileID: 11400000, guid: 9d936fb23cd838549bb47f6dd0b969ef, type: 2}
       choiceInfo:

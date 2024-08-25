@@ -37,7 +37,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
+        textLine: "Escolha entre as 2 fun\xE7\xF5es o que te interessou mais."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -72,10 +72,10 @@ MonoBehaviour:
           choiceText: Artista
           jumpToIndex: 0
         choiceC:
-          choiceText: GameDesigner
+          choiceText: 
           jumpToIndex: 0
         choiceD:
-          choiceText: "M\xFAsico"
+          choiceText: 
           jumpToIndex: 0
   - dialogueBlock:
     - type: 0

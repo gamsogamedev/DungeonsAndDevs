@@ -16,7 +16,595 @@ MonoBehaviour:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Vaza! T\xF4 ocupada"
+        textLine: "Ai ai ai tanta coisa. As janelas, as estantes, o cofre\u2026 Ah,
+          n\xE3o vi voc\xEA a\xED. O que foi?"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: "Cad\xEA todo mundo?"
+        whosTalking: Player
+        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: "Cad\xEA todo mundo?"
+          jumpToIndex: 1
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: 'Os outros? Nossa, por toda parte. '
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Fulano foi pra (loca\xE7\xE3o x), ciclano foi pra (loca\xE7\xE3o
+          y), o Ast enlouqueceu e foi viver na floresta e n\xE3o tenho nem ideia
+          que aconteceu com beltrano e deltrano."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Em resumo, uma bagun\xE7a. Ningu\xE9m fez sua parte e sobrou tudo
+          pra mim."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: E nada daqueles dois folgados me ajudarem.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: E nada daqueles dois folgados me ajudarem.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: O Daniboy?
+          jumpToIndex: 4
+        choiceB:
+          choiceText: Ir embora
+          jumpToIndex: 3
+        choiceC:
+          choiceText: O Naga?
+          jumpToIndex: 5
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock: []
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: ....
+        whosTalking: 
+        whosTalkingIcon: {fileID: 0}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "O Daniboy? Nossa ele \xE9 o mais folgado de todos."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: Fica o dia inteiro naquele roteiro e nem escreve nada.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ele pensa que vai descobrir uma maneira de tirar a gente daqui.
+          Ha. At\xE9 parece."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ele pensa que vai descobrir uma maneira de tirar a gente daqui.
+          Ha. At\xE9 parece."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: 'O Naga? Nesse nem se fala. '
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Isso sem que ele mova UM DEDO SEQUER pra consertar as rela\xE7\xF5es
+          pessoais que ELE MESMO estragou."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ele nem entende que \xE9 culpa dele que o Ast foi embora."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: O Ast?
+        whosTalking: Player
+        whosTalkingIcon: {fileID: 21300000, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: O Ast era um dos nossos programadores.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: Depois que viemos parar aqui, o Naga tretou com ele. O que, certo,
+          a culpa foi toda do Ast mesmo.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Mas ele tentou consertar as coisas. Ele falou que tinha descoberto
+          uma maneira de reverter a situa\xE7\xE3o. Algo sobre as 7 pe\xE7as do destino."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ele tava meio lel\xE9 das ideias."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "S\xF3 que o Naga s\xF3 ignorou, falando que a gente precisava
+          focar na Guilda, e tals. E ele ignorou tanto que o Ast foi embora. E consigo
+          levou o resto da galera."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "\u2026nossa acho que eu que to lel\xE9, falando tudo isso pra
+          um NPC."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 1
+      textLine:
+        textLine: "\u2026nossa acho que eu que to lel\xE9, falando tudo isso pra
+          um NPC."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: Quer ajuda?
+          jumpToIndex: 6
+        choiceB:
+          choiceText: Ir embora
+          jumpToIndex: 3
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "\u2026A- Ajuda?\u2026 De bom grado? Com as tarefas? O trabalho?"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Nossa\u2026 ningu\xE9m\u2026 ningu\xE9m nunca tinha me oferecido
+          isso."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Mas, voc\xEA \xE9 s\xF3 um NPC. Ser\xE1 que\u2026"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Ah! Quer saber? Voc\xEA n\xE3o vai conseguir fazer direito. N\xE3o
+          ia entender. Devo estar maluca mesmo.  "
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+    - type: 0
+      textLine:
+        textLine: "Vai l\xE1 ver o que o Naga quer. Ai, tanta coisa, tanta coisa\u2026 "
         whosTalking: Mary
         whosTalkingIcon: {fileID: 21300000, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
