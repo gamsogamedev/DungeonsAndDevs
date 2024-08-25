@@ -11,12 +11,13 @@ public class GridManager : MonoBehaviour
     public static GridManager Instance;
     
     [SerializeField, Foldout("--- Grid Creation ---")] private int width, height;
-    [SerializeField, Foldout("--- Grid Creation ---")] private GameObject cellPrefab;
-
-    private Dictionary<Vector2Int, Cell> _coordToCell;
-    private Dictionary<Cell, Vector2Int> _cellToCoord;
+    [SerializeField, Foldout("--- Grid Creation ---")] private Cell cellPrefab;
+    public Vector2Int GetGridDimensions() => new Vector2Int(width, height);
     
-    public Cell _activeCell;
+    private Dictionary<Vector2Int, Cell> _coordToCell;
+    public Cell getCellAtCoord(int x, int y) => _coordToCell[new Vector2Int(x, y)];
+    
+    public Cell _activeCell { get; private set; }
 
     public static readonly UnityEvent<Cell> OnSelect = new(), OnDeselect = new();
     public static readonly UnityEvent GridClear = new();
@@ -26,12 +27,13 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         GenerateGrid();
+        GridController.SetGrid(this);
+        
         OnSelect.AddListener(SetActiveCell);
     }
 
     private void GenerateGrid()
     {
-        _cellToCoord = new Dictionary<Cell, Vector2Int>();
         _coordToCell = new Dictionary<Vector2Int, Cell>();
         
         for (var x = 0; x < width; x++)
@@ -39,14 +41,16 @@ public class GridManager : MonoBehaviour
             for (var y = 0; y < height; y++)
             {
                 var cell = Instantiate(cellPrefab, new Vector3(x, y), Quaternion.identity, this.transform);
-                cell.name = $"Cell {x} {y}";
                 
-                var cellRef = cell.GetComponent<Cell>();
-                cellRef.InitCell();
-
-                var coord = new Vector2Int(x, y);
-                _cellToCoord.Add(cellRef, coord);
-                _coordToCell.Add(coord, cellRef);
+                cell.name = $"Cell {x} {y}";
+                cell.InitCell(x, y);
+                _coordToCell.Add(cell.cellCoord, cell);
+                
+                var cellBounds = cell.GetComponent<SpriteRenderer>().sprite.bounds.size;
+                var cellPos = new Vector3(x * (cellBounds.x - (cellBounds.x - cellBounds.y) * .8f) * cell.transform.localScale.x, 
+                                    y * cellBounds.y * cell.transform.localScale.y);
+                cell.transform.position = cellPos;
+                cell.transform.position += (Vector3.right * y * (cellBounds.x / 4.7f) * cell.transform.localScale.x);
             }
         }
 
@@ -56,130 +60,48 @@ public class GridManager : MonoBehaviour
             return;
         }
             
-        Camera.main.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, -10);
-
-        // USE LATER (MAYBE)
-        // var entities = Resources.LoadAll<ScriptableEntity>("Teste");
-        // foreach (var ent in entities)
-        // {
-        //     Instantiate(ent.entityPrefab);
-        // }
+        Camera.main.transform.position = new Vector3((width / 2f) + .7f, (height / 2f) - 1.5f, -10);
     }
 
     private void SetActiveCell(Cell cell) 
     {
-        _activeCell?.DeselectCell();
+        _activeCell?.SetCellAsIdle();
         _activeCell = cell;
-    }
-
-    private List<Cell> GetRadius(Cell center, int radius)
-    {
-        List<Cell> cellsInRadius = new List<Cell>();
-        if (radius <= 0) return null;
         
-        var radiusCenter = _cellToCoord[center];
-        for (var i = 0; i <= radius; i++)
-        {
-            for (var j = 0; j <= i; j++)
-            {
-                var coordXPositive = radiusCenter.x + j;
-                var coordYPositive = radiusCenter.y + (i - j);
-                var coordXNegative = radiusCenter.x - j;
-                var coordYNegative = radiusCenter.y - (i - j);
-
-                var validXPositive = coordXPositive < width;
-                var validYPositive = coordYPositive < height;
-                var validXNegative = coordXNegative >= 0;
-                var validYNegative = coordYNegative >= 0;
-
-                if (validXPositive && validYPositive)
-                    cellsInRadius.Add(_coordToCell[new (coordXPositive, coordYPositive)]);
-                
-                if(validXNegative && validYPositive) 
-                    cellsInRadius.Add(_coordToCell[new (coordXNegative, coordYPositive)]);
-
-                if (validXPositive && validYNegative) 
-                    cellsInRadius.Add(_coordToCell[new (coordXPositive, coordYNegative)]);
-
-                if (validXNegative && validYNegative) 
-                    cellsInRadius.Add(_coordToCell[new (coordXNegative, coordYNegative)]);
-            }
-        }
-
-        cellsInRadius.Remove(center);
-        return cellsInRadius;
+        _activeCell.CellDeselected.AddListener(() => _activeCell = null);
     }
     
-    public void ShowRadius(Cell center, int radius)
+    
+    public static void ShowRadiusAsWalkable(Cell center, int radius)
     {
-        var cellInRadius = GetRadius(center, radius);
+        var cellInRadius = GridController.GetRadius(center, radius);
         if (cellInRadius is null || !cellInRadius.Any()) return;
         
-        foreach (var cell in GetRadius(center, radius))
+        foreach (var cell in cellInRadius)
         {
-            cell.MarkCellAsWalkable();
+            cell.SetCellAsWalkable();
         }
     }
 
-    #region Pathfinding
-    public List<Cell> GetPath(Cell startPoint, Cell finishPoint)
+    public static void ShowRadiusAsRange(Cell center, Range range)
     {
-        var openList = new List<Cell> { startPoint };
-        var closedList = new List<Cell>();
-                    
-        startPoint.gCost = 0;
-        startPoint.hCost = Distance(startPoint, finishPoint);
-            
-        while(openList.Count > 0)
+        var cellInRadius = range.GetRange(center);
+        if (cellInRadius is null || !cellInRadius.Any()) return;
+        
+        foreach (var cell in cellInRadius)
         {
-            Cell currentCell = openList.OrderBy(node => node.fCost).First();
-
-            if (currentCell == finishPoint)
-                return RetrievePath(finishPoint);
-
-            openList.Remove(currentCell);
-            closedList.Add(currentCell);
-
-            foreach(Cell neighbor in GetRadius(currentCell, 1))
-            {
-                if(closedList.Contains(neighbor)) continue;
-                if (!neighbor._canBeWalked) continue;
-                
-                
-                var newGcost = currentCell.gCost + 1;
-                if (newGcost >= neighbor.gCost) continue;
-
-                neighbor.previousCell = currentCell;
-                neighbor.gCost = newGcost;
-                neighbor.hCost = Distance(neighbor, finishPoint);
-
-                if(!openList.Contains(neighbor))
-                    openList.Add(neighbor);
-            }
+            cell.SetCellAsRange();
         }
-
-        // No path found
-        return null;
     }
     
-    private int Distance(Cell a, Cell b) => Mathf.Abs(_cellToCoord[b].x - _cellToCoord[a].x) + Mathf.Abs(_cellToCoord[b].y - _cellToCoord[a].y);
-    
-    private List<Cell> RetrievePath(Cell finishPoint)
+    public static void ShowRadiusAsPreview(Cell center, int radius)
     {
-        List<Cell> path = new() { finishPoint };
-
-        var currentNode = finishPoint;
-            
-        while(currentNode.previousCell != null)
+        var cellInRadius = GridController.GetRadius(center, radius);
+        if (cellInRadius is null || !cellInRadius.Any()) return;
+        
+        foreach (var cell in cellInRadius)
         {
-            path.Add(currentNode.previousCell);
-            currentNode = currentNode.previousCell;
+            cell.SetCellAsTarget();
         }
-
-        path.Reverse();
-        path.RemoveAt(0);
-        return path;
     }
-
-    #endregion
 }

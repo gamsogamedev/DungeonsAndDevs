@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -9,9 +10,8 @@ using UnityEngine.Serialization;
 public abstract class BaseEntity : MonoBehaviour
 {
     // ------ BASIC INFO
-    [Foldout("--- Base Info ---")] public string entityName;
-    [Foldout("--- Base Info ---")] public EntityType entityType;
-    
+    public ScriptableEntity EntityInfo; // { get; protected set; }
+        
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
     [HideInInspector] public bool isSelected;
@@ -23,9 +23,13 @@ public abstract class BaseEntity : MonoBehaviour
     // ------- EVENTS
     public readonly UnityEvent EntitySelected = new();
     public static readonly UnityEvent OnEntityMove = new();
-
-    public abstract void MoveTowards(Cell cellToMove);
-
+    
+    // ------- MOVEMENT
+    public abstract void MoveTowards(Cell cellToMove, bool blink = false);
     public void ResetMovement() => currentMovement = movementRange;
+}
 
+public interface IEntity
+{
+    void InitializeEntity(ScriptableEntity entityInfo);
 }

@@ -3,9 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PlayableEntity : BaseEntity
+public class PlayableEntity : BaseEntity, IEntity
 {
+    public ScriptableEntity_Playable PlayableInfo;
+
+    public Skill skill1 { get; private set; }
+    public Skill skill2 { get; private set; }
+    public Skill skill3 { get; private set; }
+    public Skill skill4 { get; private set; }
+
+    public void InitializeEntity(ScriptableEntity entityInfo)
+    {
+        EntityInfo = entityInfo;
+        PlayableInfo = entityInfo.ToPlayable();
+        
+        skill1 = new Skill(PlayableInfo.skill1, this);
+        skill2 = new Skill(PlayableInfo.skill2, this);
+        skill3 = new Skill(PlayableInfo.skill3, this);
+        skill4 = new Skill(PlayableInfo.skill4, this);
+    }
+
+    private void OnEnable()
+    {
+        InitializeEntity(PlayableInfo);
+    }
+
     // TODO -- stat de destreza influencia o range de movimento
     private Vector3 positionBeforeDrag;
     private bool isDragging, dragEnabled;
@@ -17,7 +41,6 @@ public class PlayableEntity : BaseEntity
         positionBeforeDrag = transform.position;
         
         ResetMovement();
-        
         EntitySelected.AddListener(SelectEntity);
         OnEntityMove.AddListener(() => isSelected = false); // Refactor this later (won't work for multiple entities)
     }
@@ -76,34 +99,29 @@ public class PlayableEntity : BaseEntity
         if (!isSelected) CombatManager.OnEntitySelected?.Invoke(this);
         isSelected = !isSelected;
     }
-    
-    public override void MoveTowards(Cell cellToMove)
-    {
-        // var path = GridManager.Instance.GetPath(currentCell, cellToMove);
-        //
-        // foreach (var cell in path)
-        // {
-        //     Debug.Log(cell.name);
-        //     var moveSequence = DOTween.Sequence();
-        //     moveSequence.AppendCallback(() => transform.SetParent(cell.transform));
-        //     moveSequence.Append(transform.DOLocalMove(Vector3.zero, .2f));
-        //     moveSequence.AppendCallback(delegate
-        //     {
-        //         currentCell = cell;
-        //         cell._entityInCell = this;
-        //         currentMovement--;
-        //     });
-        // }
-        //
-        // OnEntityMove?.Invoke();
 
+    public override void MoveTowards(Cell cellToMove, bool blink = false) 
+    {
+        if (blink)
+        {
+            var moveSequence = DOTween.Sequence();
+            moveSequence.AppendCallback(() => transform.SetParent(cellToMove.transform));
+            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .5f));
+            moveSequence.AppendCallback(delegate
+            {
+                currentCell = cellToMove;
+                cellToMove._entityInCell = this;
+                currentMovement--;
+            });
+            return;
+        }
         StartCoroutine(Move(cellToMove));
     }
-
+    
     private IEnumerator Move(Cell cellToMove)
     {
-        var path = GridManager.Instance.GetPath(currentCell, cellToMove);
-
+        Debug.Log(cellToMove);
+        var path = GridController.GetPath(currentCell, cellToMove);
         foreach (var cell in path)
         {
             var moveSequence = DOTween.Sequence();
