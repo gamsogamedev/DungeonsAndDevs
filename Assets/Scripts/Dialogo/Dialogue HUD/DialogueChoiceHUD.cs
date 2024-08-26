@@ -83,8 +83,13 @@ public class DialogueChoiceHUD : MonoBehaviour
         }
     }
 
-    private void CallJump(MyChoiceInfo.Choice choice)
+    private void CallJump(MyChoiceInfo.Choice buttonChoice)
     {
-        DialogueManager.OnNextDialogueBlock?.Invoke(choice.jumpToIndex);
+        if (buttonChoice.updatesWorld)
+        {
+            GameManager.UpdateWorldState?.Invoke(buttonChoice.update);
+        }
+        
+        DialogueManager.OnNextDialogueBlock?.Invoke(buttonChoice.jumpToIndex);
     }
 }

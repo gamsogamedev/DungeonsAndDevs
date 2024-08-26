@@ -4,6 +4,15 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
+public enum PlayableClass
+{
+    None,
+    Programador,
+    Artista,
+    GameDesigner,
+    Musico
+}
+
 [CreateAssetMenu(menuName = "Entity/New Playable", fileName = "Playable")]
 public class ScriptableEntity_Playable : ScriptableEntity
 {
@@ -15,6 +24,8 @@ public class ScriptableEntity_Playable : ScriptableEntity
         ((PlayableEntity)EntityInstance).InitializeEntity(this);
     }
 
+    [Header("Classe")] 
+    public PlayableClass classe;
 
     [Header("Skills")]
     [Expandable] public ScriptableSkill skill1;

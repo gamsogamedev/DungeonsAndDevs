@@ -25,6 +25,13 @@ public class DialogueEvent
 public class DialogueBlock
 {
     [AllowNesting] public List<DialogueEvent> dialogueBlock;
+
+    [Space(5)]
+    public bool overrideJump;
+    [ShowIf(nameof(overrideJump)), AllowNesting] public int jumpToBlock;
+
+    public bool updatesWorld;
+    [ShowIf(nameof(updatesWorld)), AllowNesting] public WorldUpdate update;
 }
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/New Dialogue")]

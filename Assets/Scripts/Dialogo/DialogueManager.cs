@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public static readonly ChoiceInfoEvent OnChoiceEvent = new();
 
     private ScriptableDialogue _currentDialogue;
+    private DialogueBlock _currentDialogueBlock;
 
     private void Awake()
     {
@@ -41,12 +42,17 @@ public class DialogueManager : MonoBehaviour
     
     public void LoadBlock(int blockIdx)
     {
-        var curBlock = _currentDialogue.dialogueBlocks[blockIdx];
+        _currentDialogueBlock = _currentDialogue.dialogueBlocks[blockIdx];
         
         _dialogueQueue = new();
-        foreach (var dio in curBlock.dialogueBlock) {
+        foreach (var dio in _currentDialogueBlock.dialogueBlock) {
             _dialogueQueue.Enqueue(dio);
             if (dio.type == DialogueEvent.DialogueEventType.Choice) break;
+        }
+
+        if (_currentDialogueBlock.updatesWorld)
+        { 
+            GameManager.UpdateWorldState?.Invoke(_currentDialogueBlock.update);
         }
         
         ProcessDialogue();
@@ -56,6 +62,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (_dialogueQueue.Count == 0)
         {
+            if (_currentDialogueBlock.overrideJump)
+            {
+                OnNextDialogueBlock?.Invoke(_currentDialogueBlock.jumpToBlock);
+            }
+            
             OnFinishDialogue?.Invoke();
             return;
         }

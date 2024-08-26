@@ -26,15 +26,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
         textLine: "Escolha entre as 2 fun\xE7\xF5es o que te interessou mais."
@@ -47,15 +63,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 1
       textLine:
         textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
@@ -68,15 +100,37 @@ MonoBehaviour:
         choiceA:
           choiceText: Programador
           jumpToIndex: 1
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: Artista
           jumpToIndex: 2
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: OIA O GAMSO
           jumpToIndex: 3
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 1
+    update:
+      nodeName: AAA
+      nodeValue: AAA
   - dialogueBlock:
     - type: 0
       textLine:
@@ -91,15 +145,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
         textLine: "Suas habilidades ser\xE3o as seguintes:"
@@ -112,15 +182,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 2
       textLine:
         textLine: "Suas habilidades ser\xE3o as seguintes:"
@@ -133,15 +219,37 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
   - dialogueBlock:
     - type: 0
       textLine:
@@ -155,15 +263,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
         textLine: "Suas habilidades ser\xE3o as seguintes:"
@@ -176,15 +300,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 2
       textLine:
         textLine: "Suas habilidades ser\xE3o as seguintes:"
@@ -197,15 +337,37 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
   - dialogueBlock:
     - type: 2
       textLine:
@@ -219,12 +381,34 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
