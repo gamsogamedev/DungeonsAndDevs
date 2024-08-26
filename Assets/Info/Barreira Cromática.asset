@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6c1283828e7986ba15af30cf54842d, type: 3}
+  m_Name: "Barreira Crom\xE1tica"
+  m_EditorClassIdentifier: 
+  skillName: Barreira Cromatica
+  skillIcon: {fileID: 21300000, guid: 67a37a5d8ff4587438bb7d1ad6bdb882, type: 3}
+  skillRange:
+    rangeType: 4
+    range:
+      rid: 8992942474979704851
+  skillActions:
+  - actionDescription: Dano
+    actionType: 1
+    action:
+      rid: 8992942474979704859
+  references:
+    version: 2
+    RefIds:
+    - rid: 8992942474979704851
+      type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
+      data:
+        range: 1
+    - rid: 8992942474979704859
+      type: {class: DamageAction, ns: , asm: Assembly-CSharp}
+      data:
+        areaOfEffect:
+          rangeType: 4
+          range:
+            rid: 8992942474979704860
+        damage: 5
+        useDirection: 0
+        collides: 0
+        skillVisuals:
+          singleCellFX: {fileID: 0}
+          manyCellFX_midway: {fileID: 0}
+          manyCellFX_nearTarget: {fileID: 0}
+          manyCellFX_nearCaster: {fileID: 0}
+          entityCasterFX: {fileID: 0}
+          entityTargetFX: {fileID: 0}
+    - rid: 8992942474979704860
+      type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
+      data:
+        range: 1
