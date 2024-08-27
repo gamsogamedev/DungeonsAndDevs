@@ -4,26 +4,26 @@ using UnityEngine.SceneManagement;
 public class Fases : MonoBehaviour
 {
     public string sceneToLoad;
-    private void Start()
-{
-    Debug.Log("Script SceneTransition está ativo.");
-}
 
-    private void OnCollisionEnter(Collision collision)
-{
-    Debug.Log("Algo colidiu com a porta.");
-}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+
+        if (other.CompareTag("Player"))
+        {
+            LoadScene();
+        }
+        
+    }
 
     private void LoadScene()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
-        {
-            Debug.Log("Carregando a cena: " + sceneToLoad);
+        {          
             SceneManager.LoadScene(sceneToLoad);
         }
-        else
-        {
-            Debug.LogError("Nome da cena não especificado.");
-        }
+       
     }
+    public void Play() => SceneManager.LoadScene(sceneToLoad);
+    public void Exit() => Application.Quit();
 }

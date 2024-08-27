@@ -913,9 +913,9 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "Vou deixar voc\xEA dar uma volta por a\xED. Aqui tem um mapa.
-          Temos \xE1reas de Arte, Game Design, Som e Programa\xE7Explore um pouco
-          a Guilda, e quando terminar venha at\xE9 a sala do Game Design para eu
-          te testar."
+          Temos \xE1reas de Arte, Game Design, Som e Programa\xE7\xE3o. Explore um
+          pouco a Guilda, e quando terminar venha at\xE9 a sala do Game Design para
+          eu te testar."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:

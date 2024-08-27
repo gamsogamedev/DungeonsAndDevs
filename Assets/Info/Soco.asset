@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Soco
   m_EditorClassIdentifier: 
   skillName: Soco
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: 66f2472a473280d46a53b9506e9fe402, type: 3}
   skillRange:
     rangeType: 4
     range:
@@ -41,12 +41,12 @@ MonoBehaviour:
         useDirection: 0
         collides: 0
         skillVisuals:
-          singleCellFX: {fileID: 0}
-          manyCellFX_midway: {fileID: 0}
-          manyCellFX_nearTarget: {fileID: 0}
-          manyCellFX_nearCaster: {fileID: 0}
-          entityCasterFX: {fileID: 0}
-          entityTargetFX: {fileID: 0}
+          singleCellFX: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          manyCellFX_midway: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          manyCellFX_nearTarget: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          manyCellFX_nearCaster: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          entityCasterFX: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          entityTargetFX: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
     - rid: 8992942474979704845
       type: {class: Range_Single, ns: , asm: Assembly-CSharp}
       data:
