@@ -24,7 +24,7 @@ public abstract class BaseEntity : MonoBehaviour
     public readonly UnityEvent EntitySelected = new();
     public static readonly UnityEvent OnEntityMove = new();
     
-    // ------- MOVEMENT
+    // ------- MOVEMENTt
     public abstract void MoveTowards(Cell cellToMove, bool blink = false);
     public void ResetMovement() => currentMovement = movementRange;
 }

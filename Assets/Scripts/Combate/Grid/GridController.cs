@@ -164,4 +164,26 @@ public class GridController
     }
 
     #endregion
+
+    #region Auxiliar
+
+    public static List<BaseEntity> GetEntitiesOnGrid()
+    {
+        var entities = new List<BaseEntity>();
+        var dim = grid.GetGridDimensions();
+        
+        for (var x = 0; x < dim.x; x++)
+        {
+            for (var y = 0; y < dim.y; y++)
+            {
+                var cellAt = grid.getCellAtCoord(x, y);
+                if (cellAt._entityInCell is not null) 
+                    entities.Add(cellAt._entityInCell);
+            }
+        }
+        
+        return entities;
+    }
+
+    #endregion
 }
