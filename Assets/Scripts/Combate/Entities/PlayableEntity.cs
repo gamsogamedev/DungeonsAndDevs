@@ -33,14 +33,6 @@ public class PlayableEntity : BaseEntity, IEntity
     private void Start()
     {
         ResetMovement();
-        EntitySelected.AddListener(SelectEntity);
-        OnEntityMove.AddListener(() => isSelected = false); // Refactor this later (won't work for multiple entities)
-    }
-    
-    private void SelectEntity()
-    {
-        if (!isSelected) CombatManager.EnableMovement?.Invoke(this);
-        isSelected = !isSelected;
     }
 
     public override void MoveTowards(Cell cellToMove, bool blink = false) 
@@ -79,6 +71,6 @@ public class PlayableEntity : BaseEntity, IEntity
             yield return new WaitForSeconds(0.25f);
         }
         
-        OnEntityMove?.Invoke();
+        OnEntityMoved?.Invoke();
     }
 }

@@ -17,7 +17,6 @@ public class Skill
     
     // ----- Eventos
     public readonly UnityEvent
-        OnSkillSelected = new(),
         OnSkillComplete = new();
     public readonly UnityEvent<Cell>
         OnSkillUse = new();
@@ -26,6 +25,17 @@ public class Skill
     {
         skillInfo = skillConfig;
         skillCaster = caster;
+    }
+
+    public void SetupSkill()
+    {
+        OnSkillUse.AddListener(CastSkill);
+        OnSkillComplete.AddListener(delegate
+        {
+            GridManager.ClearGrid();
+            OnSkillUse?.RemoveAllListeners();
+            OnSkillComplete?.RemoveAllListeners();
+        });
     }
     
     /// <summary>

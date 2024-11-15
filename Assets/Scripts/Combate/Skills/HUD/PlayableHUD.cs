@@ -21,11 +21,10 @@ public class PlayableHUD : MonoBehaviour
             icon.sprite = skill.skillInfo.skillIcon;
             cooldownOverlay.fillAmount = 0;
             
-            button.onClick.AddListener(() => skill.OnSkillSelected?.Invoke());
+            button.onClick.AddListener(() => CombatManager.SetAttackStage(skill));
             
             // This is probs not good
             button.interactable = true;
-            CombatManager.CastComplete.AddListener(() => button.interactable = false);
         }
     }
     
@@ -33,6 +32,8 @@ public class PlayableHUD : MonoBehaviour
     [FormerlySerializedAs("skill2")] [SerializeField] private SkillVisual skill2Visual;
     [FormerlySerializedAs("skill3")] [SerializeField] private SkillVisual skill3Visual;
     [FormerlySerializedAs("skill4")] [SerializeField] private SkillVisual skill4Visual;
+    [Space(5)] 
+    [SerializeField] private Button movementButton;
     [Space(10)] 
     [SerializeField] private Button endTurnButton;
 
@@ -40,7 +41,6 @@ public class PlayableHUD : MonoBehaviour
     {
         HideUI();
         CombatManager.OnEntityTurn.AddListener(UpdateHUD);
-        
         endTurnButton.onClick.AddListener(() => CombatManager.Instance.NextTurn());
     }
 
@@ -59,15 +59,14 @@ public class PlayableHUD : MonoBehaviour
             return;
         }
         
+        movementButton.onClick.AddListener(() => CombatManager.SetMovementStage(entity));
+        
         var playableEntity = (PlayableEntity) entity;
         skill1Visual.SetupVisual(playableEntity.skill1);
         skill2Visual.SetupVisual(playableEntity.skill2);
         skill3Visual.SetupVisual(playableEntity.skill3);
         skill4Visual.SetupVisual(playableEntity.skill4);
         ShowUI();
-        
-        BaseEntity.OnEntityMove.AddListener(DisableEndTurnButton);
-        CombatManager.CastComplete.AddListener(DisableEndTurnButton);
     }
 
     private void ShowUI()

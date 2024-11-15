@@ -8,89 +8,49 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public enum CombatState {Setup, Neutral, Movement, Attack}
+public enum CombatState {Setup, Playable, Enemy }
+public enum TurnState {Neutral, Movement, Attack}
 
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
     
-    public static BaseEntity SelectedEntity;
     public static readonly UnityEvent<BaseEntity> OnEntityTurn = new();
 
-
-    public static readonly UnityEvent<BaseEntity> EnableMovement = new();
-    public static readonly UnityEvent CastComplete = new();
-    
-    public static Skill SelectedSkill;
-    
-    private void Awake()
-    { 
-        Instance = this;
-        
-        SelectedEntity = null;
-        SelectedSkill = null;
-        currentStage = CombatState.Setup;
-    }
-    
-    private void SetCurrentEntity(BaseEntity entity)
+    public class Turn
     {
-        GridManager.GridClear?.Invoke();
-        SetCombatStage(CombatState.Neutral);
-        
-        SelectedEntity = entity;
-        SelectedEntity.ResetMovement();
+        public BaseEntity TurnEntity;
+        public Skill TurnUsedSkill;
+        public bool UsedSkill;
+        public TurnState CurrentState;
 
-        SelectedSkill = null;
-        PlayableEntity playable = (PlayableEntity) SelectedEntity;
-        playable.skill1.OnSkillSelected.AddListener(() => SetAttackStage(playable.skill1));
-        playable.skill2.OnSkillSelected.AddListener(() => SetAttackStage(playable.skill2));
-        playable.skill3.OnSkillSelected.AddListener(() => SetAttackStage(playable.skill3));
-        playable.skill4.OnSkillSelected.AddListener(() => SetAttackStage(playable.skill4));
-
-        OnEntityTurn?.Invoke(SelectedEntity);
-    }
-    
-    private void SetMovementStage(BaseEntity entity)
-    {
-        if (entity != SelectedEntity) return;
-        
-        SetCombatStage(CombatState.Movement);
-        
-        GridManager.GridClear?.Invoke();
-        GridManager.ShowRadiusAsWalkable(SelectedEntity.currentCell, SelectedEntity.currentMovement);
-    }
-
-    private void SetAttackStage(Skill skill)
-    {
-        SetCombatStage(CombatState.Attack);
-        
-        SelectedSkill = skill;
-        
-        SelectedSkill.OnSkillUse.AddListener((cell) => SelectedSkill.CastSkill(cell));
-        SelectedSkill.OnSkillComplete.AddListener(delegate
+        public Turn(BaseEntity turnEntity)
         {
-            GridManager.GridClear?.Invoke();
+            this.TurnEntity = turnEntity;
             
-            SelectedSkill.OnSkillUse?.RemoveAllListeners();
-            SelectedSkill.OnSkillComplete?.RemoveAllListeners();
-            SelectedSkill = null;
+            this.TurnUsedSkill = null;
+            this.UsedSkill = false;
             
-            CastComplete?.Invoke();
-        });
-        
-        GridManager.GridClear?.Invoke();
-        GridManager.ShowRadiusAsRange(SelectedEntity.currentCell, skill.SkillRange);
+            this.TurnEntity.ResetMovement();
+            
+            CurrentState = TurnState.Neutral;
+        }
+
+        public void SetTurnState(TurnState state) => CurrentState = state;
+
+        public void AssignSkill(Skill skill)
+        {
+            TurnUsedSkill = skill;
+            TurnUsedSkill?.SetupSkill();
+        }
     }
     
-    private void ClearSelectedEntity(Cell selectedCell)
-    {
-        if (SelectedEntity is null) return;
-        if (SelectedSkill is not null) SelectedSkill = null;
-            
-        SetCombatStage(CombatState.Neutral);
-        GridManager.GridClear?.Invoke();
-    }
-
+    public static Turn CurrentTurn { get; private set; }
+    public static BaseEntity TurnEntity => CurrentTurn.TurnEntity;
+    public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
+    
+    public static readonly UnityEvent ActionTaken = new();
+    
     #region Turn Order
 
     private List<BaseEntity> _turnOrder;
@@ -141,7 +101,6 @@ public class CombatManager : MonoBehaviour
 
     public void FinishPositionSetup()
     {
-        EnableMovement.AddListener(SetMovementStage);
         GridManager.OnSelect.AddListener(ClearSelectedEntity);
         
         var all = GridController.GetEntitiesOnGrid();
@@ -150,4 +109,82 @@ public class CombatManager : MonoBehaviour
     }
 
     #endregion
+    
+    private void Awake()
+    { 
+        Instance = this;
+        CurrentTurn = null;
+        currentStage = CombatState.Setup;
+        
+        ActionTaken.AddListener(CheckActionsAvailable);
+    }
+    
+    private void SetCurrentEntity(BaseEntity entity)
+    {
+        GridManager.ClearGrid();
+
+        CurrentTurn = new Turn(entity);
+
+        SetCombatStage(TurnEntity.EntityInfo.entityType == EntityType.Playable
+            ? CombatState.Playable
+            : CombatState.Enemy);
+
+        OnEntityTurn?.Invoke(TurnEntity);
+    }
+    
+    public static void SetMovementStage(BaseEntity entity)
+    {
+        if (entity != TurnEntity) return;
+        
+        CurrentTurn.SetTurnState(TurnState.Movement);
+        
+        TurnEntity.OnEntityMoved.AddListener(GridManager.ClearGrid);
+        GridManager.ShowRadiusAsWalkable(TurnEntity);
+    }
+    public static void MovementAction(Cell cell)
+    {
+        TurnEntity.MoveTowards(cell);
+        TurnEntity.OnEntityMoved.AddListener(() => ActionTaken?.Invoke());
+    }
+
+    public static void SetAttackStage(Skill skill)
+    {
+        if (CurrentTurn.UsedSkill) return;
+        
+        CurrentTurn.SetTurnState(TurnState.Attack);
+        CurrentTurn.AssignSkill(skill);
+        
+        GridManager.ShowRadiusAsRange(TurnEntity, TurnSkill);
+    }
+    public static void AttackAction(Cell cell)
+    {
+        TurnSkill.OnSkillUse?.Invoke(cell);
+        CurrentTurn.UsedSkill = true;
+        ActionTaken?.Invoke();
+    }
+
+    private void CheckActionsAvailable()
+    {
+        if (TurnEntity.currentMovement > 0)
+        {
+            Debug.Log($"Ainda consegue andar {TurnEntity.currentMovement}");
+            return;
+        }
+        if (!CurrentTurn.UsedSkill)
+        {
+            Debug.Log("Ainda pode usar skill");
+            return;
+        }
+        
+        NextTurn();
+    }
+
+    private void ClearSelectedEntity(Cell selectedCell)
+    {
+        if (TurnEntity is null) return;
+        if (TurnSkill is not null) CurrentTurn.AssignSkill(null);
+            
+        CurrentTurn.SetTurnState(TurnState.Neutral);
+        GridManager.ClearGrid();
+    }
 }

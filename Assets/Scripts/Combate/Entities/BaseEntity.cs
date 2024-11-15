@@ -14,7 +14,6 @@ public abstract class BaseEntity : MonoBehaviour
         
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
-    [HideInInspector] public bool isSelected;
     
     // ------ STATS
     [SerializeField, Foldout("--- Stats ---")] private int movementRange;
@@ -22,9 +21,9 @@ public abstract class BaseEntity : MonoBehaviour
     
     // ------- EVENTS
     public readonly UnityEvent EntitySelected = new();
-    public static readonly UnityEvent OnEntityMove = new();
+    public readonly UnityEvent OnEntityMoved = new();
     
-    // ------- MOVEMENTt
+    // ------- MOVEMENT
     public abstract void MoveTowards(Cell cellToMove, bool blink = false);
     public void ResetMovement() => currentMovement = movementRange;
 }
