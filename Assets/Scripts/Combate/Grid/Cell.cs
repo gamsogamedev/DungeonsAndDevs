@@ -128,7 +128,7 @@ public class Cell : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        if (_entityInCell is not null)
+        if (_entityInCell is not null && !_currentState.HasFlag(CellState.Range))
         {
             GridManager.ClearGrid();
             _entityInCell?.EntitySelected?.Invoke();

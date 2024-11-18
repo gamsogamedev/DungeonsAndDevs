@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Jogador Teste
   entityType: 0
+  maxHealth: 30
+  stamina: 3
+  speed: 3
+  classe: 0
   skill1: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
   skill2: {fileID: 11400000, guid: cb8c05088e35f42d0befeea7f0b6de42, type: 2}
   skill3: {fileID: 11400000, guid: 12260f33d493fa851afa2f9726a0ef1f, type: 2}

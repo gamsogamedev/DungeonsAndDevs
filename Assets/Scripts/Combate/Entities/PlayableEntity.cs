@@ -29,9 +29,10 @@ public class PlayableEntity : BaseEntity, IEntity
     {
         InitializeEntity(PlayableInfo);
     }
-    
-    private void Start()
+
+    internal override void Start()
     {
+        base.Start();
         ResetMovement();
     }
 

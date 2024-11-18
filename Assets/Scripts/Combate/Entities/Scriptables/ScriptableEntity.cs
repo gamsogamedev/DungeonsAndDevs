@@ -17,7 +17,15 @@ public abstract class ScriptableEntity : ScriptableObject
 
     // ------ Prefab
     protected BaseEntity entityPrefab;
-    
+
+    // ------ Stats
+    [Header("Stats")]
+    [SerializeField] protected int maxHealth;
+    public int GetMaxHealth() => maxHealth;
+    [SerializeField] protected int stamina;
+    public int GetStamina() => stamina;
+    [SerializeField] protected int speed;
+    public int GetSpeed() => speed;
     // ------ Converters
     public abstract ScriptableEntity_Playable ToPlayable(); 
     public abstract ScriptableEntity_Hostile ToHostile();
