@@ -278,7 +278,7 @@ MonoBehaviour:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: 'O Naga? Nesse nem se fala. '
+        textLine: O Naga? Nem me fale
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
@@ -299,7 +299,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Isso sem que ele mova UM DEDO SEQUER pra consertar as rela\xE7\xF5es
+        textLine: "Ele n\xE3o move UM DEDO SEQUER pra consertar as rela\xE7\xF5es
           pessoais que ELE MESMO estragou."
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
@@ -321,7 +321,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Ele nem entende que \xE9 culpa dele que o Ast foi embora."
+        textLine: "E n\xE3o entende que \xE9 culpa dele que o Ast foi embora."
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
@@ -407,7 +407,7 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "Mas ele tentou consertar as coisas. Ele falou que tinha descoberto
-          uma maneira de reverter a situa\xE7\xE3o. Algo sobre as 7 pe\xE7as do destino."
+          uma maneira de reverter a situa\xE7\xE3o. Algo sobre 4 pe\xE7as do destino"
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
@@ -540,27 +540,6 @@ MonoBehaviour:
       textLine:
         textLine: "Nossa\u2026 ningu\xE9m\u2026 ningu\xE9m nunca tinha me oferecido
           isso."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mas, voc\xEA \xE9 s\xF3 um NPC. Ser\xE1 que\u2026"
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:

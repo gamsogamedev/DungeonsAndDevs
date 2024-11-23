@@ -16,20 +16,19 @@ MonoBehaviour:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Opa! Decidiu onde vai sacrificar os pr\xF3ximos quatro anos da
-          sua vida\u2013 quer dizer, onde vai trabalhar?"
+        textLine: "Agora que voc\xEA conhece o lugar, te darei uma miss\xE3o."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
-        cutscene: {fileID: 0}
+        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
       choiceInfo:
-        choiceDescription: 
+        choiceDescription: 'E se:'
         choiceA:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: O Daniboy me treinasse?
+          jumpToIndex: 3
         choiceB:
-          choiceText: 
-          jumpToIndex: 0
+          choiceText: A Mary me treinasse?
+          jumpToIndex: 2
         choiceC:
           choiceText: 
           jumpToIndex: 0
@@ -38,50 +37,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Escolha entre as 2 fun\xE7\xF5es o que te interessou mais."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 1
-      textLine:
-        textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: Escolha sua classe
-        choiceA:
-          choiceText: Programador
-          jumpToIndex: 1
-        choiceB:
-          choiceText: Artista
-          jumpToIndex: 1
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-  - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: Excelente escolh-
+        textLine: "V\xE1 at\xE9 o-"
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -165,7 +121,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: ...
+        textLine: O que foi isso?
         whosTalking: Player
         whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
@@ -442,9 +398,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Mary e Daniboy, um de voc\xEAs leva o NPC pra sala de treino.
-          Com a guilda exposta, inimigos aparecer\xE3o. Precisamos estar prontos
-          para eles. \r\n"
+        textLine: "Mary e Daniboy, um de voc\xEAs treina o NPC. Preparem ele para
+          as miss\xF5es.\n"
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -642,10 +597,10 @@ MonoBehaviour:
         choiceDescription: 'E se:'
         choiceA:
           choiceText: O Daniboy me treinasse?
-          jumpToIndex: 3
+          jumpToIndex: 2
         choiceB:
           choiceText: A Mary me treinasse?
-          jumpToIndex: 2
+          jumpToIndex: 1
         choiceC:
           choiceText: 
           jumpToIndex: 0
@@ -697,7 +652,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Ele\u2026 ele escolheu."
+        textLine: "Ele\u2026 Fez uma escolha!"
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -719,27 +674,6 @@ MonoBehaviour:
     - type: 0
       textLine:
         textLine: "Ser\xE1 que\u2026"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Eu SABIA que ele ia me escolher!
         whosTalking: Mary
         whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
@@ -848,7 +782,7 @@ MonoBehaviour:
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 6c8260a65d519b24ab72ca943ab53ef1, type: 2}
+        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -1034,8 +968,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: 'Venha para a sala de treino. Vamos destravar o seu verdadeiro
-          potencial. '
+        textLine: 'Venha comigo. Vamos destravar o seu verdadeiro potencial. '
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
@@ -1061,7 +994,7 @@ MonoBehaviour:
         whosTalking: Daniboy
         whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 6c8260a65d519b24ab72ca943ab53ef1, type: 2}
+        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:

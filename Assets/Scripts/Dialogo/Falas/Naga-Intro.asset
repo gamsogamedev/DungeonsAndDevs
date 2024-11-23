@@ -16,8 +16,7 @@ MonoBehaviour:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Ol\xE1, [INSERIR NOME DO PLAYER AQUI]. Bem-Vindo \xE0 <title>asset_guilda
-          gamso<title>."
+        textLine: "Ol\xE1, Jogador. Eu estava te esperando."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -38,8 +37,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Nesta loca\xE7\xE3o, neste jogo, n\xF3s, os funcion\xE1rios desta
-          loca\xE7\xE3o, realizamos, a realiza\xE7\xE3o de videogames. "
+        textLine: "Bem-Vindo \xE0 guilda GAMSO"
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -60,52 +58,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Voc\xEA, NPC [INSERIR NOME DO PLAYER AQUI], que n\xE3o faz nada,
-          al\xE9m de vagar por este local, falso, e inexistente, n\xE3o tem prop\xF3sito
-          e nem no\xE7\xE3o de escolha. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ent\xE3o, eu, personagem Naga, resolvi te dar prop\xF3sito. Trabalhando
-          na Game. Art. Music. And Software. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: ...GAMAS?
+        textLine: GAMSO?
         whosTalking: Player
         whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
       animationInfo:
@@ -126,7 +79,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA
+        textLine: Exato. Game Art Music and Software.
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -147,7 +100,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: HA... Ha
+        textLine: "N\xF3s costum\xE1vamos fazer jogos. At\xE9 que tivemos um probleminha
+          e mudamos de ramo."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -168,7 +122,8 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: '*Nao*'
+        textLine: "Mas voc\xEA apareceu para nos ajudar, afinal, por que outro motivo
+          voc\xEA estaria aqui."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
@@ -189,7 +144,7 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: Venha! Venha! Vamos! Vamos entrar no Guilda Gamso
+        textLine: Venha! Venha! Vamos! Vamos entrar na Guilda Gamso
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:

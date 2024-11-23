@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
-  m_Name: Naga - GameDesign
+  m_Name: Mary - SalaVar
   m_EditorClassIdentifier: 
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "O que est\xE1 achando da nosso guilda? Incrivel n\xE3o?"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "Vamos come\xE7ar seu treinamento."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:
@@ -37,9 +37,9 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Conversou com todo mundo? Isso \xE9 bem importante por aqui."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: Primeiro, vamos dar uma olhada no mapa.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
       choiceInfo:
@@ -58,32 +58,11 @@ MonoBehaviour:
           jumpToIndex: 0
     - type: 0
       textLine:
-        textLine: "Venha, vou te mostrar a \xFAltima sala."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "Chegue pr\xF3ximo dele e aperte a tecla \"E\"."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
       animationInfo:
         cutscene: {fileID: 0}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: "Venha, vou te mostrar a \xFAltima sala."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: a52bd1f5755a4584aac9713bb45f95f5, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
