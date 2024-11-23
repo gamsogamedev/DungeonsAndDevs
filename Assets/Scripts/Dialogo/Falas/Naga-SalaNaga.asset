@@ -12,50 +12,364 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
   m_Name: Naga-SalaNaga
   m_EditorClassIdentifier: 
+  atlas: {fileID: 0}
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
       textLine:
-        textLine: "Agora que voc\xEA conhece o lugar, te darei uma miss\xE3o."
+        textLine: Conseguiu decidir o que quer fazer no gamso?
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
+        cutscene: {fileID: 0}
       choiceInfo:
-        choiceDescription: 'E se:'
+        choiceDescription: 
         choiceA:
-          choiceText: O Daniboy me treinasse?
-          jumpToIndex: 3
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
-          choiceText: A Mary me treinasse?
-          jumpToIndex: 2
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
-        textLine: "V\xE1 at\xE9 o-"
+        textLine: "Escolha entre as 2 fun\xE7\xF5es o que te interessou mais."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
+        cutscene: {fileID: 0}
       choiceInfo:
-        choiceDescription: 'E se:'
+        choiceDescription: 
         choiceA:
-          choiceText: O Daniboy me treinasse?
-          jumpToIndex: 3
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
-          choiceText: A Mary me treinasse?
-          jumpToIndex: 2
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 1
+      textLine:
+        textLine: "Escolha entre as 4 fun\xE7\xF5es o que te interessou mais."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: Escolha sua classe
+        choiceA:
+          choiceText: Programador
+          jumpToIndex: 1
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: Artista
+          jumpToIndex: 2
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: OIA O GAMSO
+          jumpToIndex: 3
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 1
+    update:
+      nodeName: AAA
+      nodeValue: AAA
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: "Programadores s\xE3o conjuradores no campo de batalha. Alterar
+          as leis do mundo para que as coisas funcionem direito"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 2
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: e17f8e518a087dd4c9eef9bc61ed8a2b, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: Artistas combinam suas habilidades para liberar efeitos poderosos.
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 2
+      textLine:
+        textLine: "Suas habilidades ser\xE3o as seguintes:"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: bb2d24b43e3ecdb459b192a13f301ac0, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
+  - dialogueBlock:
     - type: 2
       textLine:
         textLine: Artistas combinam suas habilidades para liberar efeitos poderosos.
@@ -68,944 +382,34 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: 'Oh. '
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Parece que\u2026 aquilo, escapou."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: O que foi isso?
-        whosTalking: Player
-        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "O que foi? Voc\xEA acha que esse lugar chama GAMSO atoa? \xC9
-          \xD3BVIO que n\xF3s aprisionamos um Ganso bi\xF4nico gigante. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: "O que foi? Voc\xEA acha que esse lugar chama GAMSO atoa? \xC9
-          \xD3BVIO que n\xF3s aprisionamos um Ganso bi\xF4nico gigante. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "MEU DEUS DO C\xC9U!! "
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: O QUE ACONTECEU AQUI??? AH MERDA
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "N\xE3o era a SUA vez de vigiar o Ganso gigante??"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "MINHA VEZ??? Amigo, eu j\xE1 tava alimentando ele! E voc\xEA acha
-          que EU tenho TEMPO pra ficar olhando ele o dia todo??"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mas\u2026 de quem era a vez ent\xE3o?"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Do\u2026 Ast\u2026"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ah\u2026"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "\u2026"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "\u2026"
-        whosTalking: Player
-        whosTalkingIcon: {fileID: -854613324, guid: 2c66ea10ffe3f9842a786251fcc5751b, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Bom, n\xE3o h\xE1 tempo para chorar pela parede derramada e as
-          amizades cortadas. Eu tenho um Ganso para ca\xE7ar. "
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Mary e Daniboy, um de voc\xEAs treina o NPC. Preparem ele para
-          as miss\xF5es.\n"
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: O outro, conserte essa parede.
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "T\xE1."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Sim senhor.
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: Sim senhor.
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Olha, EU que n\xE3o vou consertar essa parede."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ata at\xE9 parece que eu vou tamb\xE9m."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Por que a gente n\xE3o bota o NPC pra arrumar?\r"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Boa ideia. Ele \xE9 s\xF3 um NPC mesmo. Nunca aprenderia a lutar."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 1
-      textLine:
-        textLine: "Boa ideia. Ele \xE9 s\xF3 um NPC mesmo. Nunca aprenderia a lutar."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 1e8896ed305d59d4d9b02dec0db3ed8a, type: 2}
-      choiceInfo:
-        choiceDescription: 'E se:'
-        choiceA:
-          choiceText: O Daniboy me treinasse?
-          jumpToIndex: 2
-        choiceB:
-          choiceText: A Mary me treinasse?
-          jumpToIndex: 1
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-  - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: :0
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: :0
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ele\u2026 Fez uma escolha!"
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ser\xE1 que\u2026"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Eu SABIA que ele ia me escolher! Eu sou MUITO mais legal.
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Nossa, essa s\xF3 foi a maior MENTIRA de toda a hist\xF3ria."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Vamos pro treino! Tenho muito a te ensinar.
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: Sacanagem hein. Eu lembrarei disso.
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: Sacanagem hein. Eu lembrarei disso.
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-  - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: :0
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: :0
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ele\u2026 ele escolheu."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Ser\xE1 que\u2026"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: E escolheu certo ainda por cima.
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Nossa foi a escolha mais errada poss\xEDvel.\r\n"
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "Voc\xEA \xE9 cheio de surpresas, NPC."
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: "*Grunhidos de desaprova\xE7\xE3o."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 0
-      textLine:
-        textLine: 'Venha comigo. Vamos destravar o seu verdadeiro potencial. '
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 28be5e3c890601445851f54e8c92650d, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
-    - type: 2
-      textLine:
-        textLine: 'Venha para a sala de treino. Vamos destravar o seu verdadeiro
-          potencial. '
-        whosTalking: Daniboy
-        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 

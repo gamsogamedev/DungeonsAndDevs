@@ -21,7 +21,10 @@ public class PlayableHUD : MonoBehaviour
             icon.sprite = skill.skillInfo.skillIcon;
             cooldownOverlay.fillAmount = 0;
             
-            button.onClick.AddListener(() => skill.OnSkillSelected?.Invoke());
+            button.onClick.AddListener(() => CombatManager.SetAttackStage(skill));
+            
+            // This is probs not good
+            button.interactable = true;
         }
     }
     
@@ -29,26 +32,34 @@ public class PlayableHUD : MonoBehaviour
     [FormerlySerializedAs("skill2")] [SerializeField] private SkillVisual skill2Visual;
     [FormerlySerializedAs("skill3")] [SerializeField] private SkillVisual skill3Visual;
     [FormerlySerializedAs("skill4")] [SerializeField] private SkillVisual skill4Visual;
+    [Space(5)] 
+    [SerializeField] private Button movementButton;
+    [Space(10)] 
+    [SerializeField] private Button endTurnButton;
 
     private void Start()
     {
-        CombatManager.OnEntitySelected.AddListener(UpdateHUD);
+        HideUI();
+        CombatManager.OnEntityTurn.AddListener(UpdateHUD);
+        endTurnButton.onClick.AddListener(() => CombatManager.Instance.NextTurn());
+    }
+
+    private void ReactivateEndTurnButton() => endTurnButton.interactable = true;
+    private void DisableEndTurnButton()
+    {
+        endTurnButton.interactable = false;
+        Invoke(nameof(ReactivateEndTurnButton), 1.5f);
     }
 
     private void UpdateHUD(BaseEntity entity)
     {
-        // TEMPORARY !!!
-        if (CombatManager.Instance.currentStage != CombatState.PlayerAttack)
-        {
-            HideUI();
-            return;
-        }
-        
         if (entity.EntityInfo.entityType != EntityType.Playable)
         {
             HideUI();
             return;
         }
+        
+        movementButton.onClick.AddListener(() => CombatManager.SetMovementStage(entity));
         
         var playableEntity = (PlayableEntity) entity;
         skill1Visual.SetupVisual(playableEntity.skill1);

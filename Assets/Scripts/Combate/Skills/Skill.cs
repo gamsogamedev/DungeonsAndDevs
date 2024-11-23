@@ -17,7 +17,6 @@ public class Skill
     
     // ----- Eventos
     public readonly UnityEvent
-        OnSkillSelected = new(),
         OnSkillComplete = new();
     public readonly UnityEvent<Cell>
         OnSkillUse = new();
@@ -26,6 +25,15 @@ public class Skill
     {
         skillInfo = skillConfig;
         skillCaster = caster;
+    }
+
+    public void SetupSkill()
+    {
+        OnSkillUse.RemoveAllListeners();
+        OnSkillUse.AddListener(CastSkill);
+        
+        OnSkillComplete.RemoveAllListeners();
+        OnSkillComplete.AddListener(GridManager.ClearGrid);
     }
     
     /// <summary>
@@ -49,10 +57,6 @@ public class Skill
         skillTarget = newTarget;
         ProccessAction();
     }
-
-    /// <summary>
-    /// Função chamada por SkillCast para chamar uma unidade de ação
-    /// </summary>
     private void ProccessAction()
     {
         if (actionsToDo.Count <= 0)
@@ -65,9 +69,9 @@ public class Skill
         currentAction.ExecuteAction(skillCaster, skillTarget);
     }
 
+    // Visual Info on the skill
     public List<Cell> PreviewSkill(Cell center)
     {
-        //return new List<Cell>();
         return skillInfo.skillActions[0].PreviewRange(center);
     }
 }

@@ -10,7 +10,7 @@ public class DamageAction : ICombatAction
 {
     public Range areaOfEffect;
     
-    public float damage;
+    public int damage;
 
     public bool useDirection;
     public bool collides;
@@ -28,7 +28,7 @@ public class DamageAction : ICombatAction
         if (useDirection)
         {
             var path = GridController.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range);
-
+            
             var direction = caster.currentCell.cellCoord - path[0].cellCoord;
             var rotation = 0;
             if (direction.x != 0)
@@ -59,11 +59,11 @@ public class DamageAction : ICombatAction
         //finalTarget.ActivateVisual(skillVisuals.singleCellFX, skillVisuals.hasSingleCellFX);
         foreach (var cell in aoe)
         {
-            Debug.Log($"Aplicando {damage} de dano em {cell.name}");
+            // Debug.Log($"Aplicando {damage} de dano em {cell.name}");
             if ((entity = cell._entityInCell) is not null)
             {
                 entity.currentCell.ActivateVisual(skillVisuals.entityTargetFX, skillVisuals.hasTargetFX);
-                // Deal Damage Here
+                entity.DoDamage(damage);
             }
         }
 

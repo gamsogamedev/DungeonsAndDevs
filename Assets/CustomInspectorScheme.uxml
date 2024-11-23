@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement tabindex="0" style="height: 75px; flex-direction: row;">
+        <ui:VisualElement name="Character" style="width: 50%;">
+            <uie:PropertyField binding-path="atlas" name="Character_Atlas" label="Character Atlas" style="height: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Block_Idx" style="width: 50%;" />
+    </ui:VisualElement>
+    <ui:VisualElement style="height: 300px;">
+        <ui:Foldout text="Default Inspector" name="DefaultInspector" />
+    </ui:VisualElement>
+    <ui:VisualElement style="height: 100px;" />
+    <uie:PropertyField />
+</ui:UXML>

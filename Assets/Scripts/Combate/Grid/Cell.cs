@@ -38,8 +38,8 @@ public class Cell : MonoBehaviour
     [HideInInspector] public BaseEntity _entityInCell;
     
     // ---- PATHFINDING -----
-    public Cell previousCell;
-    public int gCost, hCost;
+    [HideInInspector] public Cell previousCell;
+    [HideInInspector] public int gCost, hCost;
     public int fCost => gCost + hCost;
     
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
@@ -53,9 +53,7 @@ public class Cell : MonoBehaviour
 
         GridManager.OnSelect.AddListener((x) => ResetState(CellState.Walkable));
         GridManager.GridClear.AddListener(SetCellAsIdle);
-        BaseEntity.OnEntityMove.AddListener(ResetPathing);
         
-        ResetPathing();
         SetCellAsIdle();
     }
     
@@ -90,15 +88,15 @@ public class Cell : MonoBehaviour
         if (_currentState.HasFlag(CellState.Selected)) return;
         if (_currentState.HasFlag(CellState.Walkable))
         {
-            var path = GridController.GetPath(CombatManager.SelectedEntity.currentCell, this);
+            var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
             foreach (var pathCell in path)
             {
-                pathCell.SetCellAsPath();   
+                pathCell.SetCellAsPath();
             }
         }
         if (_currentState.HasFlag(CellState.Range))
         {
-            var areaOfEffect = CombatManager.SelectedSkill.PreviewSkill(this);
+            var areaOfEffect = CombatManager.TurnSkill.PreviewSkill(this);
             foreach (var aoeCell in areaOfEffect)
             {
                 aoeCell.SetCellAsTarget();     
@@ -112,7 +110,7 @@ public class Cell : MonoBehaviour
         if (_currentState.HasFlag(CellState.Hover)) ResetState(CellState.Hover);
         if (_currentState.HasFlag(CellState.Path))
         {
-            var path = GridController.GetPath(CombatManager.SelectedEntity.currentCell, this);
+            var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
             foreach (var pathCell in path)
             {
                 pathCell.ResetState(CellState.Path);   
@@ -120,7 +118,7 @@ public class Cell : MonoBehaviour
         }
         if (_currentState.HasFlag(CellState.Target))
         {
-            var areaOfEffect = CombatManager.SelectedSkill.PreviewSkill(this);
+            var areaOfEffect = CombatManager.TurnSkill.PreviewSkill(this);
             foreach (var aoeCell in areaOfEffect)
             {
                 aoeCell.ResetState(CellState.Target);     
@@ -130,25 +128,29 @@ public class Cell : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        if (_entityInCell is not null)
+        if (_entityInCell is not null && !_currentState.HasFlag(CellState.Range))
         {
-            GridManager.GridClear?.Invoke();
+            GridManager.ClearGrid();
             _entityInCell?.EntitySelected?.Invoke();
         }
         else if (_currentState.HasFlag(CellState.Selected))
             CellDeselected?.Invoke();
         else if (_currentState.HasFlag(CellState.Walkable))
-            CombatManager.SelectedEntity.MoveTowards(this);
+            CombatManager.MovementAction(this);
         else if (_currentState.HasFlag(CellState.Range))
-            CombatManager.SelectedSkill.OnSkillUse?.Invoke(this);
+            CombatManager.AttackAction(this);
         else
         {
-            GridManager.GridClear?.Invoke();
+            GridManager.ClearGrid();
             CellSelected?.Invoke();
         }
     }
 
-    public void SetCellAsIdle() => SetState(CellState.Idle);
+    public void SetCellAsIdle()
+    {
+        SetState(CellState.Idle);
+        ResetPathing();
+    }
     public void SetCellAsHover() => SetState(CellState.Hover, flag: true);
     public void SetCellAsWalkable() => SetState(CellState.Walkable);
     public void SetCellAsPath()
@@ -160,12 +162,12 @@ public class Cell : MonoBehaviour
     {
         if (_currentState.HasFlag(CellState.Walkable))
         {
-            CombatManager.SelectedEntity.MoveTowards(this);
+            CombatManager.TurnEntity.MoveTowards(this);
             return;
         }
         if (_currentState.HasFlag(CellState.Walkable))
         {
-            CombatManager.SelectedEntity.MoveTowards(this);
+            CombatManager.TurnEntity.MoveTowards(this);
             return;
         }
         
@@ -205,8 +207,7 @@ public class Cell : MonoBehaviour
     {
         ResetState(CellState.Walkable);
         ResetState(CellState.Path);
-        previousCell = null;
-        gCost = Int32.MaxValue;
+        ClearPath();
     }
 
     

@@ -70,10 +70,13 @@ public class GridManager : MonoBehaviour
         
         _activeCell.CellDeselected.AddListener(() => _activeCell = null);
     }
-    
-    
+
+
+    public static void ShowRadiusAsWalkable(BaseEntity ent) =>
+        ShowRadiusAsWalkable(ent.currentCell, ent.currentMovement);
     public static void ShowRadiusAsWalkable(Cell center, int radius)
     {
+        GridClear?.Invoke();
         var cellInRadius = GridController.GetRadius(center, radius);
         if (cellInRadius is null || !cellInRadius.Any()) return;
         
@@ -83,8 +86,12 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    public static void ShowRadiusAsRange(BaseEntity ent, Skill sk) =>
+        ShowRadiusAsRange(ent.currentCell, sk.SkillRange);
     public static void ShowRadiusAsRange(Cell center, Range range)
     {
+        GridClear?.Invoke();
+        
         var cellInRadius = range.GetRange(center);
         if (cellInRadius is null || !cellInRadius.Any()) return;
         
@@ -104,4 +111,6 @@ public class GridManager : MonoBehaviour
             cell.SetCellAsTarget();
         }
     }
+
+    public static void ClearGrid() => GridClear?.Invoke();
 }
