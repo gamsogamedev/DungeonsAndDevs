@@ -14,9 +14,9 @@ public class PlayableEntity : BaseEntity, IEntity
     public Skill skill3 { get; private set; }
     public Skill skill4 { get; private set; }
 
-    public void InitializeEntity(ScriptableEntity entityInfo)
+    public override void InitializeEntity(ScriptableEntity entityInfo)
     {
-        EntityInfo = entityInfo;
+        base.InitializeEntity(entityInfo);
         PlayableInfo = entityInfo.ToPlayable();
         
         skill1 = new Skill(PlayableInfo.skill1, this);
@@ -25,6 +25,7 @@ public class PlayableEntity : BaseEntity, IEntity
         skill4 = new Skill(PlayableInfo.skill4, this);
     }
 
+    // Remove later
     private void OnEnable()
     {
         InitializeEntity(PlayableInfo);

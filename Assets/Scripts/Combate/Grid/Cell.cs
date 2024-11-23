@@ -38,8 +38,8 @@ public class Cell : MonoBehaviour
     [HideInInspector] public BaseEntity _entityInCell;
     
     // ---- PATHFINDING -----
-    public Cell previousCell;
-    public int gCost, hCost;
+    [HideInInspector] public Cell previousCell;
+    [HideInInspector] public int gCost, hCost;
     public int fCost => gCost + hCost;
     
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
@@ -207,8 +207,7 @@ public class Cell : MonoBehaviour
     {
         ResetState(CellState.Walkable);
         ResetState(CellState.Path);
-        previousCell = null;
-        gCost = Int32.MaxValue;
+        ClearPath();
     }
 
     

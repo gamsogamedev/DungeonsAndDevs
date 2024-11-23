@@ -50,7 +50,9 @@ public class CombatManager : MonoBehaviour
     public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
     
     public static readonly UnityEvent ActionTaken = new();
-    
+    public static readonly UnityEvent<BaseEntity> OnEntityDeath = new();
+    public static readonly UnityEvent OnWin = new(), OnLose = new();
+     
     #region Turn Order
 
     private List<BaseEntity> _turnOrder;
@@ -93,12 +95,7 @@ public class CombatManager : MonoBehaviour
 
     public CombatState currentStage;
     public static readonly UnityEvent<CombatState> OnStagePass = new();
-    public void SetCombatStage(CombatState nxtStage)
-    {
-        currentStage = nxtStage;
-        OnStagePass?.Invoke(currentStage);
-    }
-
+    
     public void FinishPositionSetup()
     {
         GridManager.OnSelect.AddListener(ClearSelectedEntity);
@@ -108,15 +105,10 @@ public class CombatManager : MonoBehaviour
         NextTurn(true);
     }
 
-    #endregion
-    
-    private void Awake()
-    { 
-        Instance = this;
-        CurrentTurn = null;
-        currentStage = CombatState.Setup;
-        
-        ActionTaken.AddListener(CheckActionsAvailable);
+    public void SetCombatStage(CombatState nxtStage)
+    {
+        currentStage = nxtStage;
+        OnStagePass?.Invoke(currentStage);
     }
     
     private void SetCurrentEntity(BaseEntity entity)
@@ -143,8 +135,8 @@ public class CombatManager : MonoBehaviour
     }
     public static void MovementAction(Cell cell)
     {
-        TurnEntity.MoveTowards(cell);
         TurnEntity.OnEntityMoved.AddListener(() => ActionTaken?.Invoke());
+        TurnEntity.MoveTowards(cell);
     }
 
     public static void SetAttackStage(Skill skill)
@@ -158,9 +150,24 @@ public class CombatManager : MonoBehaviour
     }
     public static void AttackAction(Cell cell)
     {
+        TurnSkill.OnSkillComplete.AddListener(delegate
+        {
+            CurrentTurn.UsedSkill = true;
+            ActionTaken?.Invoke(); 
+        });
         TurnSkill.OnSkillUse?.Invoke(cell);
-        CurrentTurn.UsedSkill = true;
-        ActionTaken?.Invoke();
+    }
+    
+    #endregion
+    
+    private void Awake()
+    { 
+        Instance = this;
+        CurrentTurn = null;
+        currentStage = CombatState.Setup;
+        
+        ActionTaken.AddListener(CheckActionsAvailable);
+        OnEntityDeath.AddListener(CheckCombatState);
     }
 
     private void CheckActionsAvailable()
@@ -179,6 +186,20 @@ public class CombatManager : MonoBehaviour
         NextTurn();
     }
 
+    private void CheckCombatState(BaseEntity entity)
+    {
+        _turnOrder.Remove(entity);
+        int playableCount = 0, enemieCount = 0;
+        foreach (var ent in _turnOrder)
+        {
+            if (ent.EntityInfo.entityType == EntityType.Playable) playableCount++;
+            if (ent.EntityInfo.entityType == EntityType.Hostile) enemieCount++;
+        }
+
+        if (enemieCount == 0) OnWin?.Invoke();
+        else if (playableCount == 0) OnLose?.Invoke();
+    }
+    
     private void ClearSelectedEntity(Cell selectedCell)
     {
         if (TurnEntity is null) return;

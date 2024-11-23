@@ -19,21 +19,32 @@ public abstract class BaseEntity : MonoBehaviour
         currentHealth = Health;
     }
 
+    public virtual void InitializeEntity(ScriptableEntity entity)
+    {
+        EntityInfo = entity;
+        
+        transform.Find("Visuals").GetComponent<SpriteRenderer>().sprite = EntityInfo.entityVisuals;
+
+        GetComponentInChildren<HealthHUD>().Init(this);
+    }
+
     // ------ STATS
     private int Health => EntityInfo.GetMaxHealth();
     private int currentHealth;
+
+    public readonly UnityEvent<float> HealthUpdated = new();
+    
     public void DoDamage(int amount)
     {
         currentHealth -= amount;
-        Debug.Log($"{this.gameObject.name} taken {amount} damage\nCurrent Health: {currentHealth}");
         
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            // Call death;
+            CombatManager.OnEntityDeath?.Invoke(this);
         }
-        
-        // Update Visuals
+
+        HealthUpdated?.Invoke((float) currentHealth / Health);
     }
     
     private int MovementRange => EntityInfo.GetSpeed();

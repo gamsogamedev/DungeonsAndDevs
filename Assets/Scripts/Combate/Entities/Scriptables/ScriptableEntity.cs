@@ -17,7 +17,8 @@ public abstract class ScriptableEntity : ScriptableObject
 
     // ------ Prefab
     protected BaseEntity entityPrefab;
-
+    public Sprite entityVisuals;
+    
     // ------ Stats
     [Header("Stats")]
     [SerializeField] protected int maxHealth;

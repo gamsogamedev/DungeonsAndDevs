@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
   m_Name: Naga-SalaNaga
   m_EditorClassIdentifier: 
+  atlas: {fileID: 0}
   dialogueBlocks:
   - dialogueBlock:
     - type: 0

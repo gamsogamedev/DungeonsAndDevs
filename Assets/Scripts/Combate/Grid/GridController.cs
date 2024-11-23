@@ -105,7 +105,7 @@ public class GridController
         while(openList.Count > 0)
         {
             Cell currentCell = openList.OrderBy(node => node.fCost).First();
-
+            
             if (currentCell == finishPoint)
             {
                 var path = RetrievePath(finishPoint);
@@ -127,7 +127,6 @@ public class GridController
                 if (closedList.Contains(neighbor)) continue;
                 if (!neighbor._currentState.HasFlag(stateFilter)) continue;
                 
-                
                 var newGcost = currentCell.gCost + 1;
                 if (newGcost >= neighbor.gCost) continue;
 
@@ -139,8 +138,7 @@ public class GridController
                     openList.Add(neighbor);
             }
         }
-
-        // No path found
+        
         return null;
     }
     
