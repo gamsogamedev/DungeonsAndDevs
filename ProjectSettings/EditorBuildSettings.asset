@@ -15,14 +15,8 @@ EditorBuildSettings:
     path: Assets/Cenas/HalldeEntrada.unity
     guid: 795411409f986b64fbd78f26bf82fade
   - enabled: 1
-    path: Assets/Cenas/SalaArte.unity
-    guid: 0bf702bf6a1e3284d83ca559d723bfa0
-  - enabled: 1
     path: Assets/Cenas/SalaGameDesign.unity
     guid: f4a448fce62242342b82d44cf9d5bb98
-  - enabled: 1
-    path: Assets/Cenas/SalaGameDesignVar.unity
-    guid: 2046265d99263f542b66861dd1a647ab
   - enabled: 1
     path: Assets/Cenas/SalaNaga.unity
     guid: 388abdecc14545b4fac7089420c2436f

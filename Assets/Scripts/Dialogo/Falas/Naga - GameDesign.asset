@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
   m_Name: Naga - GameDesign
   m_EditorClassIdentifier: 
+  atlas: {fileID: 0}
   dialogueBlocks:
   - dialogueBlock:
     - type: 0
@@ -26,15 +27,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
         textLine: "Conversou com todo mundo? Isso \xE9 bem importante por aqui."
@@ -47,15 +64,31 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 0
       textLine:
         textLine: "Venha, vou te mostrar a \xFAltima sala."
@@ -68,33 +101,71 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     - type: 2
       textLine:
         textLine: "Venha, vou te mostrar a \xFAltima sala."
         whosTalking: Naga
         whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: a52bd1f5755a4584aac9713bb45f95f5, type: 2}
+        cutscene: {fileID: 11400000, guid: 48d6514a4e047e345a0b03cd87449230, type: 2}
       choiceInfo:
         choiceDescription: 
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
