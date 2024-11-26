@@ -120,13 +120,9 @@ public class CombatManager : MonoBehaviour
         SetCombatStage(TurnEntity.EntityInfo.entityType == EntityType.Playable
             ? CombatState.Playable
             : CombatState.Enemy);
-
-        if (currentStage == CombatState.Enemy)
-        {
-            entity.StartTurn();
-        }
         
         OnEntityTurn?.Invoke(TurnEntity);
+        entity.StartTurn();
     }
     
     public static void SetMovementStage(BaseEntity entity)

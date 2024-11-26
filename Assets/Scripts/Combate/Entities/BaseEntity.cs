@@ -73,7 +73,11 @@ public abstract class BaseEntity : MonoBehaviour
     public readonly UnityEvent EntitySelected = new();
     public readonly UnityEvent OnEntityMoved = new();
 
-    public abstract void StartTurn();
+    public virtual void StartTurn()
+    {
+        Debug.Log($"{gameObject.name}'s Turn");
+        GetComponentInChildren<TurnHighlight>().HighlightEntity();
+    }
     
     // ------- MOVEMENT
     public abstract void MoveTowards(Cell cellToMove, bool blink = false);

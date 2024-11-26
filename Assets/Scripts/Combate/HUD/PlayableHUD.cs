@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -27,7 +28,11 @@ public class PlayableHUD : MonoBehaviour
             button.interactable = true;
         }
     }
-    
+
+    [SerializeField] private CanvasGroup turnHUD;
+    [SerializeField] private TextMeshProUGUI turnIndicator;
+    [Space(20)]
+    [SerializeField] private CanvasGroup playableHUD;
     [FormerlySerializedAs("skill1")] [SerializeField] private SkillVisual skill1Visual;
     [FormerlySerializedAs("skill2")] [SerializeField] private SkillVisual skill2Visual;
     [FormerlySerializedAs("skill3")] [SerializeField] private SkillVisual skill3Visual;
@@ -41,6 +46,8 @@ public class PlayableHUD : MonoBehaviour
     
     private void Start()
     {
+        turnHUD.alpha = 0;
+        
         HideUI();
         CombatManager.OnEntityTurn.AddListener(UpdateHUD);
         endTurnButton.onClick.AddListener(() => CombatManager.Instance.NextTurn());
@@ -55,6 +62,11 @@ public class PlayableHUD : MonoBehaviour
 
     private void UpdateHUD(BaseEntity entity)
     {
+        var changeTurnAnim = DOTween.Sequence();
+        changeTurnAnim.Append(turnHUD.DOFade(0f, .5f));
+        changeTurnAnim.AppendCallback(() => turnIndicator.text = $"{entity.EntityInfo.name}'s\n Turn");
+        changeTurnAnim.Append(turnHUD.DOFade(1f, .5f));
+        
         if (entity.EntityInfo.entityType != EntityType.Playable)
         {
             HideUI();
@@ -76,8 +88,6 @@ public class PlayableHUD : MonoBehaviour
 
     private void ShowUI()
     {
-        var playableHUD = GetComponent<CanvasGroup>();
-
         playableHUD.DOFade(1f, 1f)
             .OnComplete(delegate
             {
@@ -88,8 +98,6 @@ public class PlayableHUD : MonoBehaviour
 
     private void HideUI()
     {
-        var playableHUD = GetComponent<CanvasGroup>();
-
         playableHUD.DOFade(0f, 1f)
             .OnStart(delegate
             {

@@ -39,7 +39,7 @@ public class PlayableEntity : BaseEntity, IEntity
 
     public override void StartTurn()
     {
-        Debug.Log($"{this.gameObject.name}'s turn");
+        base.StartTurn();
     }
 
     public override void MoveTowards(Cell cellToMove, bool blink = false) 

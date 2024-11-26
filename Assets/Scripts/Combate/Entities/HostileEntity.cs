@@ -23,6 +23,7 @@ public class HostileEntity : BaseEntity
 
     public override void StartTurn()
     {
+        base.StartTurn();
         var target = CombatBehaviour.GetTarget(this, HostileInfo.Behaviour);
         
         OnEntityMoved.AddListener(AttackTargetInRange);
