@@ -39,9 +39,6 @@ public class DamageAction : ICombatAction
             {
                 rotation = (direction.y < 0) ? 75 : -105;
             }
-             
-            path.First().ActivateVisual(skillVisuals.manyCellFX_nearCaster, skillVisuals.hasManyCellFX, rotation);
-            path.Remove(path.First());
             
             foreach (var pathCell in path)
             {
@@ -50,7 +47,10 @@ public class DamageAction : ICombatAction
                     finalTarget = pathCell;
                     break;
                 }
-                pathCell.ActivateVisual(skillVisuals.manyCellFX_midway, skillVisuals.hasManyCellFX, rotation);
+
+                pathCell.ActivateVisual(
+                    pathCell == path[0] ? skillVisuals.manyCellFX_nearCaster : skillVisuals.manyCellFX_midway,
+                    skillVisuals.hasManyCellFX, rotation);
             }
             
             path.Last().ActivateVisual(skillVisuals.manyCellFX_nearTarget, skillVisuals.hasManyCellFX, rotation);

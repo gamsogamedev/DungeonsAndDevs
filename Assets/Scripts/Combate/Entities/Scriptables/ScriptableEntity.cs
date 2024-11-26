@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum EntityType
 {
+    All,
     Playable,
     Hostile
 } 
@@ -23,8 +25,8 @@ public abstract class ScriptableEntity : ScriptableObject
     [Header("Stats")]
     [SerializeField] protected int maxHealth;
     public int GetMaxHealth() => maxHealth;
-    [SerializeField] protected int stamina;
-    public int GetStamina() => stamina;
+    [SerializeField] protected int initiative;
+    public int GetInitiative() => initiative;
     [SerializeField] protected int speed;
     public int GetSpeed() => speed;
     // ------ Converters

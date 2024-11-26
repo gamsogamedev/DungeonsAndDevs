@@ -37,6 +37,11 @@ public class PlayableEntity : BaseEntity, IEntity
         ResetMovement();
     }
 
+    public override void StartTurn()
+    {
+        Debug.Log($"{this.gameObject.name}'s turn");
+    }
+
     public override void MoveTowards(Cell cellToMove, bool blink = false) 
     {
         if (blink)

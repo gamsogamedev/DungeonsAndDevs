@@ -9,8 +9,9 @@ public class HealthHUD : MonoBehaviour
     [SerializeField] private Image healthbarUI;
     
     public void Init(BaseEntity hudOwner)
-    { 
-        GetComponent<Canvas>().worldCamera = Camera.main;
+    {
+        if (TryGetComponent<Canvas>(out var wCanva)) 
+            wCanva.worldCamera = Camera.main;    
         
         hudOwner.HealthUpdated.AddListener(UpdateHUD);
         healthbarUI.fillAmount = 1;
@@ -18,7 +19,6 @@ public class HealthHUD : MonoBehaviour
 
     private void UpdateHUD(float healthPercentage)
     {
-        Debug.Log($"Updating life to {healthPercentage}");
         healthbarUI.DOFillAmount(healthPercentage, .5f);
     }
 }

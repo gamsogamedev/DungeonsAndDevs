@@ -6,5 +6,10 @@ using UnityEngine;
 public class ScriptableEntity_Hostile : ScriptableEntity
 {
     public override ScriptableEntity_Playable ToPlayable() => null; 
-    public override ScriptableEntity_Hostile ToHostile() => this; 
+    public override ScriptableEntity_Hostile ToHostile() => this;
+
+    public CombatBehaviour.TargetBehavior Behaviour;
+    
+    public Range basicAttackRange;
+    public int basicAttackDamage;
 }
