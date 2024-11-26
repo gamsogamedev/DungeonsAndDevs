@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,7 +31,8 @@ public abstract class BaseEntity : MonoBehaviour
 
     // ------ STATS
     private int Health => EntityInfo.GetMaxHealth();
-    private int currentHealth;
+    public int currentHealth { get; private set; }
+    public float healthPercentage => (float)currentHealth / Health;
 
     public readonly UnityEvent<float> HealthUpdated = new();
     
@@ -41,10 +43,27 @@ public abstract class BaseEntity : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            CombatManager.OnEntityDeath?.Invoke(this);
+            HealthUpdated?.Invoke(0f);
+            Invoke(nameof(ProccessDeath), 1f);
         }
 
-        HealthUpdated?.Invoke((float) currentHealth / Health);
+        HealthUpdated?.Invoke(healthPercentage);
+    }
+
+    private void ProccessDeath()
+    {
+        CombatManager.OnEntityDeath?.Invoke(this);
+        
+        var visuals = transform.Find("Visuals").GetComponent<SpriteRenderer>();
+        var hudVisuals = transform.Find("HUD").GetComponent<CanvasGroup>();
+
+        var deleteSequence = DOTween.Sequence();
+        deleteSequence.Append(visuals.DOFade(0f, .2f));
+        deleteSequence.Join(hudVisuals.DOFade(0f, .2f));
+        deleteSequence.AppendCallback(() => visuals.enabled = false);
+
+        currentCell._entityInCell = null;
+        Destroy(this.gameObject, 1.5f);
     }
     
     private int MovementRange => EntityInfo.GetSpeed();
@@ -53,6 +72,8 @@ public abstract class BaseEntity : MonoBehaviour
     // ------- EVENTS
     public readonly UnityEvent EntitySelected = new();
     public readonly UnityEvent OnEntityMoved = new();
+
+    public abstract void StartTurn();
     
     // ------- MOVEMENT
     public abstract void MoveTowards(Cell cellToMove, bool blink = false);

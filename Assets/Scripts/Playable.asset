@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Playable
   m_EditorClassIdentifier: 
   entityName: Jogador Teste
-  entityType: 0
-  entityVisuals: {fileID: 21300000, guid: 7952c31175cfaea49855f48011bbef88, type: 3}
+  entityType: 1
+  entityVisuals: {fileID: 21300000, guid: d0ea12ac8b7024c9a928ce40c4df6e8f, type: 3}
   maxHealth: 30
-  stamina: 3
+  initiative: 3
   speed: 3
   classe: 3
   skill1: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}

@@ -36,7 +36,9 @@ public class PlayableHUD : MonoBehaviour
     [SerializeField] private Button movementButton;
     [Space(10)] 
     [SerializeField] private Button endTurnButton;
-
+    [Space(10)] 
+    [SerializeField] private HealthHUD activePlayerHealth;
+    
     private void Start()
     {
         HideUI();
@@ -58,8 +60,11 @@ public class PlayableHUD : MonoBehaviour
             HideUI();
             return;
         }
-        
+
         movementButton.onClick.AddListener(() => CombatManager.SetMovementStage(entity));
+        
+        activePlayerHealth.Init(entity);
+        entity.HealthUpdated?.Invoke(entity.healthPercentage);
         
         var playableEntity = (PlayableEntity) entity;
         skill1Visual.SetupVisual(playableEntity.skill1);

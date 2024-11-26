@@ -142,7 +142,7 @@ public class GridController
         return null;
     }
     
-    private static int Distance(Cell a, Cell b) => Mathf.Abs(b.cellCoord.x - a.cellCoord.x) + Mathf.Abs(b.cellCoord.y - a.cellCoord.y);
+    public static int Distance(Cell a, Cell b) => Mathf.Abs(b.cellCoord.x - a.cellCoord.x) + Mathf.Abs(b.cellCoord.y - a.cellCoord.y);
     
     private static List<Cell> RetrievePath(Cell finishPoint)
     {
@@ -165,7 +165,7 @@ public class GridController
 
     #region Auxiliar
 
-    public static List<BaseEntity> GetEntitiesOnGrid()
+    public static List<BaseEntity> GetEntitiesOnGrid(EntityType type = EntityType.All)
     {
         var entities = new List<BaseEntity>();
         var dim = grid.GetGridDimensions();
@@ -179,8 +179,11 @@ public class GridController
                     entities.Add(cellAt._entityInCell);
             }
         }
-        
-        return entities;
+
+        if (type == EntityType.All)
+            return entities;
+        else
+            return entities.Where(e => e.EntityInfo.entityType == type).ToList();
     }
 
     #endregion

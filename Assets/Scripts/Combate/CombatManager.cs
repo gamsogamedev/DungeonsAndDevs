@@ -121,6 +121,11 @@ public class CombatManager : MonoBehaviour
             ? CombatState.Playable
             : CombatState.Enemy);
 
+        if (currentStage == CombatState.Enemy)
+        {
+            entity.StartTurn();
+        }
+        
         OnEntityTurn?.Invoke(TurnEntity);
     }
     
@@ -192,8 +197,16 @@ public class CombatManager : MonoBehaviour
         int playableCount = 0, enemieCount = 0;
         foreach (var ent in _turnOrder)
         {
-            if (ent.EntityInfo.entityType == EntityType.Playable) playableCount++;
-            if (ent.EntityInfo.entityType == EntityType.Hostile) enemieCount++;
+            if (ent.EntityInfo.entityType == EntityType.Playable)
+            {
+                Debug.Log("Win");
+                playableCount++;
+            }
+            if (ent.EntityInfo.entityType == EntityType.Hostile)
+            {
+                Debug.Log("Lose");
+                enemieCount++;
+            }
         }
 
         if (enemieCount == 0) OnWin?.Invoke();
