@@ -12,29 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
   m_Name: Mapa
   m_EditorClassIdentifier: 
+  atlas: {fileID: 0}
   dialogueBlocks:
   - dialogueBlock:
-    - type: 0
-      textLine:
-        textLine: MAPA
-        whosTalking: MAPA
-        whosTalkingIcon: {fileID: 0}
-      animationInfo:
-        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
-      choiceInfo:
-        choiceDescription: 
-        choiceA:
-          choiceText: 
-          jumpToIndex: 0
-        choiceB:
-          choiceText: 
-          jumpToIndex: 0
-        choiceC:
-          choiceText: 
-          jumpToIndex: 0
-        choiceD:
-          choiceText: 
-          jumpToIndex: 0
     - type: 2
       textLine:
         textLine: "Ol\xE1, Jogador. Eu estava te esperando."
@@ -47,12 +27,108 @@ MonoBehaviour:
         choiceA:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceB:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceC:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
         choiceD:
           choiceText: 
           jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Aqui est\xE1 tudo o que mapeamos ao longo do tempo"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Experimente clicar no primeiro local
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: 
+      nodeValue: 
