@@ -43,12 +43,16 @@ public class PlayableHUD : MonoBehaviour
     [SerializeField] private Button endTurnButton;
     [Space(10)] 
     [SerializeField] private HealthHUD activePlayerHealth;
-    
+
+    private void Awake()
+    {
+        GridManager.GridGenerated.AddListener(HideUI);
+    }
+
     private void Start()
     {
         turnHUD.alpha = 0;
         
-        HideUI();
         CombatManager.OnEntityTurn.AddListener(UpdateHUD);
         endTurnButton.onClick.AddListener(() => CombatManager.Instance.NextTurn());
     }

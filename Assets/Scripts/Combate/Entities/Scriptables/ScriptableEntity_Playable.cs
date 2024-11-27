@@ -18,10 +18,12 @@ public class ScriptableEntity_Playable : ScriptableEntity
 {
     public override ScriptableEntity_Playable ToPlayable() => this; 
     public override ScriptableEntity_Hostile ToHostile() => null;
-    public override void GenerateEntity()
+    public override BaseEntity GenerateEntity()
     {
-        base.GenerateEntity();
-        ((PlayableEntity)EntityInstance).InitializeEntity(this);
+        var playable = Instantiate(entityPrefab) as PlayableEntity;
+        playable?.InitializeEntity(this);
+
+        return playable;
     }
 
     [Header("Classe")] 

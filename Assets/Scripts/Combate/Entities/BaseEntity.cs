@@ -79,6 +79,16 @@ public abstract class BaseEntity : MonoBehaviour
         GetComponentInChildren<TurnHighlight>().HighlightEntity();
     }
     
+    // ------- POSITION
+    public void SetPosition(Cell c)
+    {
+        transform.SetParent(c.transform);
+        transform.localPosition = Vector3.zero;
+
+        this.currentCell = c;
+        c._entityInCell = this;
+    }
+    
     // ------- MOVEMENT
     public abstract void MoveTowards(Cell cellToMove, bool blink = false);
     public void ResetMovement() => currentMovement = MovementRange;

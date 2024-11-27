@@ -17,6 +17,14 @@ public class CombatManager : MonoBehaviour
     
     public static readonly UnityEvent<BaseEntity> OnEntityTurn = new();
 
+    [Serializable]
+    public class EnemieMapping
+    {
+        public ScriptableEntity_Hostile enemie;
+        public Vector2Int enemieCoord;
+    }
+    [SerializeField] private List<EnemieMapping> enemieList;
+    
     public class Turn
     {
         public BaseEntity TurnEntity;
@@ -44,7 +52,6 @@ public class CombatManager : MonoBehaviour
             TurnUsedSkill?.SetupSkill();
         }
     }
-    
     public static Turn CurrentTurn { get; private set; }
     public static BaseEntity TurnEntity => CurrentTurn.TurnEntity;
     public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
@@ -167,8 +174,23 @@ public class CombatManager : MonoBehaviour
         CurrentTurn = null;
         currentStage = CombatState.Setup;
         
+        GridManager.GridGenerated.AddListener(PositionEnemies);
         ActionTaken.AddListener(CheckActionsAvailable);
         OnEntityDeath.AddListener(CheckCombatState);
+    }
+
+    private void PositionEnemies()
+    {
+        foreach (var e in enemieList)
+        {
+            var instance = e.enemie.GenerateEntity();
+
+            var coord = GridController.GetCellAt(e.enemieCoord);
+            if (coord._entityInCell is not null)
+                Debug.Log("Cell already occupied");
+            
+            instance.SetPosition(coord);
+        }
     }
 
     private void CheckActionsAvailable()

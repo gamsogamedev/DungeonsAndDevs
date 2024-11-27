@@ -18,7 +18,7 @@ public abstract class ScriptableEntity : ScriptableObject
     public EntityType entityType;
 
     // ------ Prefab
-    protected BaseEntity entityPrefab;
+    [SerializeField] protected BaseEntity entityPrefab;
     public Sprite entityVisuals;
     
     // ------ Stats
@@ -34,10 +34,5 @@ public abstract class ScriptableEntity : ScriptableObject
     public abstract ScriptableEntity_Hostile ToHostile();
     
     // ------ Instance
-    public BaseEntity EntityInstance { get; private set; }
-    public virtual void GenerateEntity()
-    {
-        EntityInstance = Instantiate(entityPrefab);
-        
-    }
+    public abstract BaseEntity GenerateEntity();
 }

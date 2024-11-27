@@ -3,11 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class GridController
+public static class GridController
 {
     private static GridManager grid;
     public static void SetGrid(GridManager manager) => grid = manager;
 
+    public static Cell GetCellAt(Vector2Int coord)
+    {
+        var dim = grid.GetGridDimensions();
+        var finalX = coord.x; var finalY = coord.y;
+        
+        if (coord.x > dim.x)
+            finalX = coord.x;
+        else if (coord.x < 0)
+            finalX = 0;
+        
+        if (coord.y > dim.y)
+            finalY = coord.y;
+        else if (coord.y < 0)
+            finalY = 0;
+        
+        return grid.getCellAtCoord(finalX, finalY);
+    }
+    
     public static List<Cell> GetRing(Cell center, int radius)
     {
         List<Cell> cellsInRing = new List<Cell>();

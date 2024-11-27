@@ -11,14 +11,18 @@ public class DraggableEntity : MonoBehaviour
     private Vector3 positionBeforeDrag;
     private bool isDragging;
 
-    private void Start()
+    private void Awake()
+    {
+        GridManager.GridGenerated.AddListener(SetupDrag);
+        CombatManager.OnStagePass.AddListener(DisableDrag);
+    }
+
+    private void SetupDrag()
     {
         _entity = GetComponent<BaseEntity>();
         
         isDragging = false;
         positionBeforeDrag = transform.position;
-        
-        CombatManager.OnStagePass.AddListener(DisableDrag);
     }
 
     private void DisableDrag(CombatState state)

@@ -12,4 +12,11 @@ public class ScriptableEntity_Hostile : ScriptableEntity
     
     public Range basicAttackRange;
     public int basicAttackDamage;
+
+    public override BaseEntity GenerateEntity()
+    {
+        var hostile = Instantiate(entityPrefab) as HostileEntity;
+        hostile?.InitializeEntity(this);
+        return hostile;
+    }
 }
