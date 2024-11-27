@@ -62,8 +62,9 @@ public class GridManager : MonoBehaviour
             Debug.LogError("No camera in the scene");
             return;
         }
-            
-        Camera.main.transform.position = new Vector3((width / 2f) + .7f, (height / 2f) - 1.5f, -10);
+
+        Camera.main.orthographicSize = 7.5f;
+        Camera.main.transform.position = new Vector3((width / 2f) + 1.7f, (height / 2f) - 1f, -10);
         
         GridController.SetGrid(this);
         GridGenerated?.Invoke();

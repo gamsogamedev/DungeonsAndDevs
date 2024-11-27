@@ -64,6 +64,7 @@ public class DraggableEntity : MonoBehaviour
             tileHit._entityInCell = _entity;
             
             positionBeforeDrag = transform.position;
+            _entity.FixSort();
         }
     }
 

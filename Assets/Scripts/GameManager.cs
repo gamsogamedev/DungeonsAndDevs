@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
+    // ----- CURRENCY
+    public static int currency;
+    public static readonly UnityEvent<int> CurrencyUpdated = new();
+    
     public static readonly UnityEvent<WorldUpdate> UpdateWorldState = new();
     
     private void Awake()
@@ -33,6 +37,12 @@ public class GameManager : MonoBehaviour
         UpdateWorldState.AddListener(UpdateWorld);
     }
 
+    public static void UpdateCurrency(int value)
+    {
+        currency += value;
+        CurrencyUpdated?.Invoke(currency);
+    }
+    
     private static void UpdateWorld(WorldUpdate update)
     {
         WorldStateReader.EditNode(update.nodeName, update.nodeValue);

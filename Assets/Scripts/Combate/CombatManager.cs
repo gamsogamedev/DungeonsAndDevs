@@ -183,13 +183,13 @@ public class CombatManager : MonoBehaviour
     {
         foreach (var e in enemieList)
         {
-            var instance = e.enemie.GenerateEntity();
+            var instance = e.enemie.GenerateEntity() as HostileEntity;
 
-            var coord = GridController.GetCellAt(e.enemieCoord);
+            var coord = GridController.GetCellAt(e.enemieCoord);     
             if (coord._entityInCell is not null)
                 Debug.Log("Cell already occupied");
             
-            instance.SetPosition(coord);
+            instance?.SetPosition(coord);
         }
     }
 
@@ -215,19 +215,17 @@ public class CombatManager : MonoBehaviour
         int playableCount = 0, enemieCount = 0;
         foreach (var ent in _turnOrder)
         {
-            if (ent.EntityInfo.entityType == EntityType.Playable)
-            {
-                Debug.Log("Win");
+            if (ent.EntityInfo.entityType == EntityType.Playable) 
                 playableCount++;
-            }
-            if (ent.EntityInfo.entityType == EntityType.Hostile)
-            {
-                Debug.Log("Lose");
+            else if (ent.EntityInfo.entityType == EntityType.Hostile)
                 enemieCount++;
-            }
         }
 
-        if (enemieCount == 0) OnWin?.Invoke();
+        if (enemieCount == 0)
+        {
+            GameManager.UpdateCurrency(10); // TODO Update currency based on a variable
+            OnWin?.Invoke();
+        }
         else if (playableCount == 0) OnLose?.Invoke();
     }
     

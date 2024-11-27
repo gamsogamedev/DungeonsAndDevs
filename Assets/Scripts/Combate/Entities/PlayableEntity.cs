@@ -57,6 +57,7 @@ public class PlayableEntity : BaseEntity, IEntity
             });
             return;
         }
+        
         StartCoroutine(Move(cellToMove));
     }
     
@@ -78,6 +79,7 @@ public class PlayableEntity : BaseEntity, IEntity
             yield return new WaitForSeconds(0.25f);
         }
         
+        FixSort();
         OnEntityMoved?.Invoke();
     }
 }

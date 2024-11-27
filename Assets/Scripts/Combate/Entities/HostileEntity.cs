@@ -10,11 +10,6 @@ public class HostileEntity : BaseEntity
 {
     public ScriptableEntity_Hostile HostileInfo;
 
-    private void OnEnable()
-    {
-        InitializeEntity(HostileInfo);
-    }
-
     public override void InitializeEntity(ScriptableEntity entity)
     {
         base.InitializeEntity(entity);
@@ -40,6 +35,8 @@ public class HostileEntity : BaseEntity
         
         foreach (var cell in movementRadius)
         {
+            if (cell._entityInCell is not null) continue;
+            
             var cellDist = GridController.Distance(cell, target.currentCell);
             if (cellDist > .5f && cellDist < nearestDistance)
             {
@@ -51,18 +48,25 @@ public class HostileEntity : BaseEntity
         MoveTowards(nearestToTarget);
     }
 
-    private void AttackTargetInRange()
+    private List<BaseEntity> GetTargetsInRange()
     {
         var attackRadius = HostileInfo.basicAttackRange.GetRange(currentCell);
         var targetsInRange = attackRadius
-            .Where(c => c._entityInCell is not null)
-            .Where(c => c._entityInCell.EntityInfo.entityType == EntityType.Playable)
+            .Select(c => c._entityInCell)
+            .Where(c => c is not null)
+            .Where(c => c.EntityInfo.entityType == EntityType.Playable)
             .ToList();
 
+        return targetsInRange;
+    }
+
+    private void AttackTargetInRange()
+    {
+        var targetsInRange = GetTargetsInRange();
         if (!targetsInRange.Any()) return;
         
         var finalTarget = targetsInRange.OrderBy(c => Random.value).First();
-        finalTarget._entityInCell.DoDamage(HostileInfo.basicAttackDamage);
+        finalTarget. DoDamage(HostileInfo.basicAttackDamage);
     }
 
     private void CallNextTurn()
@@ -108,6 +112,7 @@ public class HostileEntity : BaseEntity
             yield return new WaitForSeconds(0.25f);
         }
         
+        FixSort();
         OnEntityMoved?.Invoke();
     }
 }

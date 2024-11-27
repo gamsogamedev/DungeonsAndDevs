@@ -112,7 +112,7 @@ public static class GridController
     }
     
     #region Pathfinding
-    public static List<Cell> GetPath(Cell startPoint, Cell finishPoint, CellState stateFilter = CellState.Walkable)
+    public static List<Cell> GetPath(Cell startPoint, Cell finishPoint, CellState stateFilter = CellState.Walkable, bool avoidEntitites = true)
     {
         var openList = new List<Cell> { startPoint };
         var closedList = new List<Cell>();
@@ -144,6 +144,7 @@ public static class GridController
             {
                 if (closedList.Contains(neighbor)) continue;
                 if (!neighbor._currentState.HasFlag(stateFilter)) continue;
+                if (avoidEntitites && neighbor._entityInCell is not null) continue;
                 
                 var newGcost = currentCell.gCost + 1;
                 if (newGcost >= neighbor.gCost) continue;
