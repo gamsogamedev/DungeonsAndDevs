@@ -387,6 +387,1060 @@ MonoBehaviour:
           update:
             nodeName: 
             nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "N\xE3o era a SUA vez de vigiar o Ganso gigante??"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "MINHA VEZ??? Amigo, eu j\xE1 tava alimentando ele! E voc\xEA acha
+          que EU tenho TEMPO pra ficar olhando ele o dia todo??"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Mas\u2026 de quem era a vez ent\xE3o?\r\n"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Do Ast....
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Ah...
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Bom, n\xE3o h\xE1 tempo para chorar pela parede derramada e as
+          amizades cortadas. Eu tenho um Ganso para ca\xE7ar. "
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Mary e Daniboy, um de voc\xEAs ensine o Jogador. O outro conserte
+          a parede."
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 1c2516c55c286fc4fb31d3a4544499d9, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Certo.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: "Por que o Daniboy n\xE3o me ensina?"
+          jumpToIndex: 1
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: "Por que a Mary n\xE3o me ensina?"
+          jumpToIndex: 2
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Ok.
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: "Por que o Daniboy n\xE3o me ensina?"
+          jumpToIndex: 1
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: "Por que a Mary n\xE3o me ensina?"
+          jumpToIndex: 2
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 2
+      textLine:
+        textLine: "Mary e Daniboy, um de voc\xEAs ensine o Jogador. O outro conserte
+          a parede"
+        whosTalking: Naga
+        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Olha, EU que n\xE3o vou consertar essa parede."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Ata at\xE9 parece que eu vou tamb\xE9m."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 1
+      textLine:
+        textLine: 
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: 4dde8734aad2a114aaf28dbfac2b2d66, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: "Por que o Daniboy n\xE3o me ensina?"
+          jumpToIndex: 1
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: "Por que a Mary n\xE3o me ensina?"
+          jumpToIndex: 2
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: AAA
+      nodeValue: AAA
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: :0
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: :0
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Ele escolheu! Isso \xE9 poss\xEDvel?"
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: E escolheu certo ainda por cima.
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "*Grunhidos de desaprova\xE7\xE3o."
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: 'Venha comigo. Vamos destravar o seu verdadeiro potencial. '
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 2
+      textLine:
+        textLine: 'Venha comigo. Vamos destravar o seu verdadeiro potencial. '
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    overrideJump: 0
+    jumpToBlock: 0
+    updatesWorld: 0
+    update:
+      nodeName: AAA
+      nodeValue: AAA
+  - dialogueBlock:
+    - type: 0
+      textLine:
+        textLine: :0
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: :0
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Ele escolheu! Isso \xE9 poss\xEDvel?"
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: E escolheu certo ainda por cima.
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: "Nossa, essa s\xF3 foi a maior MENTIRA de toda a hist\xF3ria."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Venha comigo, tenho muito a ensinar
+        whosTalking: Mary
+        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+      animationInfo:
+        cutscene: {fileID: 0}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 0
+      textLine:
+        textLine: Sacanagem.Eu me lembrarei disso!
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: b6a55aa8b9552404aa7a0c3e94520d40, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+    - type: 2
+      textLine:
+        textLine: 'Venha comigo. Vamos destravar o seu verdadeiro potencial. '
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
+      animationInfo:
+        cutscene: {fileID: 11400000, guid: c64b8343e6d517e45b5ee6f10f20854a, type: 2}
+      choiceInfo:
+        choiceDescription: 
+        choiceA:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceB:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceC:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
+        choiceD:
+          choiceText: 
+          jumpToIndex: 0
+          updatesWorld: 0
+          update:
+            nodeName: 
+            nodeValue: 
     overrideJump: 0
     jumpToBlock: 0
     updatesWorld: 0

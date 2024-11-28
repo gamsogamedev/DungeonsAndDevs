@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afe91d99253623eb9ab3f8f8e44a72d, type: 3}
-  m_Name: Mapa
+  m_Name: Daniboy-SalaVar
   m_EditorClassIdentifier: 
   atlas: {fileID: 0}
   dialogueBlocks:
   - dialogueBlock:
-    - type: 2
+    - type: 0
       textLine:
-        textLine: "Ol\xE1, Jogador. Eu estava te esperando."
-        whosTalking: Naga
-        whosTalkingIcon: {fileID: -568965107, guid: 8900cb4518b4a60a28762417b4d47374, type: 3}
+        textLine: "Vamos come\xE7ar seu treinamento."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -54,11 +54,11 @@ MonoBehaviour:
             nodeValue: 
     - type: 0
       textLine:
-        textLine: "Aqui est\xE1 tudo o que mapeamos ao longo do tempo."
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        textLine: Primeiro, vamos dar uma olhada no mapa.
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
@@ -91,11 +91,11 @@ MonoBehaviour:
             nodeValue: 
     - type: 0
       textLine:
-        textLine: Experimente clicar no primeiro local.
-        whosTalking: Mary
-        whosTalkingIcon: {fileID: -389104783, guid: 215c4d37a2aff5748a8616b729da79af, type: 3}
+        textLine: "Chegue pr\xF3ximo dele e aperte a tecla \"E\"."
+        whosTalking: Daniboy
+        whosTalkingIcon: {fileID: 1170708910, guid: 1f8d28a693b03264e920053ad8a9beaf, type: 3}
       animationInfo:
-        cutscene: {fileID: 11400000, guid: 6b503e01bae56f4468d9817fab8429f2, type: 2}
+        cutscene: {fileID: 0}
       choiceInfo:
         choiceDescription: 
         choiceA:
