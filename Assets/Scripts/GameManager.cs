@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
+    // ----- COMBAT INFO
+    public static CombatSettingsScriptable currentCombatInfo;
+    public static void SetNewGame(CombatSettingsScriptable s) => currentCombatInfo = s;
+    
     // ----- CURRENCY
     public static int currency;
     public static readonly UnityEvent<int> CurrencyUpdated = new();

@@ -1,22 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public enum CombatState {Setup, Playable, Enemy }
 public enum TurnState {Neutral, Movement, Attack}
-
-[Serializable]
-public class EnemieMapping
-{
-    public ScriptableEntity_Hostile enemie;
-    public Vector2Int enemieCoord;
-}
 
 public class CombatManager : MonoBehaviour
 {
@@ -183,6 +173,8 @@ public class CombatManager : MonoBehaviour
 
     private void PositionEnemies()
     {
+        LoadCombatSettings(GameManager.currentCombatInfo);
+        
         foreach (var e in cSettings.enemieList)
         {
             var instance = e.enemie.GenerateEntity() as HostileEntity;
@@ -192,6 +184,20 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("Cell already occupied");
             
             instance?.SetPosition(coord);
+        }
+
+        if (cSettings.hasUnlock)
+        {
+            // Check if player has unlock here
+            
+            var e = cSettings.playableUnlocked;
+            var unlockInstace = e.enemie.GenerateEntity() as HostileEntity;
+            
+            var coord = GridController.GetCellAt(e.enemieCoord);     
+            if (coord._entityInCell is not null)
+                Debug.Log("Cell already occupied");
+            
+            unlockInstace?.SetPosition(coord);
         }
     }
 

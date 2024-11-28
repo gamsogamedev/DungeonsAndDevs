@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndCombatOverlay : MonoBehaviour
@@ -17,7 +18,7 @@ public class EndCombatOverlay : MonoBehaviour
     {
         CombatManager.OnWin.AddListener(OpenWinOverlay);
         ControlOverlay(victoryOverlay, false);
-        // continueBtn.onClick.AddListener();
+        continueBtn.onClick.AddListener(BackToMap);
         
         CombatManager.OnLose.AddListener(OpenDefeatOverlay);
         ControlOverlay(defeatOverlay, false);
@@ -42,6 +43,11 @@ public class EndCombatOverlay : MonoBehaviour
     private void OpenWinOverlay()
     {
         ControlOverlay(victoryOverlay, true);
+    }
+
+    private void BackToMap()
+    {
+        SceneManager.LoadScene("Cenas/Mapa");
     }
     
     private void OpenDefeatOverlay()
