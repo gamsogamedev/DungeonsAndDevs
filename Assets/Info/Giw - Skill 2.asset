@@ -26,19 +26,20 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 100548792533123072
+      type: {class: Range_Line, ns: , asm: Assembly-CSharp}
+      data:
+        range: 4
+        direction: {x: 1, y: 0}
     - rid: 2732558624803258371
       type: {class: MoveAction, ns: , asm: Assembly-CSharp}
       data:
         directionMoved:
-          rangeType: 1
+          rangeType: 2
           range:
-            rid: 2732558624803258379
+            rid: 100548792533123072
     - rid: 2732558624803258378
       type: {class: Range_Line, ns: , asm: Assembly-CSharp}
       data:
         range: 4
         direction: {x: 1, y: 0}
-    - rid: 2732558624803258379
-      type: {class: Range_Single, ns: , asm: Assembly-CSharp}
-      data:
-        range: 4

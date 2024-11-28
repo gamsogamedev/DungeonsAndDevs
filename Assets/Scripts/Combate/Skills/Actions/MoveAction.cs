@@ -11,15 +11,16 @@ public class MoveAction : ICombatAction
     {
         var pathPreview = directionMoved.GetRange(caster.currentCell);
         Cell cellToMove = caster.currentCell;
+     
         foreach (var cell in pathPreview)
         {
             if (cell._entityInCell is not null) break;
             cell.SetCellAsWalkable();
             cellToMove = cell;
         }
-
+        
         if (cellToMove != caster.currentCell)
-            caster.MoveTowards(cellToMove, blink: true);
+            caster.MoveTowards(cellToMove, blink: true);   
 
         return cellToMove;
     }

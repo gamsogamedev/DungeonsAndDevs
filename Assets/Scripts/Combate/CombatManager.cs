@@ -95,7 +95,6 @@ public class CombatManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Going to next dude");
         orderCount = (orderCount + 1 >= _turnOrder.Count) ? 0 : orderCount + 1;
         SetCurrentEntity(_turnOrder[orderCount]);
     }
@@ -245,16 +244,10 @@ public class CombatManager : MonoBehaviour
 
     private void CheckActionsAvailable()
     {
-        if (TurnEntity.currentMovement > 0)
-        {
-            Debug.Log($"Ainda consegue andar {TurnEntity.currentMovement}");
+        if (TurnEntity.currentMovement > 0) 
             return;
-        }
         if (!CurrentTurn.UsedSkill)
-        {
-            Debug.Log("Ainda pode usar skill");
             return;
-        }
         
         PassTurn();
     }
