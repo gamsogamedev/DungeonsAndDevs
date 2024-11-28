@@ -19,17 +19,20 @@ public class GridManager : MonoBehaviour
     
     public Cell _activeCell { get; private set; }
 
+    public static readonly UnityEvent GridGenerated = new();
+    
     public static readonly UnityEvent<Cell> OnSelect = new(), OnDeselect = new();
     public static readonly UnityEvent GridClear = new();
 
-    private void Awake() => Instance = this;
+    private void Awake()
+    {
+        Instance = this;
+        OnSelect.AddListener(SetActiveCell);
+    }
 
     private void Start()
     {
         GenerateGrid();
-        GridController.SetGrid(this);
-        
-        OnSelect.AddListener(SetActiveCell);
     }
 
     private void GenerateGrid()
@@ -59,8 +62,12 @@ public class GridManager : MonoBehaviour
             Debug.LogError("No camera in the scene");
             return;
         }
-            
-        Camera.main.transform.position = new Vector3((width / 2f) + .7f, (height / 2f) - 1.5f, -10);
+
+        Camera.main.orthographicSize = 7.5f;
+        Camera.main.transform.position = new Vector3((width / 2f) + 1.7f, (height / 2f) - 1f, -10);
+        
+        GridController.SetGrid(this);
+        GridGenerated?.Invoke();
     }
 
     private void SetActiveCell(Cell cell) 
@@ -70,8 +77,7 @@ public class GridManager : MonoBehaviour
         
         _activeCell.CellDeselected.AddListener(() => _activeCell = null);
     }
-
-
+    
     public static void ShowRadiusAsWalkable(BaseEntity ent) =>
         ShowRadiusAsWalkable(ent.currentCell, ent.currentMovement);
     public static void ShowRadiusAsWalkable(Cell center, int radius)

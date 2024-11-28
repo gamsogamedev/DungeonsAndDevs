@@ -11,12 +11,22 @@ using Random = UnityEngine.Random;
 public enum CombatState {Setup, Playable, Enemy }
 public enum TurnState {Neutral, Movement, Attack}
 
+[Serializable]
+public class EnemieMapping
+{
+    public ScriptableEntity_Hostile enemie;
+    public Vector2Int enemieCoord;
+}
+
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
     
     public static readonly UnityEvent<BaseEntity> OnEntityTurn = new();
 
+    [SerializeField] private CombatSettingsScriptable cSettings;
+    private void LoadCombatSettings(CombatSettingsScriptable sett) => cSettings = sett;
+    
     public class Turn
     {
         public BaseEntity TurnEntity;
@@ -44,7 +54,6 @@ public class CombatManager : MonoBehaviour
             TurnUsedSkill?.SetupSkill();
         }
     }
-    
     public static Turn CurrentTurn { get; private set; }
     public static BaseEntity TurnEntity => CurrentTurn.TurnEntity;
     public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
@@ -167,8 +176,23 @@ public class CombatManager : MonoBehaviour
         CurrentTurn = null;
         currentStage = CombatState.Setup;
         
+        GridManager.GridGenerated.AddListener(PositionEnemies);
         ActionTaken.AddListener(CheckActionsAvailable);
         OnEntityDeath.AddListener(CheckCombatState);
+    }
+
+    private void PositionEnemies()
+    {
+        foreach (var e in cSettings.enemieList)
+        {
+            var instance = e.enemie.GenerateEntity() as HostileEntity;
+
+            var coord = GridController.GetCellAt(e.enemieCoord);     
+            if (coord._entityInCell is not null)
+                Debug.Log("Cell already occupied");
+            
+            instance?.SetPosition(coord);
+        }
     }
 
     private void CheckActionsAvailable()
@@ -193,19 +217,17 @@ public class CombatManager : MonoBehaviour
         int playableCount = 0, enemieCount = 0;
         foreach (var ent in _turnOrder)
         {
-            if (ent.EntityInfo.entityType == EntityType.Playable)
-            {
-                Debug.Log("Win");
+            if (ent.EntityInfo.entityType == EntityType.Playable) 
                 playableCount++;
-            }
-            if (ent.EntityInfo.entityType == EntityType.Hostile)
-            {
-                Debug.Log("Lose");
+            else if (ent.EntityInfo.entityType == EntityType.Hostile)
                 enemieCount++;
-            }
         }
 
-        if (enemieCount == 0) OnWin?.Invoke();
+        if (enemieCount == 0)
+        {
+            GameManager.UpdateCurrency(10); // TODO Update currency based on a variable
+            OnWin?.Invoke();
+        }
         else if (playableCount == 0) OnLose?.Invoke();
     }
     

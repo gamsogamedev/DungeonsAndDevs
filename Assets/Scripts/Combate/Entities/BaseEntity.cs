@@ -15,6 +15,9 @@ public abstract class BaseEntity : MonoBehaviour
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
 
+    private SpriteRenderer visualRef;
+    private int baseSortOrder;
+    
     internal virtual void Start()
     {
         currentHealth = Health;
@@ -24,8 +27,10 @@ public abstract class BaseEntity : MonoBehaviour
     {
         EntityInfo = entity;
         
-        transform.Find("Visuals").GetComponent<SpriteRenderer>().sprite = EntityInfo.entityVisuals;
-
+        visualRef = transform.Find("Visuals").GetComponent<SpriteRenderer>();
+        visualRef.sprite = EntityInfo.entityVisuals;
+        baseSortOrder = visualRef.sortingOrder;
+        
         GetComponentInChildren<HealthHUD>().Init(this);
     }
 
@@ -77,6 +82,23 @@ public abstract class BaseEntity : MonoBehaviour
     {
         Debug.Log($"{gameObject.name}'s Turn");
         GetComponentInChildren<TurnHighlight>().HighlightEntity();
+    }
+    
+    // ------- POSITION
+    public void SetPosition(Cell c)
+    {
+        transform.SetParent(c.transform);
+        transform.localPosition = Vector3.zero;
+
+        this.currentCell = c;
+        c._entityInCell = this;
+            
+        FixSort();
+    }
+
+    public void FixSort()
+    {
+        visualRef.sortingOrder = baseSortOrder - currentCell.cellCoord.y;
     }
     
     // ------- MOVEMENT

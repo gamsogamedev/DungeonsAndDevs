@@ -27,7 +27,7 @@ public class DamageAction : ICombatAction
         var finalTarget = target;
         if (useDirection)
         {
-            var path = GridController.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range);
+            var path = GridController.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range, avoidEntitites: false);
             
             var direction = caster.currentCell.cellCoord - path[0].cellCoord;
             var rotation = 0;
@@ -53,7 +53,7 @@ public class DamageAction : ICombatAction
                     skillVisuals.hasManyCellFX, rotation);
             }
             
-            path.Last().ActivateVisual(skillVisuals.manyCellFX_nearTarget, skillVisuals.hasManyCellFX, rotation);
+            finalTarget.ActivateVisual(skillVisuals.manyCellFX_nearTarget, skillVisuals.hasManyCellFX, rotation);
         }
         
         //finalTarget.ActivateVisual(skillVisuals.singleCellFX, skillVisuals.hasSingleCellFX);

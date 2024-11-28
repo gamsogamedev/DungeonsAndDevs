@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2dc67750fff2f9c4897b6fe716c2d282
+guid: 869bf1f89d287d6f2b5aeb68a35f7dd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,28 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: daniboysheetwalkfull_3
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 192
-        width: 37
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b6d028f6e1e91a4c9756e5ccb7c305c
-      internalID: 776288963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -147,23 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      daniboysheetwalkfull_0: -1101684355
-      daniboysheetwalkfull_11: 308998585
-      daniboysheetwalkfull_13: -625287486
-      daniboysheetwalkfull_3: 776288963
-      daniboysheetwalkfull_12: 357657681
-      daniboysheetwalkfull_8: -865708329
-      daniboysheetwalkfull_2: -1548773797
-      daniboysheetwalkfull_6: -1174661621
-      daniboysheetwalkfull_7: 1820783474
-      daniboysheetwalkfull_14: -1299414013
-      daniboysheetwalkfull_4: -1795792086
-      daniboysheetwalkfull_1: -1470629940
-      daniboysheetwalkfull_15: -357822500
-      daniboysheetwalkfull_9: 45876495
-      daniboysheetwalkfull_5: 1315033806
-      daniboysheetwalkfull_10: 1796307640
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

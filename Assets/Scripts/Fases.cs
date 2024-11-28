@@ -19,11 +19,11 @@ public class Fases : MonoBehaviour
     private void LoadScene()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
-        {          
+        {
             SceneManager.LoadScene(sceneToLoad);
         }
-       
     }
+
     public void Play() => SceneManager.LoadScene(sceneToLoad);
     public void Exit() => Application.Quit();
 }

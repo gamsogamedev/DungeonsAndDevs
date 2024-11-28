@@ -5,6 +5,7 @@ using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 
 [Flags] public enum CellState {
@@ -88,6 +89,7 @@ public class Cell : MonoBehaviour
         if (_currentState.HasFlag(CellState.Selected)) return;
         if (_currentState.HasFlag(CellState.Walkable))
         {
+            if (_entityInCell is not null) return;
             var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
             foreach (var pathCell in path)
             {
