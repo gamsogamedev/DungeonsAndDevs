@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e328d6ab5bf68ca188e8bebfa440b82e, type: 3}
-  m_Name: Hostile
+  m_Name: Cobra-Cega
   m_EditorClassIdentifier: 
   entityName: Goblin
   entityType: 2
   entityPrefab: {fileID: 359335061407300131, guid: 92ef8987301c13819961fd7b72bac382, type: 3}
-  entityVisuals: {fileID: 21300000, guid: d1582d8eeed9a892cbaf57d9a8955352, type: 3}
-  maxHealth: 10
+  entityVisuals: {fileID: 21300000, guid: f603ec0b3463e8f42a45ed12930dd0f9, type: 3}
+  maxHealth: 30
   initiative: 3
-  speed: 5
+  speed: 6
   Behaviour: 0
   basicAttackRange:
     rangeType: 4

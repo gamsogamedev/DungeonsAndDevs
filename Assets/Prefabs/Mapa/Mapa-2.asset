@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1baa5c36ce6470893dae17715beeca, type: 3}
+  m_Name: Mapa-2
+  m_EditorClassIdentifier: 
+  gridSize: {x: 0, y: 0}
+  enemieList:
+  - enemie: {fileID: 11400000, guid: 9a9bc6fcc537907448441b199c8dafb3, type: 2}
+    enemieCoord: {x: 13, y: 6}
+  - enemie: {fileID: 11400000, guid: 66706c0e3cdf9354a8c5206a7cd68712, type: 2}
+    enemieCoord: {x: 13, y: 4}
+  - enemie: {fileID: 11400000, guid: 2d9729212ab7f374eb93b71750f6b218, type: 2}
+    enemieCoord: {x: 13, y: 2}
+  - enemie: {fileID: 11400000, guid: 9a9bc6fcc537907448441b199c8dafb3, type: 2}
+    enemieCoord: {x: 13, y: 2}
+  hasUnlock: 0
+  playableUnlocked: {fileID: 0}
