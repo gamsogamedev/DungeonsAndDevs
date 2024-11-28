@@ -59,6 +59,10 @@ public class Skill
     private void UpdateTarget(Cell newTarget)
     {
         skillTarget = newTarget;
+
+        var skillDir = newTarget.cellCoord - skillCaster.currentCell.cellCoord;
+        skillCaster.FixSort(skillDir);
+        
         ProccessAction();
     }
     private void ProccessAction()

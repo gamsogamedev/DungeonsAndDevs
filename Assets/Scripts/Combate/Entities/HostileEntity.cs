@@ -82,6 +82,10 @@ public class HostileEntity : BaseEntity
         }
         
         var finalTarget = targetsInRange.OrderBy(c => Random.value).First();
+
+        var targetDir = finalTarget.currentCell.cellCoord - currentCell.cellCoord;
+        FixSort(targetDir);
+        
         finalTarget.DoDamage(HostileInfo.basicAttackDamage);
         
         Invoke(nameof(CallNextTurn), 1f);
@@ -126,11 +130,13 @@ public class HostileEntity : BaseEntity
                 currentCell = cell;
                 cell._entityInCell = this;
                 currentMovement--;
+
+                var direction = cell.cellCoord - currentCell.cellCoord;
+                FixSort(direction);
             });
             yield return new WaitForSeconds(0.25f);
         }
         
-        FixSort();
         OnEntityMoved?.Invoke();
     }
 }

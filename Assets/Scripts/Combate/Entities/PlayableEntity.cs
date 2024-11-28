@@ -37,11 +37,6 @@ public class PlayableEntity : BaseEntity, IEntity
         ResetMovement();
     }
 
-    public override void StartTurn()
-    {
-        base.StartTurn();
-    }
-
     public override void MoveTowards(Cell cellToMove, bool blink = false) 
     {
         if (blink)
@@ -75,11 +70,13 @@ public class PlayableEntity : BaseEntity, IEntity
                 currentCell = cell;
                 cell._entityInCell = this;
                 currentMovement--;
+
+                var direction = cell.cellCoord - currentCell.cellCoord;
+                FixSort(direction);
             });
             yield return new WaitForSeconds(0.25f);
         }
         
-        FixSort();
         OnEntityMoved?.Invoke();
     }
 }

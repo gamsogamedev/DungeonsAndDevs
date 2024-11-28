@@ -16,6 +16,7 @@ public abstract class BaseEntity : MonoBehaviour
     [HideInInspector] public Cell currentCell;
 
     private SpriteRenderer visualRef;
+    private bool facingRight;
     private int baseSortOrder;
     
     internal virtual void Start()
@@ -92,12 +93,14 @@ public abstract class BaseEntity : MonoBehaviour
 
         this.currentCell = c;
         c._entityInCell = this;
-            
-        FixSort();
+        
+        FixSort(EntityInfo.entityType == EntityType.Playable ? Vector2Int.right : Vector2Int.left);
     }
 
-    public void FixSort()
+    public void FixSort(Vector2Int lastDirection)
     {
+        facingRight = lastDirection.x > 0;
+        visualRef.flipX = facingRight;
         visualRef.sortingOrder = baseSortOrder - currentCell.cellCoord.y;
     }
     
