@@ -12,11 +12,11 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
     
-    public static readonly UnityEvent<BaseEntity> OnEntityTurn = new();
-
+    // ----- COMBAT SETTINGS
     [SerializeField] private CombatSettingsScriptable cSettings;
     private void LoadCombatSettings(CombatSettingsScriptable sett) => cSettings = sett;
     
+    // ----- TURN INFO
     public class Turn
     {
         public BaseEntity TurnEntity;
@@ -48,7 +48,12 @@ public class CombatManager : MonoBehaviour
     public static BaseEntity TurnEntity => CurrentTurn.TurnEntity;
     public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
     
+    
+    // ----- TURN EVENTS
+    public static readonly UnityEvent<BaseEntity> OnEntityTurn = new(); 
     public static readonly UnityEvent ActionTaken = new();
+    
+    // ----- OTHER EVENTS
     public static readonly UnityEvent<BaseEntity> OnEntityDeath = new();
     public static readonly UnityEvent OnWin = new(), OnLose = new();
      
@@ -76,6 +81,12 @@ public class CombatManager : MonoBehaviour
         return orderList.ToList();
     }
 
+    public void PassTurn()
+    {
+        Invoke(nameof(NextTurn), .5f);
+    }
+
+    public void NextTurn() => NextTurn(startCombat: false);
     public void NextTurn(bool startCombat = false)
     {
         if (startCombat)
@@ -188,17 +199,47 @@ public class CombatManager : MonoBehaviour
 
         if (cSettings.hasUnlock)
         {
-            // Check if player has unlock here
+            var entName = cSettings.playableUnlocked.enemie.entityName;
+            EnemieMapping unlockable;
+            if (!GameManager.GetUnlock(entName))
+            {
+                unlockable = cSettings.playableUnlocked;
+            }
+            else
+            {
+                unlockable = cSettings.SubstituteHostile;
+                
+                OnWin.AddListener(() => GameManager.SetUnlock(cSettings.playableUnlocked.enemie.entityName));
+            }
             
-            var e = cSettings.playableUnlocked;
-            var unlockInstace = e.enemie.GenerateEntity() as HostileEntity;
-            
-            var coord = GridController.GetCellAt(e.enemieCoord);     
+            var unlockInstance = unlockable.enemie.GenerateEntity() as HostileEntity;
+            var coord = GridController.GetCellAt(unlockable.enemieCoord);     
             if (coord._entityInCell is not null)
                 Debug.Log("Cell already occupied");
-            
-            unlockInstace?.SetPosition(coord);
+            unlockInstance?.SetPosition(coord);
         }
+        
+        Invoke(nameof(ProccesDialogue), 2f);
+    }
+
+    private void ProccesDialogue()
+    {
+        ScriptableDialogue dialogue;
+        if (!cSettings.hasDialogue) return;
+        
+        
+        if (cSettings.hasUnlock)
+        {
+            var isUnlocked = GameManager.GetUnlock(cSettings.playableUnlocked.enemie.entityName);
+            dialogue = cSettings.GetDialogue(isUnlocked);
+        }
+        else
+        {
+            dialogue = cSettings.GetDialogue(true);
+        }
+
+        // TODO block interaction during dialogue (Waiting for party system impl)
+        DialogueManager.OnStartDialogue?.Invoke(dialogue);
     }
 
     private void CheckActionsAvailable()
@@ -214,7 +255,7 @@ public class CombatManager : MonoBehaviour
             return;
         }
         
-        NextTurn();
+        PassTurn();
     }
 
     private void CheckCombatState(BaseEntity entity)
