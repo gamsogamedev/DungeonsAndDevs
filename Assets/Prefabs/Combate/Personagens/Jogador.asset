@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a76f4bff29441ac5180153209f35177a, type: 3}
-  m_Name: Ast
+  m_Name: Jogador
   m_EditorClassIdentifier: 
-  entityName: Ast
+  entityName: Jogador Teste
   entityType: 1
   entityPrefab: {fileID: 0}
-  entityVisuals: {fileID: -241983882, guid: ec339f7c8bf657a449e5027809d90a0e, type: 3}
-  maxHealth: 30
+  entityVisuals: {fileID: 21300000, guid: d0ea12ac8b7024c9a928ce40c4df6e8f, type: 3}
+  maxHealth: 100
   initiative: 3
   speed: 4
   classe: 3

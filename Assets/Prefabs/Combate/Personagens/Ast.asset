@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a76f4bff29441ac5180153209f35177a, type: 3}
-  m_Name: Player_Base 1
+  m_Name: Ast
   m_EditorClassIdentifier: 
-  entityName: Jogador_B
-  entityType: 0
+  entityName: Ast
+  entityType: 1
+  entityPrefab: {fileID: 0}
+  entityVisuals: {fileID: -241983882, guid: ec339f7c8bf657a449e5027809d90a0e, type: 3}
+  maxHealth: 100
+  initiative: 3
+  speed: 4
+  classe: 1
   skill1: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill2: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill3: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill4: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
+  skill2: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
+  skill3: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
+  skill4: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
