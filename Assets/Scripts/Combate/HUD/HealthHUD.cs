@@ -15,8 +15,6 @@ public class HealthHUD : MonoBehaviour
         
         hudOwner.HealthUpdated.AddListener(UpdateHUD);
         healthbarUI.fillAmount = 1;
-
-        Debug.Log($"{hudOwner.gameObject.name}'s health ui set");
     }
 
     private void UpdateHUD(float healthPercentage)

@@ -54,7 +54,7 @@ public class PlayableHUD : MonoBehaviour
         turnHUD.alpha = 0;
         
         CombatManager.OnEntityTurn.AddListener(UpdateHUD);
-        endTurnButton.onClick.AddListener(() => CombatManager.Instance.NextTurn());
+        endTurnButton.onClick.AddListener(() => CombatManager.Instance.PassTurn());
     }
 
     private void ReactivateEndTurnButton() => endTurnButton.interactable = true;

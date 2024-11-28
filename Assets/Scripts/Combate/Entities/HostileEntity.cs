@@ -19,12 +19,23 @@ public class HostileEntity : BaseEntity
     public override void StartTurn()
     {
         base.StartTurn();
-        var target = CombatBehaviour.GetTarget(this, HostileInfo.Behaviour);
         
-        OnEntityMoved.AddListener(AttackTargetInRange);
-        ApproachTarget(target);
+        var targetsInRange = GetTargetsInRange();
+        BaseEntity target;
+        if (targetsInRange.Any())
+        {
+            target = targetsInRange.OrderBy(t => Random.value).First();
+            AttackTargetInRange();
+        }
+        else
+        {
+            target = CombatBehaviour.GetTarget(this, HostileInfo.Behaviour);
+        
+            OnEntityMoved.AddListener(AttackTargetInRange);
+            ApproachTarget(target);   
+        }
 
-        Invoke(nameof(CallNextTurn), 1f);
+        Invoke(nameof(CallNextTurn), 2f);
     }
 
     private void ApproachTarget(BaseEntity target)

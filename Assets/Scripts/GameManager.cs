@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
+    // ----- COMBAT INFO
+    public static CombatSettingsScriptable currentCombatInfo;
+    public static void SetNewGame(CombatSettingsScriptable s) => currentCombatInfo = s;
+    
     // ----- CURRENCY
     public static int currency;
     public static readonly UnityEvent<int> CurrencyUpdated = new();
@@ -48,5 +52,8 @@ public class GameManager : MonoBehaviour
         WorldStateReader.EditNode(update.nodeName, update.nodeValue);
         Debug.Log(WorldStateReader.RetrieveNodeValue(update.nodeName));
     }
-   
+
+    // ----- UNLOCK
+    public static void SetUnlock(string unlockName) => PlayerPrefs.SetInt(unlockName, 1);
+    public static bool GetUnlock(string unlockName) => PlayerPrefs.HasKey(unlockName);
 }
