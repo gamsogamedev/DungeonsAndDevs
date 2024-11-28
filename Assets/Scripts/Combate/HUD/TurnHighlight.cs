@@ -29,12 +29,11 @@ public class TurnHighlight : MonoBehaviour
             highlightArrow.color -= Color.black;
             
             SetHighlight(true);
-            Debug.Log(highlightArrow.enabled);
         });
         highlightAnimation.Append(highlightCell.DOFade(1f, .2f));
         highlightAnimation.Join(highlightArrow.DOFade(1f, .2f));
 
-        highlightAnimation.Append(highlightArrow.transform.DOMoveY(highlightArrow.transform.position.y + .5f, 1f)
+        highlightAnimation.Append(highlightArrow.transform.DOLocalMoveY(highlightArrow.transform.position.y + .5f, 1f)
             .SetLoops(2, LoopType.Yoyo));
         highlightAnimation.AppendInterval(.5f);
         

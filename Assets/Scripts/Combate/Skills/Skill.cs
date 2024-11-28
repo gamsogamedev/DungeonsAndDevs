@@ -42,7 +42,7 @@ public class Skill
     /// <param name="target"></param>
     public void CastSkill(Cell target)
     {
-        if (target._entityInCell.EntityInfo.entityType == skillCaster.EntityInfo.entityType) return;
+        if (target._entityInCell?.EntityInfo.entityType == skillCaster.EntityInfo.entityType) return;
         actionsToDo = new Queue<CombatAction>();
         foreach (var action in skillInfo.skillActions)
         {

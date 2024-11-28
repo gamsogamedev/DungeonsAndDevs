@@ -94,7 +94,8 @@ public class CombatManager : MonoBehaviour
             SetCurrentEntity(_turnOrder[0]);
             return;
         }
-        
+
+        Debug.Log("Going to next dude");
         orderCount = (orderCount + 1 >= _turnOrder.Count) ? 0 : orderCount + 1;
         SetCurrentEntity(_turnOrder[orderCount]);
     }

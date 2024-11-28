@@ -65,7 +65,6 @@ public class CombatStageSelection : MonoBehaviour
 
     private void LoadNextCombat()
     {
-        Debug.Log("Settings Loaded");
         GameManager.SetNewGame(selectedSettings);
         SceneManager.LoadScene("Cenas/TesteCombate");
     }

@@ -49,6 +49,8 @@ public abstract class BaseEntity : MonoBehaviour
         {
             currentHealth = 0;
             HealthUpdated?.Invoke(0f);
+            CombatManager.OnEntityDeath?.Invoke(this);
+
             Invoke(nameof(ProccessDeath), 1f);
         }
 
@@ -57,8 +59,6 @@ public abstract class BaseEntity : MonoBehaviour
 
     private void ProccessDeath()
     {
-        CombatManager.OnEntityDeath?.Invoke(this);
-        
         var visuals = transform.Find("Visuals").GetComponent<SpriteRenderer>();
         var hudVisuals = transform.Find("HUD").GetComponent<CanvasGroup>();
 

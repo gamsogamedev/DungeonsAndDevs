@@ -19,12 +19,15 @@ public class HostileEntity : BaseEntity
     public override void StartTurn()
     {
         base.StartTurn();
-        
+        Invoke(nameof(TakeAction), 1f);
+    }
+
+    public void TakeAction()
+    {
         var targetsInRange = GetTargetsInRange();
         BaseEntity target;
         if (targetsInRange.Any())
         {
-            target = targetsInRange.OrderBy(t => Random.value).First();
             AttackTargetInRange();
         }
         else
@@ -34,8 +37,6 @@ public class HostileEntity : BaseEntity
             OnEntityMoved.AddListener(AttackTargetInRange);
             ApproachTarget(target);   
         }
-
-        Invoke(nameof(CallNextTurn), 2f);
     }
 
     private void ApproachTarget(BaseEntity target)
@@ -74,10 +75,16 @@ public class HostileEntity : BaseEntity
     private void AttackTargetInRange()
     {
         var targetsInRange = GetTargetsInRange();
-        if (!targetsInRange.Any()) return;
+        if (!targetsInRange.Any())
+        {
+            Invoke(nameof(CallNextTurn), 1f);
+            return;
+        }
         
         var finalTarget = targetsInRange.OrderBy(c => Random.value).First();
-        finalTarget. DoDamage(HostileInfo.basicAttackDamage);
+        finalTarget.DoDamage(HostileInfo.basicAttackDamage);
+        
+        Invoke(nameof(CallNextTurn), 1f);
     }
 
     private void CallNextTurn()
