@@ -24,7 +24,7 @@ MonoBehaviour:
     rangeType: 4
     range:
       rid: 100548717278920704
-  basicAttackDamage: 10
+  basicAttackDamage: 20
   references:
     version: 2
     RefIds:

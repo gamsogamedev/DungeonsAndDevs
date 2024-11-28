@@ -1582,7 +1582,7 @@ PrefabInstance:
     - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
       propertyPath: EntityInfo
       value: 
-      objectReference: {fileID: 11400000, guid: ff5d2ea9ef6b1e640a4341af3fd267cc, type: 2}
+      objectReference: {fileID: 11400000, guid: 273cf86305b98b2428edee6d6068d935, type: 2}
     - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
       propertyPath: testeEntity
       value: 
@@ -1590,7 +1590,7 @@ PrefabInstance:
     - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
       propertyPath: PlayableInfo
       value: 
-      objectReference: {fileID: 11400000, guid: ff5d2ea9ef6b1e640a4341af3fd267cc, type: 2}
+      objectReference: {fileID: 11400000, guid: 273cf86305b98b2428edee6d6068d935, type: 2}
     - target: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
       propertyPath: movementRange
       value: 3
@@ -3220,7 +3220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc3b5166197e165f8d7987330f40c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cSettings: {fileID: 11400000, guid: 6e00d8b3972745f41bdf859db284e3c1, type: 2}
+  cSettings: {fileID: 11400000, guid: d1995d3addf855d4ea20d1993e3c3e06, type: 2}
   currentStage: 2
 --- !u!1 &1122045337
 GameObject:

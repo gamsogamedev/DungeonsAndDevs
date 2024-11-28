@@ -10,34 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6c1283828e7986ba15af30cf54842d, type: 3}
-  m_Name: "Tra\xE7o Atraente"
+  m_Name: Giw - Skill 2
   m_EditorClassIdentifier: 
-  skillName: "Tra\xE7o atraente"
-  skillIcon: {fileID: 21300000, guid: dd5080bb64940e44aaaf7ad0d149ff66, type: 3}
+  skillName: Giw - Skill 2
+  skillIcon: {fileID: 21300000, guid: 10602e00c00143d40aeb81687993baa0, type: 3}
   skillRange:
-    rangeType: 4
+    rangeType: 2
     range:
-      rid: 8992942474979704851
+      rid: 2732558624803258378
   skillActions:
-  - actionDescription: Puxao
-    actionType: 4
+  - actionDescription: Dash
+    actionType: 3
     action:
-      rid: 8992942474979704861
+      rid: 2732558624803258371
   references:
     version: 2
     RefIds:
-    - rid: 8992942474979704851
-      type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
-      data:
-        range: 3
-    - rid: 8992942474979704861
-      type: {class: DeslocAction, ns: , asm: Assembly-CSharp}
+    - rid: 2732558624803258371
+      type: {class: MoveAction, ns: , asm: Assembly-CSharp}
       data:
         directionMoved:
           rangeType: 1
           range:
-            rid: 8992942474979704862
-    - rid: 8992942474979704862
+            rid: 2732558624803258379
+    - rid: 2732558624803258378
+      type: {class: Range_Line, ns: , asm: Assembly-CSharp}
+      data:
+        range: 4
+        direction: {x: 1, y: 0}
+    - rid: 2732558624803258379
       type: {class: Range_Single, ns: , asm: Assembly-CSharp}
       data:
-        range: 1
+        range: 4
