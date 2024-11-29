@@ -37,7 +37,7 @@ MonoBehaviour:
           rangeType: 1
           range:
             rid: 8992942474979704845
-        damage: 10
+        damage: 30
         useDirection: 0
         collides: 0
         skillVisuals:
@@ -46,7 +46,7 @@ MonoBehaviour:
           manyCellFX_nearTarget: {fileID: 0}
           manyCellFX_nearCaster: {fileID: 0}
           entityCasterFX: {fileID: 0}
-          entityTargetFX: {fileID: 22100000, guid: 818d414c2674264498ec2b82343d1afa, type: 2}
+          entityTargetFX: {fileID: 0}
     - rid: 8992942474979704845
       type: {class: Range_Single, ns: , asm: Assembly-CSharp}
       data:

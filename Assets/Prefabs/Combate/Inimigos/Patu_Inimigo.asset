@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e328d6ab5bf68ca188e8bebfa440b82e, type: 3}
-  m_Name: Cobra-Cega
+  m_Name: Patu_Inimigo
   m_EditorClassIdentifier: 
-  entityName: Goblin
+  entityName: Ast
   entityType: 2
   entityPrefab: {fileID: 359335061407300131, guid: 92ef8987301c13819961fd7b72bac382, type: 3}
-  entityVisuals: {fileID: 21300000, guid: f603ec0b3463e8f42a45ed12930dd0f9, type: 3}
-  maxHealth: 40
+  entityVisuals: {fileID: 21300000, guid: 84b879be64b423447945ac388eb56f4f, type: 3}
+  maxHealth: 100
   initiative: 3
-  speed: 6
+  speed: 2
   Behaviour: 0
   basicAttackRange:
     rangeType: 4
     range:
       rid: 100548717278920704
-  basicAttackDamage: 15
+  basicAttackDamage: 20
   references:
     version: 2
     RefIds:

@@ -16,11 +16,11 @@ MonoBehaviour:
   entityType: 1
   entityPrefab: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
   entityVisuals: {fileID: -241983882, guid: ec339f7c8bf657a449e5027809d90a0e, type: 3}
-  maxHealth: 100
+  maxHealth: 80
   initiative: 3
-  speed: 4
+  speed: 3
   classe: 1
-  skill1: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill2: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
+  skill1: {fileID: 11400000, guid: 2112e393362144c409fa84ebec5abc6c, type: 2}
+  skill2: {fileID: 11400000, guid: a4c28a75989b25c4c869885b8bb168f6, type: 2}
   skill3: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
   skill4: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}

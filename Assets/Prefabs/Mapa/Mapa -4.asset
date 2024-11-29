@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed1baa5c36ce6470893dae17715beeca, type: 3}
-  m_Name: Mapa-2
+  m_Name: Mapa -4
   m_EditorClassIdentifier: 
   gridSize: {x: 0, y: 0}
   enemieList:
-  - enemie: {fileID: 11400000, guid: 9097a7475e6bb87428acdfc2c16f8c59, type: 2}
+  - enemie: {fileID: 11400000, guid: 31daa6be3fa13824ca6035d0a64050e9, type: 2}
     enemieCoord: {x: 13, y: 4}
-  - enemie: {fileID: 11400000, guid: d6e2d837b8ec957e994e91978d44dee2, type: 2}
-    enemieCoord: {x: 13, y: 5}
-  - enemie: {fileID: 11400000, guid: d6e2d837b8ec957e994e91978d44dee2, type: 2}
-    enemieCoord: {x: 13, y: 3}
+  - enemie: {fileID: 11400000, guid: 31daa6be3fa13824ca6035d0a64050e9, type: 2}
+    enemieCoord: {x: 13, y: 2}
   hasUnlock: 0
   playableUnlocked:
     enemie: {fileID: 0}
