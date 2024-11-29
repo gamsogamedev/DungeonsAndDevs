@@ -12,6 +12,10 @@ public class Move : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        Interaction.OnInteractionTriggered.AddListener(() => this.enabled = false);
+        Interaction.OnInteractionEnded.AddListener(() => this.enabled = true);
+        
         DialogueManager.OnStartDialogue.AddListener((canmove) => this.enabled = false);
         DialogueManager.OnFinishDialogue.AddListener(() => this.enabled = true);
     }

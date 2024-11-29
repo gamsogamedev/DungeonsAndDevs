@@ -158,6 +158,13 @@ public static class GridController
             }
         }
         
+        var errorPath = RetrievePath(finishPoint);
+                
+        var errorCellsRead = new List<Cell>();
+        errorCellsRead.AddRange(openList);
+        errorCellsRead.AddRange(closedList);
+        foreach (var c in errorCellsRead) 
+            c.ClearPath();
         return null;
     }
     

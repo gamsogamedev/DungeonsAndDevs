@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,8 +17,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     public List<ScriptableEntity_Playable> party;
+    public int MaxPartySize;
+    public int CurrentPartySize { get; private set; }
+    public void UnlockPartySlot()
+    {
+        if(CurrentPartySize == MaxPartySize) return;
+        CurrentPartySize++;
+    }
     
-
     // ----- COMBAT INFO
     public static CombatSettingsScriptable currentCombatInfo;
     public static void SetNewGame(CombatSettingsScriptable s) => currentCombatInfo = s;
@@ -39,6 +46,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        SetUnlock("Jogador");
+        CurrentPartySize = 2;
         
         WorldStateReader.Initialize();
         UpdateWorldState.AddListener(UpdateWorld);
@@ -59,4 +69,21 @@ public class GameManager : MonoBehaviour
     // ----- UNLOCK
     public static void SetUnlock(string unlockName) => PlayerPrefs.SetInt(unlockName, 1);
     public static bool GetUnlock(string unlockName) => PlayerPrefs.HasKey(unlockName);
+
+    [Button("Unlock")]
+    public void UnlockAll()
+    {
+        SetUnlock("Mary");
+        SetUnlock("Daniboy");
+        SetUnlock("Ast");
+        SetUnlock("Giw");
+        SetUnlock("Patu");
+    }
+
+    [Button("Clean Unlocks")]
+    public void ClearPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        SetUnlock("Jogador");
+    }
 }

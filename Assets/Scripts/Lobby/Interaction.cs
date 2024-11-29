@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class DialogueInteraction : MonoBehaviour
+public class Interaction : MonoBehaviour
 {
-    [SerializeField] private List<ScriptableDialogue> dialogues;
     private bool _canInteract;
+    [SerializeField] private StartGameHUD _startGameHUD;
+
+    public static UnityEvent OnInteractionTriggered = new();
+    public static UnityEvent OnInteractionEnded = new();
+
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(!other.CompareTag("Player")) return;
@@ -20,8 +26,15 @@ public class DialogueInteraction : MonoBehaviour
     
     private void Update()
     {
+        if (!_startGameHUD.GetComponent<Canvas>().enabled)
+        {
+            OnInteractionEnded?.Invoke();
+        }
+        
         if (Input.GetKeyDown(KeyCode.E) && _canInteract) {
-            DialogueManager.OnStartDialogue?.Invoke(dialogues[0]);
+            OnInteractionTriggered?.Invoke();
+            
+            _startGameHUD.Open();
         }
     }
 }

@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: Assets/Cenas/Lobby/SalaVariavelDan.unity
     guid: 956ead7e8b00f7944bc6adc83701f8f4
   - enabled: 1
-    path: Assets/Cenas/Teste.unity
-    guid: c66fe466b055edd41aa12f2acfb41b91
+    path: Assets/Cenas/Mapa.unity
+    guid: 1c2cd2f6eadf4204a834f23524e36021
   - enabled: 1
     path: Assets/Cenas/TesteCombate.unity
     guid: 856eb29b49fdc15f5bb85cb957075a4e

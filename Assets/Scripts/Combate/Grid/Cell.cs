@@ -91,6 +91,7 @@ public class Cell : MonoBehaviour
         {
             if (_entityInCell is not null) return;
             var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
+            if (path is null) return;
             foreach (var pathCell in path)
             {
                 pathCell.SetCellAsPath();
