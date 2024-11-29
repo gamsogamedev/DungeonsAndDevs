@@ -16,15 +16,15 @@ MonoBehaviour:
   entityType: 2
   entityPrefab: {fileID: 359335061407300131, guid: 92ef8987301c13819961fd7b72bac382, type: 3}
   entityVisuals: {fileID: 173122122, guid: 31e7c010b0f435549850af880d9fe2f9, type: 3}
-  maxHealth: 400
+  maxHealth: 200
   initiative: 3
-  speed: 6
+  speed: 5
   Behaviour: 0
   basicAttackRange:
     rangeType: 4
     range:
       rid: 100548717278920704
-  basicAttackDamage: 100
+  basicAttackDamage: 50
   references:
     version: 2
     RefIds:
