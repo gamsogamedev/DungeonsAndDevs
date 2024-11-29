@@ -1557,21 +1557,21 @@ MonoBehaviour:
   - btn: {fileID: 2088851550}
     combatSettings: {fileID: 11400000, guid: 6e00d8b3972745f41bdf859db284e3c1, type: 2}
   - btn: {fileID: 1374782332}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 3e2f2988141219141861f6b6a7540857, type: 2}
   - btn: {fileID: 1785370477}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 899bdeb1bc1aeac4b87ec4aa46dc1bb8, type: 2}
   - btn: {fileID: 188369887}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: f4966e68c97a7c645ad78ca7b42a4458, type: 2}
   - btn: {fileID: 1144863750}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 24f8aaaa2a13f70469fca9e889463441, type: 2}
   - btn: {fileID: 1135542775}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 4619a59a50c11044db9bac77e5f6b410, type: 2}
   - btn: {fileID: 1167361215}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 0202bcd50e9f691439f37b8614cea4d3, type: 2}
   - btn: {fileID: 1421049707}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: d009aec07d48b5244bf588fa7e337907, type: 2}
   - btn: {fileID: 596934694}
-    combatSettings: {fileID: 11400000, guid: 3f16f79049919b3538356a7cf8dafbe5, type: 2}
+    combatSettings: {fileID: 11400000, guid: 2360f291497227e48a4b38b664f00fa6, type: 2}
 --- !u!1 &1135542773
 GameObject:
   m_ObjectHideFlags: 0

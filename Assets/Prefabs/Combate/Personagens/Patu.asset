@@ -15,12 +15,12 @@ MonoBehaviour:
   entityName: Jogador Teste
   entityType: 1
   entityPrefab: {fileID: 0}
-  entityVisuals: {fileID: 21300000, guid: d0ea12ac8b7024c9a928ce40c4df6e8f, type: 3}
-  maxHealth: 100
+  entityVisuals: {fileID: 21300000, guid: 84b879be64b423447945ac388eb56f4f, type: 3}
+  maxHealth: 200
   initiative: 3
-  speed: 4
+  speed: 2
   classe: 2
-  skill1: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill2: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
+  skill1: {fileID: 11400000, guid: f3979958c6f9148419adc48080360c99, type: 2}
+  skill2: {fileID: 11400000, guid: 630f22798d8fe314c99f348ba1aea582, type: 2}
   skill3: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
   skill4: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}

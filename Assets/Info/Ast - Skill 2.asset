@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6c1283828e7986ba15af30cf54842d, type: 3}
-  m_Name: Giw - Skill 1
+  m_Name: Ast - Skill 2
   m_EditorClassIdentifier: 
-  skillName: Giw - Skill 1
-  skillIcon: {fileID: 21300000, guid: f70289bf6e1f5c948816d1bef268345f, type: 3}
+  skillName: Ast - Skill 1
+  skillIcon: {fileID: 21300000, guid: 96f9b411aeccd2e4d8aca7499382396e, type: 3}
   skillRange:
-    rangeType: 4
+    rangeType: 3
     range:
-      rid: 8992942474979704843
+      rid: 2732558632633499653
   skillActions:
   - actionDescription: Dano
     actionType: 1
@@ -26,11 +26,11 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2732558632633499672
-      type: {class: Range_Single, ns: , asm: Assembly-CSharp}
+    - rid: 2732558632633499653
+      type: {class: Range_Cross, ns: , asm: Assembly-CSharp}
       data:
-        range: 1
-    - rid: 8992942474979704843
+        range: 5
+    - rid: 2732558632633499655
       type: {class: Range_Radius, ns: , asm: Assembly-CSharp}
       data:
         range: 1
@@ -38,10 +38,10 @@ MonoBehaviour:
       type: {class: DamageAction, ns: , asm: Assembly-CSharp}
       data:
         areaOfEffect:
-          rangeType: 1
+          rangeType: 4
           range:
-            rid: 2732558632633499672
-        damage: 30
+            rid: 2732558632633499655
+        damage: 10
         useDirection: 0
         collides: 0
         skillVisuals:

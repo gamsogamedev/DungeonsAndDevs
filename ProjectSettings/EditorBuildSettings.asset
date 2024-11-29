@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/Cenas/Menus.unity
     guid: e70b18e8a0ef84a4b9644b06d85725e5
   - enabled: 1
-    path: Assets/Cenas/Cena 1.1.unity
+    path: Assets/Cenas/Lobby/Cena 1.1.unity
     guid: 1ac7d65464251e649b87ea17a442ebe3
   - enabled: 1
-    path: Assets/Cenas/HalldeEntrada.unity
+    path: Assets/Cenas/Lobby/HalldeEntrada.unity
     guid: 795411409f986b64fbd78f26bf82fade
   - enabled: 1
-    path: Assets/Cenas/SalaGameDesign.unity
+    path: Assets/Cenas/Lobby/SalaGameDesign.unity
     guid: f4a448fce62242342b82d44cf9d5bb98
   - enabled: 1
-    path: Assets/Cenas/SalaNaga.unity
+    path: Assets/Cenas/Lobby/SalaNaga.unity
     guid: 388abdecc14545b4fac7089420c2436f
   - enabled: 1
-    path: Assets/Cenas/SalaVariavel.unity
+    path: Assets/Cenas/Lobby/SalaVariavel.unity
     guid: 3d3b604f62911304d9fe8f8475d62990
   - enabled: 1
-    path: Assets/Cenas/SalaVariavelDan.unity
+    path: Assets/Cenas/Lobby/SalaVariavelDan.unity
     guid: 956ead7e8b00f7944bc6adc83701f8f4
   - enabled: 1
     path: Assets/Cenas/Teste.unity

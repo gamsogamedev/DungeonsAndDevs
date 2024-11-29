@@ -33,7 +33,7 @@ MonoBehaviour:
           rangeType: 1
           range:
             rid: 1059906688252641286
-        damage: 10
+        damage: 20
         useDirection: 1
         collides: 1
         skillVisuals:
