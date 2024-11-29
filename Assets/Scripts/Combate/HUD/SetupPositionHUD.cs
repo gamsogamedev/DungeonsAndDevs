@@ -44,19 +44,11 @@ public class SetupPositionHUD : MonoBehaviour
 
     private void StartCombat()
     {
-        bool allPlayersInstantiated = true;
-
         for (int i = 0; i < GameManager.Instance.party.Count; i++){
-
-            if (!PlayableList[i].valid){
-                allPlayersInstantiated = false;
-            }
-
+            if (!PlayableList[i].valid) return;
         }
-
-        if (allPlayersInstantiated) {
-            setupUI.enabled = false;
-            CombatManager.Instance.FinishPositionSetup();
-        }
+        
+        setupUI.enabled = false; 
+        CombatManager.Instance.FinishPositionSetup();
     }
 }

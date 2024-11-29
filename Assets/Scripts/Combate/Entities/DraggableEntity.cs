@@ -11,7 +11,7 @@ public class DraggableEntity : MonoBehaviour
     private Vector3 positionBeforeDrag;
     private bool isDragging;
 
-    public bool isOnGrid{get;private set;}
+    public bool isOnGrid { get; private set; }
 
     private void Awake()
     {
@@ -23,8 +23,6 @@ public class DraggableEntity : MonoBehaviour
     {
         _entity = GetComponent<BaseEntity>();
         
-        isDragging = false;
-
         positionBeforeDrag = new Vector3(-100, -100, -100);
         isOnGrid = false;
     }
@@ -38,12 +36,15 @@ public class DraggableEntity : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if (!isDragging) return;
+        if (!isDragging)
+        {
+            transform.position = positionBeforeDrag;
+            return;
+        }
         isDragging = false;
         
         var hit = Physics2D.OverlapBox(transform.position, Vector3.one / 20f, 0);
         this.GetComponent<Collider2D>().enabled = true;
-        
         
         if (hit is null || !hit.CompareTag("Cell"))
         {
@@ -81,7 +82,7 @@ public class DraggableEntity : MonoBehaviour
             _entity.FixSort(Vector2Int.right);
         }
     }
-
+    
     public void OnMouseDrag()
     {
         if (!isDragging)

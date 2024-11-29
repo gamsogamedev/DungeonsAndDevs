@@ -188,54 +188,6 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
---- !u!1 &51609541
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 51609543}
-  - component: {fileID: 51609542}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &51609542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51609541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56bc4e0feafffbbe39a18f1ee5e85160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  party:
-  - {fileID: 11400000, guid: ff5d2ea9ef6b1e640a4341af3fd267cc, type: 2}
-  - {fileID: 11400000, guid: 2d51ced5c44a25140a281b0325e6c65b, type: 2}
-  - {fileID: 11400000, guid: 273cf86305b98b2428edee6d6068d935, type: 2}
---- !u!4 &51609543
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51609541}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61298593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,7 +3523,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1248143183}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudGeneratePlayer
+          m_MethodName: HUDGeneratePlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3587,7 +3539,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1248143183}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudDragPlayer
+          m_MethodName: HUDDragPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3603,7 +3555,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1248143183}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudMouseUpPlayer
+          m_MethodName: HUDMouseUpPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4909,7 +4861,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1891928067}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudGeneratePlayer
+          m_MethodName: HUDGeneratePlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4925,7 +4877,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1891928067}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudDragPlayer
+          m_MethodName: HUDDragPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4941,7 +4893,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1891928067}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudMouseUpPlayer
+          m_MethodName: HUDMouseUpPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5061,7 +5013,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1969724637}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudGeneratePlayer
+          m_MethodName: HUDGeneratePlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5077,7 +5029,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1969724637}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudDragPlayer
+          m_MethodName: HUDDragPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5093,7 +5045,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1969724637}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudMouseUpPlayer
+          m_MethodName: HUDMouseUpPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5601,7 +5553,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2144060746}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudGeneratePlayer
+          m_MethodName: HUDGeneratePlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5617,7 +5569,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2144060746}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudDragPlayer
+          m_MethodName: HUDDragPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5633,7 +5585,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2144060746}
           m_TargetAssemblyTypeName: ButtonInstantiator, Assembly-CSharp
-          m_MethodName: hudMouseUpPlayer
+          m_MethodName: HUDMouseUpPlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
