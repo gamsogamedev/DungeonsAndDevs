@@ -23,10 +23,9 @@ public class SetupPositionHUD : MonoBehaviour
 
     private void Start()
     {
-    
-        for (int i = 0; i < GameManager.Instance.party.Count; i++){
-            
-            PlayableList[i].entity = GameManager.Instance.party[i];
+        for (int i = 0; i < GameManager.Instance.party.Count; i++)
+        {
+            PlayableList[i].AssignEntity(GameManager.Instance.party[i]);
         }
         
         if (finishSetupButton is null)

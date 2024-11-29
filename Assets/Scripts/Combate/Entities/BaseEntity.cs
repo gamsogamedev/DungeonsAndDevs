@@ -101,6 +101,8 @@ public abstract class BaseEntity : MonoBehaviour
     {
         facingRight = lastDirection.x > 0;
         visualRef.flipX = facingRight;
+
+        if (currentCell is null) return;
         visualRef.sortingOrder = baseSortOrder - currentCell.cellCoord.y;
     }
     

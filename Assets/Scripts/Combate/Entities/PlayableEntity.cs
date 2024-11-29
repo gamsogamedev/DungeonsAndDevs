@@ -23,6 +23,8 @@ public class PlayableEntity : BaseEntity, IEntity
         skill2 = new Skill(PlayableInfo.skill2, this);
         skill3 = new Skill(PlayableInfo.skill3, this);
         skill4 = new Skill(PlayableInfo.skill4, this);
+        
+        FixSort(Vector2Int.right);
     }
 
 

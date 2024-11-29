@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class ButtonInstantiator : MonoBehaviour
@@ -12,10 +13,21 @@ public class ButtonInstantiator : MonoBehaviour
     private bool isInstantiated;
     public bool valid => isInstantiated && draggableEntity.isOnGrid;
 
-    private void Awake() {
+    [SerializeField] private Image entityIcon, lockedSlot;
+    
+    private void Awake()
+    {
+        lockedSlot.enabled = true;
         isInstantiated = false;
     }
 
+    public void AssignEntity(ScriptableEntity_Playable e)
+    {
+        entity = e;
+        entityIcon.sprite = entity.entityVisuals;
+        lockedSlot.enabled = false;
+    }
+    
     public void HUDGeneratePlayer() {
 
         if (entity is null) return;
