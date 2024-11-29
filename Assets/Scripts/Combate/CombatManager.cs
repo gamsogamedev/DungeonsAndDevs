@@ -184,7 +184,11 @@ public class CombatManager : MonoBehaviour
 
     private void PositionEnemies()
     {
-        LoadCombatSettings(GameManager.currentCombatInfo);
+        //LoadCombatSettings(GameManager.currentCombatInfo);
+
+        if (GameManager.currentCombatInfo is not null){
+            LoadCombatSettings(GameManager.currentCombatInfo);
+        }
         
         foreach (var e in cSettings.enemieList)
         {

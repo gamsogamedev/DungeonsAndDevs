@@ -25,11 +25,6 @@ public class PlayableEntity : BaseEntity, IEntity
         skill4 = new Skill(PlayableInfo.skill4, this);
     }
 
-    // Remove later
-    private void OnEnable()
-    {
-        InitializeEntity(PlayableInfo);
-    }
 
     internal override void Start()
     {

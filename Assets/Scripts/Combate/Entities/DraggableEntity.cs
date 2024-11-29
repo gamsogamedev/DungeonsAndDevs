@@ -11,18 +11,22 @@ public class DraggableEntity : MonoBehaviour
     private Vector3 positionBeforeDrag;
     private bool isDragging;
 
+    public bool isOnGrid{get;private set;}
+
     private void Awake()
     {
         GridManager.GridGenerated.AddListener(SetupDrag);
         CombatManager.OnStagePass.AddListener(DisableDrag);
     }
 
-    private void SetupDrag()
+    public void SetupDrag()
     {
         _entity = GetComponent<BaseEntity>();
         
         isDragging = false;
-        positionBeforeDrag = transform.position;
+
+        positionBeforeDrag = new Vector3(-100, -100, -100);
+        isOnGrid = false;
     }
 
     private void DisableDrag(CombatState state)
@@ -32,7 +36,7 @@ public class DraggableEntity : MonoBehaviour
         this.enabled = false;
     }
 
-    private void OnMouseUp()
+    public void OnMouseUp()
     {
         if (!isDragging) return;
         isDragging = false;
@@ -40,8 +44,13 @@ public class DraggableEntity : MonoBehaviour
         var hit = Physics2D.OverlapBox(transform.position, Vector3.one / 20f, 0);
         this.GetComponent<Collider2D>().enabled = true;
         
+        
         if (hit is null || !hit.CompareTag("Cell"))
         {
+            if (!isOnGrid){
+                transform.position = positionBeforeDrag;
+                return;
+            }
             transform.position = positionBeforeDrag;
             return;
         }
@@ -49,6 +58,10 @@ public class DraggableEntity : MonoBehaviour
         var tileHit = hit.GetComponent<Cell>();
         if (tileHit._entityInCell)
         {
+            if (!isOnGrid){
+                transform.position = positionBeforeDrag;
+                return;
+            }
             transform.position = positionBeforeDrag;
             return;
         }
@@ -63,18 +76,18 @@ public class DraggableEntity : MonoBehaviour
             
             tileHit._entityInCell = _entity;
             
+            isOnGrid = true;
             positionBeforeDrag = transform.position;
             _entity.FixSort(Vector2Int.right);
         }
     }
 
-    private void OnMouseDrag()
+    public void OnMouseDrag()
     {
         if (!isDragging)
         {
             transform.SetParent(null);
             this.GetComponent<Collider2D>().enabled = false;
-            positionBeforeDrag = transform.position;
             isDragging = true;
         }
 

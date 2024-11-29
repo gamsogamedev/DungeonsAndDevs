@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
+    public List<ScriptableEntity_Playable> party;
+    
+
     // ----- COMBAT INFO
     public static CombatSettingsScriptable currentCombatInfo;
     public static void SetNewGame(CombatSettingsScriptable s) => currentCombatInfo = s;
@@ -29,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance is null)
         {
-            Instance = null;
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else

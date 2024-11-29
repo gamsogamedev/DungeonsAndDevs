@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Jogador Teste
   entityType: 1
-  entityPrefab: {fileID: 0}
+  entityPrefab: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
   entityVisuals: {fileID: 21300000, guid: 29259bef1bf323d4aaf3bb0c5799c5bc, type: 3}
   maxHealth: 100
   initiative: 3

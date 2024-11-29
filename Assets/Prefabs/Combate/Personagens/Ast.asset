@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Ast
   entityType: 1
-  entityPrefab: {fileID: 0}
+  entityPrefab: {fileID: 6743908333147414447, guid: 07921424289512dd993a5246a8f57601, type: 3}
   entityVisuals: {fileID: -241983882, guid: ec339f7c8bf657a449e5027809d90a0e, type: 3}
   maxHealth: 100
   initiative: 3
