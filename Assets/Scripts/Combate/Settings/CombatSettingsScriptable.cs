@@ -17,6 +17,10 @@ public class CombatSettingsScriptable : ScriptableObject
     public Vector2Int gridSize;
     
     public List<EnemieMapping> enemieList;
+
+    [Space(10)]
+
+    public int mapLevel;
     
     [Space(10)]
     

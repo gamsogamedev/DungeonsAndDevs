@@ -22,7 +22,7 @@ public class EndCombatOverlay : MonoBehaviour
         
         CombatManager.OnLose.AddListener(OpenDefeatOverlay);
         ControlOverlay(defeatOverlay, false);
-        homeBtn.onClick.AddListener(() => SceneManager.LoadScene("Cenas/Lobby/HalldeEntrada"));
+        homeBtn.onClick.AddListener(BackToStart);           // TODO: fazer voltar pra tela inicial e resetar progresso do mapa
     }
 
     private void ControlOverlay(CanvasGroup overlay, bool activate)
@@ -47,9 +47,16 @@ public class EndCombatOverlay : MonoBehaviour
 
     private void BackToMap()
     {
+        GameManager.Instance.AddMapProgress();
         SceneManager.LoadScene("Cenas/Mapa");
     }
     
+    private void BackToStart()
+    {
+        GameManager.Instance.ResetMapProgress();
+        SceneManager.LoadScene("Cenas/Lobby/HalldeEntrada");
+    }
+
     private void OpenDefeatOverlay()
     {
         ControlOverlay(defeatOverlay, true);

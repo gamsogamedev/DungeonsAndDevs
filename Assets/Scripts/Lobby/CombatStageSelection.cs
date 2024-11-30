@@ -32,11 +32,27 @@ public class CombatStageSelection : MonoBehaviour
         
         foreach (var comb in combatTrail)
         {
-            comb.btn.onClick.AddListener(delegate
-            {
-                selectedSettings = comb.combatSettings;
-                OpenOverlay();
-            });
+
+            if (comb.combatSettings.mapLevel == GameManager.Instance.GetMapProgress()){
+                comb.btn.onClick.AddListener(delegate
+                {
+                    selectedSettings = comb.combatSettings;
+                    OpenOverlay();
+                });
+            }
+            else{
+                if (comb.combatSettings.mapLevel < GameManager.Instance.GetMapProgress()){
+                    // Adicionar um check de complete talvez?
+                    comb.btn.image.color = Color.green;
+                    comb.btn.interactable = false;
+                }else{
+                    // Adicionar aquele cadeadinho maneiro
+                    comb.btn.image.color = Color.red;
+                    comb.btn.interactable = false;
+                }
+            }
+
+            
         }
     }
 
