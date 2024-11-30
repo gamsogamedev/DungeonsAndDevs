@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -78}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178201348
@@ -656,8 +656,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1827,6 +1827,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7515393883280053456, guid: 9911fd46bfed291ba8e8af417a260ea8, type: 3}
+      propertyPath: MaxPartySize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515393883280053456, guid: 9911fd46bfed291ba8e8af417a260ea8, type: 3}
+      propertyPath: party.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515393883280053456, guid: 9911fd46bfed291ba8e8af417a260ea8, type: 3}
+      propertyPath: party.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c40536c00551a5858fe44001cb7aa10, type: 2}
     - target: {fileID: 7515393883280053457, guid: 9911fd46bfed291ba8e8af417a260ea8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2874,7 +2886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -360, y: 0}
+  m_AnchoredPosition: {x: -387, y: 825}
   m_SizeDelta: {x: 350, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &752999034
@@ -4089,8 +4101,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4db8c13950f356f42839b3abadff690b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4308,7 +4320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc3b5166197e165f8d7987330f40c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cSettings: {fileID: 11400000, guid: d1995d3addf855d4ea20d1993e3c3e06, type: 2}
+  cSettings: {fileID: 0}
   currentStage: 2
 --- !u!1 &1075823170
 GameObject:
