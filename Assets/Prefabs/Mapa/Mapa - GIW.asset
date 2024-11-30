@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: Mapa - GIW
   m_EditorClassIdentifier: 
   gridSize: {x: 0, y: 0}
-  enemieList:
-  - enemie: {fileID: 11400000, guid: 2624e3d8f09d22b498aca9daff52ca29, type: 2}
-    enemieCoord: {x: 13, y: 4}
+  enemieList: []
   mapLevel: 5
-  hasUnlock: 0
+  hasUnlock: 1
   playableUnlocked:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: 2624e3d8f09d22b498aca9daff52ca29, type: 2}
+    enemieCoord: {x: 13, y: 4}
   SubstituteHostile:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: 66706c0e3cdf9354a8c5206a7cd68712, type: 2}
+    enemieCoord: {x: 13, y: 4}
   hasDialogue: 0
   dialogueList: []
   hasUnlockableDialogue: 0

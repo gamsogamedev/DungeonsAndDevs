@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: Mapa-AST
   m_EditorClassIdentifier: 
   gridSize: {x: 0, y: 0}
-  enemieList:
-  - enemie: {fileID: 11400000, guid: 7d7b2d9111839414397a6ad29faf92e7, type: 2}
-    enemieCoord: {x: 13, y: 4}
+  enemieList: []
   mapLevel: 2
-  hasUnlock: 0
+  hasUnlock: 1
   playableUnlocked:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: 7d7b2d9111839414397a6ad29faf92e7, type: 2}
+    enemieCoord: {x: 13, y: 4}
   SubstituteHostile:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: 97b2a7da3b83e5145a5712cac2b092a7, type: 2}
+    enemieCoord: {x: 13, y: 4}
   hasDialogue: 0
   dialogueList: []
   hasUnlockableDialogue: 0

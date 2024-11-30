@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: Mapa - Patu
   m_EditorClassIdentifier: 
   gridSize: {x: 0, y: 0}
-  enemieList:
-  - enemie: {fileID: 11400000, guid: cd5e3aa69ce631646ba2eb127cb2e8a4, type: 2}
-    enemieCoord: {x: 13, y: 4}
+  enemieList: []
   mapLevel: 8
-  hasUnlock: 0
+  hasUnlock: 1
   playableUnlocked:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: cd5e3aa69ce631646ba2eb127cb2e8a4, type: 2}
+    enemieCoord: {x: 13, y: 4}
   SubstituteHostile:
-    enemie: {fileID: 0}
-    enemieCoord: {x: 0, y: 0}
+    enemie: {fileID: 11400000, guid: 31daa6be3fa13824ca6035d0a64050e9, type: 2}
+    enemieCoord: {x: 13, y: 4}
   hasDialogue: 0
   dialogueList: []
   hasUnlockableDialogue: 0
