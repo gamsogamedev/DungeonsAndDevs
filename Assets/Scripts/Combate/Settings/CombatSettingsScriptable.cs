@@ -25,6 +25,8 @@ public class CombatSettingsScriptable : ScriptableObject
     [Space(10)]
     
     public bool hasUnlock;
+
+    [ShowIf(nameof(hasUnlock))] public string unlockableName;
     [ShowIf(nameof(hasUnlock))] public EnemieMapping playableUnlocked;
     [ShowIf(nameof(hasUnlock))] public EnemieMapping  SubstituteHostile;
     

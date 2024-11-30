@@ -22,7 +22,7 @@ public class EndCombatOverlay : MonoBehaviour
         
         CombatManager.OnLose.AddListener(OpenDefeatOverlay);
         ControlOverlay(defeatOverlay, false);
-        homeBtn.onClick.AddListener(BackToStart);           // TODO: fazer voltar pra tela inicial e resetar progresso do mapa
+        homeBtn.onClick.AddListener(BackToStart);
     }
 
     private void ControlOverlay(CanvasGroup overlay, bool activate)
@@ -48,6 +48,13 @@ public class EndCombatOverlay : MonoBehaviour
     private void BackToMap()
     {
         GameManager.Instance.AddMapProgress();
+
+        var sett = CombatManager.Instance.GetSettings();
+        if (sett.hasUnlock && !GameManager.GetUnlock(sett.unlockableName))
+        {
+            GameManager.SetUnlock(sett.unlockableName);
+        }
+        
         SceneManager.LoadScene("Cenas/Mapa");
     }
     
