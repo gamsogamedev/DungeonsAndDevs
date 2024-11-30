@@ -14,6 +14,7 @@ public class CombatManager : MonoBehaviour
     
     // ----- COMBAT SETTINGS
     [SerializeField] private CombatSettingsScriptable cSettings;
+    public CombatSettingsScriptable GetSettings() => cSettings;
     private void LoadCombatSettings(CombatSettingsScriptable sett) => cSettings = sett;
     
     // ----- TURN INFO
