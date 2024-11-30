@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c125b664544a4f43abef6013e47ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SalaVariavelDan
+  sceneToLoad: HalldeEntrada
 --- !u!212 &736573926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4757,7 +4757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c125b664544a4f43abef6013e47ed72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SalaVariavel
+  sceneToLoad: HalldeEntrada
 --- !u!212 &913353857
 SpriteRenderer:
   m_ObjectHideFlags: 0
