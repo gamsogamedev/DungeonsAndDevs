@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,14 +34,28 @@ public class StartGameHUD : MonoBehaviour
 
     private void ParseParty(StartGameSlotHUD e)
     {
+        if (e.GetEntity() is null) return;
+        
         var p = GameManager.Instance.party;
         if (p.Contains(e.GetEntity()))
         {
-            e.MarkAsSelected(false);
+            
+            if (e.partySlot)
+            { 
+                if (e.GetEntity().entityName == "Jogador") return;
+                
+                availables.First(slot => slot.GetEntity() == e.GetEntity()).MarkAsSelected(false);
+            }
+            else
+            {
+                e.MarkAsSelected(false);
+            }
+        
             p.Remove(e.GetEntity());
         }
         else
         {
+            if (e.partySlot) return;
             if (p.Count == GameManager.Instance.CurrentPartySize) return;
             
             e.MarkAsSelected(true);

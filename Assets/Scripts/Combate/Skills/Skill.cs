@@ -51,13 +51,11 @@ public class Skill
         {
             actionsToDo.Enqueue(action);
         }
-
-        iteration = 0;
+        
         CombatAction.OnActionComplete.AddListener(UpdateTarget);
         UpdateTarget(target);
     }
 
-    private int iteration;
     private void UpdateTarget(Cell newTarget)
     {
         skillTarget = newTarget;

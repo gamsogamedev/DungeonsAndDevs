@@ -93,6 +93,9 @@ public class GameManager : MonoBehaviour
     public void UnlockAll()
     {
         ClearPrefs();
+        
+        SetUnlock("Sumir");
+        
         SetUnlock("Mary");
         SetUnlock("Daniboy");
         SetUnlock("Ast");

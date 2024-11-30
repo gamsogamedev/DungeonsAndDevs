@@ -87,7 +87,7 @@ public class DialogueChoiceHUD : MonoBehaviour
     {
         if (buttonChoice.updatesWorld)
         {
-            GameManager.UpdateWorldState?.Invoke(buttonChoice.update);
+            GameManager.SetUnlock(buttonChoice.update.nodeName);
         }
         
         DialogueManager.OnNextDialogueBlock?.Invoke(buttonChoice.jumpToIndex);

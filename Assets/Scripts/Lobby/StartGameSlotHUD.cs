@@ -12,10 +12,12 @@ public class StartGameSlotHUD : MonoBehaviour
     [SerializeField] private Image blocked;
 
     [SerializeField] private bool isPartySlot;
+    public bool partySlot => isPartySlot;
 
     [SerializeField, HideIf(nameof(isPartySlot))]
     private ScriptableEntity_Playable entity;
     public ScriptableEntity_Playable GetEntity() => entity;
+    public void SetEntity(ScriptableEntity_Playable e) => entity = e;
     
     private Button interactionBtn;
 
@@ -31,10 +33,10 @@ public class StartGameSlotHUD : MonoBehaviour
                 MarkAsSelected(true);
 
             if (entity?.entityName == "Jogador") return;
-            
-            interactionBtn = GetComponent<Button>();
-            interactionBtn.onClick.AddListener(() => EntitySelected?.Invoke(this));
         }
+
+        interactionBtn = GetComponent<Button>();
+        interactionBtn.onClick.AddListener(() => EntitySelected?.Invoke(this));
     }
     
     public void SetSlotInfo(ScriptableEntity_Playable e, bool empty = false)
@@ -44,7 +46,8 @@ public class StartGameSlotHUD : MonoBehaviour
             blocked.enabled = true;
             return;
         }
-        
+
+        entity = e;
         icon.sprite = e.entityVisuals;
         
         if (empty)

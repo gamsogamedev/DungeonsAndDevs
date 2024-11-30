@@ -11,6 +11,7 @@ public class LobbyLoad : MonoBehaviour
     {
         public GameObject prop;
         public string conditionKey;
+        public bool activateIfCondition = true;
         public bool useConditionValue;
         [AllowNesting, ShowIf(nameof(useConditionValue))] public int conditionValue;
     }
@@ -21,7 +22,7 @@ public class LobbyLoad : MonoBehaviour
     {
         foreach (var cp in _propsList)
         {
-            cp.prop.SetActive(false);
+            cp.prop.SetActive(!cp.activateIfCondition);
         }
         
         LoadProps();
@@ -36,12 +37,12 @@ public class LobbyLoad : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt(cp.conditionKey) == cp.conditionValue)
                 {
-                    cp.prop.SetActive(true);
+                    cp.prop.SetActive(cp.activateIfCondition);
                 }
             }
             else
             {
-                cp.prop.SetActive(true);
+                cp.prop.SetActive(cp.activateIfCondition);
             }
         }
     }
