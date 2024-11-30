@@ -24,6 +24,22 @@ public class GameManager : MonoBehaviour
         if(CurrentPartySize == MaxPartySize) return;
         CurrentPartySize++;
     }
+
+    // ----- MAP
+    private int mapProgress;
+
+    public int GetMapProgress(){
+        return mapProgress;
+    }
+
+    public void AddMapProgress(){
+        mapProgress++;
+    }
+
+    public void ResetMapProgress(){
+        mapProgress = 0;
+    }
+
     
     // ----- COMBAT INFO
     public static CombatSettingsScriptable currentCombatInfo;
@@ -49,7 +65,8 @@ public class GameManager : MonoBehaviour
 
         SetUnlock("Jogador");
         CurrentPartySize = 2;
-        
+
+        mapProgress = 0;        
         WorldStateReader.Initialize();
         UpdateWorldState.AddListener(UpdateWorld);
     }

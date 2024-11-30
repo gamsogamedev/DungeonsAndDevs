@@ -16,5 +16,15 @@ MonoBehaviour:
   enemieList:
   - enemie: {fileID: 11400000, guid: 97b2a7da3b83e5145a5712cac2b092a7, type: 2}
     enemieCoord: {x: 13, y: 6}
+  mapLevel: 3
   hasUnlock: 0
-  playableUnlocked: {fileID: 0}
+  playableUnlocked:
+    enemie: {fileID: 0}
+    enemieCoord: {x: 0, y: 0}
+  SubstituteHostile:
+    enemie: {fileID: 0}
+    enemieCoord: {x: 0, y: 0}
+  hasDialogue: 0
+  dialogueList: []
+  hasUnlockableDialogue: 0
+  unlockableDialogueList: []

@@ -24,6 +24,7 @@ MonoBehaviour:
     enemieCoord: {x: 13, y: 5}
   - enemie: {fileID: 11400000, guid: 2d9729212ab7f374eb93b71750f6b218, type: 2}
     enemieCoord: {x: 13, y: 6}
+  mapLevel: 8
   hasUnlock: 0
   playableUnlocked:
     enemie: {fileID: 0}
