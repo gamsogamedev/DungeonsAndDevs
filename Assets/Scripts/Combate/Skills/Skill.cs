@@ -69,6 +69,7 @@ public class Skill
     {
         if (actionsToDo.Count <= 0)
         {
+            CombatAction.OnActionComplete.RemoveAllListeners();
             OnSkillComplete?.Invoke();
             return;
         }

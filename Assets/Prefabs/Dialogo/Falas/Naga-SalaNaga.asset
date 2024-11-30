@@ -846,17 +846,17 @@ MonoBehaviour:
         choiceA:
           choiceText: "Por que o Daniboy n\xE3o me ensina?"
           jumpToIndex: 1
-          updatesWorld: 0
+          updatesWorld: 1
           update:
-            nodeName: 
-            nodeValue: 
+            nodeName: Daniboy
+            nodeValue: 1
         choiceB:
           choiceText: "Por que a Mary n\xE3o me ensina?"
           jumpToIndex: 2
-          updatesWorld: 0
+          updatesWorld: 1
           update:
-            nodeName: 
-            nodeValue: 
+            nodeName: Mary
+            nodeValue: 1
         choiceC:
           choiceText: 
           jumpToIndex: 0
@@ -875,8 +875,8 @@ MonoBehaviour:
     jumpToBlock: 0
     updatesWorld: 1
     update:
-      nodeName: Daniboy
-      nodeValue: Daniboy
+      nodeName: Sumir
+      nodeValue: 1
   - dialogueBlock:
     - type: 0
       textLine:

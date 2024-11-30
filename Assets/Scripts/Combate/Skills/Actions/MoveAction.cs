@@ -15,7 +15,7 @@ public class MoveAction : ICombatAction
         foreach (var cell in pathPreview)
         {
             if (cell._entityInCell is not null) break;
-            cell.SetCellAsWalkable();
+            //cell.SetCellAsWalkable();
             cellToMove = cell;
         }
         

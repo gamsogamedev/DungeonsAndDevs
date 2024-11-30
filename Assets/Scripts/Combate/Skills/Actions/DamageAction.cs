@@ -21,7 +21,6 @@ public class DamageAction : ICombatAction
     {
         var aoe = areaOfEffect.GetRange(target);
         BaseEntity entity;
-
         //caster.currentCell.ActivateVisual(skillVisuals.entityCasterFX, skillVisuals.hasCasterFX);
         
         var finalTarget = target;

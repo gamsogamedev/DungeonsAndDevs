@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
         
         if (_currentDialogueBlock.updatesWorld)
         { 
-            GameManager.UpdateWorldState?.Invoke(_currentDialogueBlock.update);
+            GameManager.SetUnlock(_currentDialogueBlock.update.nodeName);
         }
         
         ProcessDialogue();

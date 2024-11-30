@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityInfo: {fileID: 11400000, guid: d6e2d837b8ec957e994e91978d44dee2, type: 2}
   currentCell: {fileID: 0}
+  visualRef: {fileID: 359335061006606327}
   currentMovement: 0
   HostileInfo: {fileID: 11400000, guid: d6e2d837b8ec957e994e91978d44dee2, type: 2}
 --- !u!1 &359335061426267087

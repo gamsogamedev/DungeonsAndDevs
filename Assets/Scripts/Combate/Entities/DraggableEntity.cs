@@ -68,18 +68,13 @@ public class DraggableEntity : MonoBehaviour
         }
         else
         {
-            transform.SetParent(tileHit.transform);
-            transform.localPosition = Vector3.zero;
-
             if (_entity.currentCell is not null) 
                 _entity.currentCell._entityInCell = null;
-            _entity.currentCell = tileHit;
-            
-            tileHit._entityInCell = _entity;
-            
+
+            _entity.SetPosition(tileHit);
+
             isOnGrid = true;
             positionBeforeDrag = transform.position;
-            _entity.FixSort(Vector2Int.right);
         }
     }
     
