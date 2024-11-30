@@ -100,6 +100,7 @@ public abstract class BaseEntity : MonoBehaviour
     public void FixSort(Vector2Int lastDirection)
     {
         facingRight = lastDirection.x > 0;
+        
         visualRef.flipX = facingRight;
 
         if (currentCell is null) return;

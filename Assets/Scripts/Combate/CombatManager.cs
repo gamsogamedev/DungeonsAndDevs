@@ -63,21 +63,7 @@ public class CombatManager : MonoBehaviour
     private int orderCount;
     private List<BaseEntity> SetTurnOrder(List<BaseEntity> entitiesInvolved)
     {
-        var orderList = new BaseEntity[entitiesInvolved.Count];
-     
-        foreach (var ent in entitiesInvolved)
-        {
-            var valid = false;
-            while (!valid)
-            {
-                var ord = Random.Range(0, entitiesInvolved.Count);
-                if (orderList[ord] is not null) continue;
-                
-                valid = true;
-                orderList[ord] = ent;
-            }
-        }
-
+        var orderList = entitiesInvolved.OrderBy(e => e.EntityInfo.GetInitiative());
         return orderList.ToList();
     }
 
@@ -95,6 +81,7 @@ public class CombatManager : MonoBehaviour
             return;
         }
 
+        Debug.Log($"Current turn: {orderCount} // Round size: {_turnOrder.Count}");
         orderCount = (orderCount + 1 >= _turnOrder.Count) ? 0 : orderCount + 1;
         SetCurrentEntity(_turnOrder[orderCount]);
     }
@@ -259,6 +246,8 @@ public class CombatManager : MonoBehaviour
     private void CheckCombatState(BaseEntity entity)
     {
         _turnOrder.Remove(entity);
+        SetTurnOrder(_turnOrder);
+        
         int playableCount = 0, enemieCount = 0;
         foreach (var ent in _turnOrder)
         {

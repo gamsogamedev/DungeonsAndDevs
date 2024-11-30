@@ -37,6 +37,5 @@ public class DialogueBlock
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/New Dialogue")]
 public class ScriptableDialogue : ScriptableObject
 {
-    public CharacterAtlas atlas;
     public List<DialogueBlock> dialogueBlocks;
 }

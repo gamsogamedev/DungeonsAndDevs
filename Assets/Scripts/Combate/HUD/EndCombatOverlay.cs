@@ -22,7 +22,7 @@ public class EndCombatOverlay : MonoBehaviour
         
         CombatManager.OnLose.AddListener(OpenDefeatOverlay);
         ControlOverlay(defeatOverlay, false);
-        // homeBtn.onClick.AddListener();
+        homeBtn.onClick.AddListener(() => SceneManager.LoadScene("Cenas/Lobby/HalldeEntrada"));
     }
 
     private void ControlOverlay(CanvasGroup overlay, bool activate)

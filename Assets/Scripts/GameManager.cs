@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     [Button("Unlock")]
     public void UnlockAll()
     {
+        ClearPrefs();
         SetUnlock("Mary");
         SetUnlock("Daniboy");
         SetUnlock("Ast");

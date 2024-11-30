@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
             _dialogueQueue.Enqueue(dio);
             if (dio.type == DialogueEvent.DialogueEventType.Choice) break;
         }
-
+        
         if (_currentDialogueBlock.updatesWorld)
         { 
             GameManager.UpdateWorldState?.Invoke(_currentDialogueBlock.update);
