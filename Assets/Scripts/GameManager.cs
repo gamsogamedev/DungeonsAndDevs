@@ -62,8 +62,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        PlayerPrefs.DeleteKey("Tutorial");
         
         SetUnlock("Jogador");
         CurrentPartySize = 2;
@@ -72,7 +70,7 @@ public class GameManager : MonoBehaviour
         WorldStateReader.Initialize();
         UpdateWorldState.AddListener(UpdateWorld);
     }
-
+    
     public static void UpdateCurrency(int value)
     {
         currency += value;
@@ -86,7 +84,11 @@ public class GameManager : MonoBehaviour
     }
 
     // ----- UNLOCK
-    public static void SetUnlock(string unlockName) => PlayerPrefs.SetInt(unlockName, 1);
+    public static void SetUnlock(string unlockName) 
+    {
+        Debug.Log(unlockName);
+        PlayerPrefs.SetInt(unlockName, 1);
+    }
     public static bool GetUnlock(string unlockName) => PlayerPrefs.HasKey(unlockName);
 
     [Button("Unlock")]

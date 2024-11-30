@@ -17,13 +17,14 @@ public class TutorialOverlay : MonoBehaviour
         overlay.blocksRaycasts = false;
         
         okButton.onClick.AddListener(CloseOverlay);
+
     }
 
     private void Start()
     {
         if (GameManager.GetUnlock("Tutorial")) 
         {
-            overlay.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
             return;
         }
 
@@ -37,12 +38,12 @@ public class TutorialOverlay : MonoBehaviour
 
     private void CloseOverlay()
     {
+        GameManager.SetUnlock("Tutorial");
+        
         overlay.DOFade(0f, 1f)
             .OnComplete(delegate
             {
-                overlay.gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
             });
-        
-        GameManager.SetUnlock("Tutorial");
     }
 }
