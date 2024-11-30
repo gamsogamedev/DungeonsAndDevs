@@ -7968,7 +7968,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: f467541d87d9014448d5d005c353a4b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7952c31175cfaea49855f48011bbef88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9422,7 +9422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - {fileID: 11400000, guid: 7c40720fbe5f8944ebfab3c0e373f1d9, type: 2}
+  - {fileID: 11400000, guid: 04269a6a957d2b84e887391a6f6c20bf, type: 2}
 --- !u!61 &1547083375
 BoxCollider2D:
   m_ObjectHideFlags: 0
