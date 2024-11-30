@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour
         WorldStateReader.Initialize();
         UpdateWorldState.AddListener(UpdateWorld);
     }
+
+    private void OnEnable() {
+        ClearPrefs();
+    }
     
     public static void UpdateCurrency(int value)
     {
