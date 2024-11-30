@@ -200,7 +200,7 @@ public class CombatManager : MonoBehaviour
             {
                 unlockable = cSettings.SubstituteHostile;
                 
-                OnWin.AddListener(() => GameManager.SetUnlock(cSettings.playableUnlocked.enemie.entityName));
+                //OnWin.AddListener(() => GameManager.SetUnlock(cSettings.playableUnlocked.enemie.entityName));
             }
             
             var unlockInstance = unlockable.enemie.GenerateEntity() as HostileEntity;
