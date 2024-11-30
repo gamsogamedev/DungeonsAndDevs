@@ -20,7 +20,7 @@ MonoBehaviour:
   initiative: 3
   speed: 4
   classe: 3
-  skill1: {fileID: 11400000, guid: 579216b6265313c40849de295ccb4007, type: 2}
-  skill2: {fileID: 11400000, guid: 640babb88238ede55956e240d6bbbdef, type: 2}
+  skill1: {fileID: 11400000, guid: c27b29aa405d2074ea47b5ae6ed2f9f4, type: 2}
+  skill2: {fileID: 11400000, guid: 78ba7e75b2bc40543a4810d8e2a379e2, type: 2}
   skill3: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
   skill4: {fileID: 11400000, guid: ad39fc08bca23854883a3f3b6513bdb4, type: 2}
