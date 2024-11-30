@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        PlayerPrefs.DeleteKey("Tutorial");
+        
         SetUnlock("Jogador");
         CurrentPartySize = 2;
 

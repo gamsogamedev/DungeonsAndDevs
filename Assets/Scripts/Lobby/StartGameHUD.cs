@@ -14,7 +14,7 @@ public class StartGameHUD : MonoBehaviour
     
     private void Awake()
     {
-        startButton.onClick.AddListener(() => SceneManager.LoadScene("Cenas/Mapa"));
+        startButton.onClick.AddListener(StartRun);
         
         StartGameSlotHUD.EntitySelected.AddListener(ParseParty);
         UpdatePartyHUD();
@@ -71,7 +71,13 @@ public class StartGameHUD : MonoBehaviour
                     party[i].SetSlotInfo(p[i]);
                 } 
             }
-        }
+        }   
+    }
+
+    private void StartRun()
+    {
+        GameManager.Instance.ResetMapProgress();
+        SceneManager.LoadScene(GameManager.GetUnlock("Tutorial") ? "Cenas/Mapa" : "TesteCombate");
     }
     
 }

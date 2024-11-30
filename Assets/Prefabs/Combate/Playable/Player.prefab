@@ -760,6 +760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityInfo: {fileID: 0}
   currentCell: {fileID: 0}
+  visualRef: {fileID: 5145649920533439286}
   currentMovement: 0
   PlayableInfo: {fileID: 0}
 --- !u!114 &265348080525926195

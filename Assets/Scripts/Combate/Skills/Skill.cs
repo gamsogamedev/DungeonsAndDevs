@@ -51,11 +51,13 @@ public class Skill
         {
             actionsToDo.Enqueue(action);
         }
-        
+
+        iteration = 0;
         CombatAction.OnActionComplete.AddListener(UpdateTarget);
         UpdateTarget(target);
     }
 
+    private int iteration;
     private void UpdateTarget(Cell newTarget)
     {
         skillTarget = newTarget;
@@ -69,6 +71,7 @@ public class Skill
     {
         if (actionsToDo.Count <= 0)
         {
+            CombatAction.OnActionComplete.RemoveAllListeners();
             OnSkillComplete?.Invoke();
             return;
         }

@@ -15,7 +15,7 @@ public abstract class BaseEntity : MonoBehaviour
     // ------ GRID STATE INFO
     [HideInInspector] public Cell currentCell;
 
-    private SpriteRenderer visualRef;
+    [SerializeField] private SpriteRenderer visualRef;
     private bool facingRight;
     private int baseSortOrder;
     
@@ -27,11 +27,13 @@ public abstract class BaseEntity : MonoBehaviour
     public virtual void InitializeEntity(ScriptableEntity entity)
     {
         EntityInfo = entity;
+
+        currentCell = null;
         
-        visualRef = transform.Find("Visuals").GetComponent<SpriteRenderer>();
         visualRef.sprite = EntityInfo.entityVisuals;
         baseSortOrder = visualRef.sortingOrder;
-        
+
+        currentHealth = Health;
         GetComponentInChildren<HealthHUD>().Init(this);
     }
 
@@ -60,13 +62,13 @@ public abstract class BaseEntity : MonoBehaviour
 
     private void ProccessDeath()
     {
-        var visuals = transform.Find("Visuals").GetComponent<SpriteRenderer>();
+        //var visuals = transform.Find("Visuals").GetComponent<SpriteRenderer>();
         var hudVisuals = transform.Find("HUD").GetComponent<CanvasGroup>();
 
         var deleteSequence = DOTween.Sequence();
-        deleteSequence.Append(visuals.DOFade(0f, .2f));
+        deleteSequence.Append(visualRef.DOFade(0f, .2f));
         deleteSequence.Join(hudVisuals.DOFade(0f, .2f));
-        deleteSequence.AppendCallback(() => visuals.enabled = false);
+        deleteSequence.AppendCallback(() => visualRef.enabled = false);
 
         currentCell._entityInCell = null;
         Destroy(this.gameObject, 1.5f);
@@ -81,7 +83,6 @@ public abstract class BaseEntity : MonoBehaviour
 
     public virtual void StartTurn()
     {
-        Debug.Log($"{gameObject.name}'s Turn");
         GetComponentInChildren<TurnHighlight>().HighlightEntity();
     }
     
@@ -99,7 +100,7 @@ public abstract class BaseEntity : MonoBehaviour
 
     public void FixSort(Vector2Int lastDirection)
     {
-        facingRight = lastDirection.x > 0;
+        facingRight = lastDirection.x >= 0;
         
         visualRef.flipX = facingRight;
 

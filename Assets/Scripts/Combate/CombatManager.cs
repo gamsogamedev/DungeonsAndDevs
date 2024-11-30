@@ -81,7 +81,6 @@ public class CombatManager : MonoBehaviour
             return;
         }
 
-        Debug.Log($"Current turn: {orderCount} // Round size: {_turnOrder.Count}");
         orderCount = (orderCount + 1 >= _turnOrder.Count) ? 0 : orderCount + 1;
         SetCurrentEntity(_turnOrder[orderCount]);
     }

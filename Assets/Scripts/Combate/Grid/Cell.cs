@@ -219,6 +219,7 @@ public class Cell : MonoBehaviour
     public void ActivateVisual(AnimatorOverrideController skillVisual, bool play, int rotation = 0)
     {
         if (!play) return;
+        if (fxAnimator is null) return;
 
         fxAnimator.gameObject.SetActive(true);
         fxAnimator.transform.Rotate(Vector3.forward, rotation);
