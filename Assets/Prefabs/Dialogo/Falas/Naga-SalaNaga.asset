@@ -1139,10 +1139,10 @@ MonoBehaviour:
             nodeValue: 
     overrideJump: 0
     jumpToBlock: 0
-    updatesWorld: 1
+    updatesWorld: 0
     update:
-      nodeName: Mary
-      nodeValue: Mary
+      nodeName: 
+      nodeValue: 
   - dialogueBlock:
     - type: 0
       textLine:
