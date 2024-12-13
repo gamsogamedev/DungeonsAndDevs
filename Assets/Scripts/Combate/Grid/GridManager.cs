@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     [SerializeField, Foldout("--- Grid Creation ---")] private Cell cellPrefab;
     public Vector2Int GetGridDimensions() => new Vector2Int(width, height);
     
-    private Dictionary<Vector2Int, Cell> _coordToCell;
+    public Dictionary<Vector2Int, Cell> _coordToCell { get; private set; }
     public Cell getCellAtCoord(int x, int y) => _coordToCell[new Vector2Int(x, y)];
     
     public Cell _activeCell { get; private set; }

@@ -26,7 +26,7 @@ public class DamageAction : ICombatAction
         var finalTarget = target;
         if (useDirection)
         {
-            var path = GridController.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range, avoidEntitites: false);
+            var path = Pathfinder.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range, avoidEntitites: false);
             
             var direction = caster.currentCell.cellCoord - path[0].cellCoord;
             var rotation = 0;

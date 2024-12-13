@@ -15,24 +15,24 @@ public class CombatManager : MonoBehaviour
     // ----- COMBAT SETTINGS
     [SerializeField] private CombatSettingsScriptable cSettings;
     public CombatSettingsScriptable GetSettings() => cSettings;
-    private void LoadCombatSettings(CombatSettingsScriptable sett) => cSettings = sett;
+    private void SetCombatSettings(CombatSettingsScriptable sett) => cSettings = sett;
     
     // ----- TURN INFO
     public class Turn
     {
-        public BaseEntity TurnEntity;
-        public Skill TurnUsedSkill;
+        public BaseEntity TurnSelectedEntity;
+        public Skill TurnSelectedSkill;
         public bool UsedSkill;
         public TurnState CurrentState;
 
         public Turn(BaseEntity turnEntity)
         {
-            this.TurnEntity = turnEntity;
+            this.TurnSelectedEntity = turnEntity;
             
-            this.TurnUsedSkill = null;
+            this.TurnSelectedSkill = null;
             this.UsedSkill = false;
             
-            this.TurnEntity.ResetMovement();
+            this.TurnSelectedEntity.ResetMovement();
             
             CurrentState = TurnState.Neutral;
         }
@@ -41,13 +41,13 @@ public class CombatManager : MonoBehaviour
 
         public void AssignSkill(Skill skill)
         {
-            TurnUsedSkill = skill;
-            TurnUsedSkill?.SetupSkill();
+            TurnSelectedSkill = skill;
+            TurnSelectedSkill?.SetupSkill();
         }
     }
     public static Turn CurrentTurn { get; private set; }
-    public static BaseEntity TurnEntity => CurrentTurn.TurnEntity;
-    public static Skill TurnSkill => CurrentTurn.TurnUsedSkill;
+    public static BaseEntity TurnEntity => CurrentTurn.TurnSelectedEntity;
+    public static Skill TurnSkill => CurrentTurn.TurnSelectedSkill;
     
     
     // ----- TURN EVENTS
@@ -61,7 +61,9 @@ public class CombatManager : MonoBehaviour
     #region Turn Order
 
     private List<BaseEntity> _turnOrder;
-    private int orderCount;
+
+    public static readonly UnityEvent<List<BaseEntity>> OnTurnOrderUpdate = new();
+    
     private List<BaseEntity> SetTurnOrder(List<BaseEntity> entitiesInvolved)
     {
         var orderList = entitiesInvolved.OrderBy(e => e.EntityInfo.GetInitiative());
@@ -72,17 +74,11 @@ public class CombatManager : MonoBehaviour
     {
         Invoke(nameof(NextTurn), .5f);
     }
-
-    public void NextTurn() => NextTurn(startCombat: false);
-    public void NextTurn(bool startCombat = false)
+    
+    public void NextTurn()
     {
-        if (startCombat)
-        {
-            SetCurrentEntity(_turnOrder[0]);
-            return;
-        }
-
-        orderCount = (orderCount + 1 >= _turnOrder.Count) ? 0 : orderCount + 1;
+        var entityIdx = _turnOrder.FindIndex(ent => ent == TurnEntity);
+        var orderCount = (entityIdx + 1 >= _turnOrder.Count) ? 0 : entityIdx + 1;
         SetCurrentEntity(_turnOrder[orderCount]);
     }
 
@@ -92,17 +88,8 @@ public class CombatManager : MonoBehaviour
 
     public CombatState currentStage;
     public static readonly UnityEvent<CombatState> OnStagePass = new();
-    
-    public void FinishPositionSetup()
-    {
-        GridManager.OnSelect.AddListener(ClearSelectedEntity);
-        
-        var all = GridController.GetEntitiesOnGrid();
-        _turnOrder = SetTurnOrder(all);
-        NextTurn(true);
-    }
 
-    public void SetCombatStage(CombatState nxtStage)
+    private void SetCombatStage(CombatState nxtStage)
     {
         currentStage = nxtStage;
         OnStagePass?.Invoke(currentStage);
@@ -122,19 +109,38 @@ public class CombatManager : MonoBehaviour
         entity.StartTurn();
     }
     
+    // SETUP STAGE ------------------------------------------------------
+    public void FinishPositionSetup()
+    {
+        GridManager.OnSelect.AddListener(ClearSelectedEntity);
+        
+        var all = GridController.GetEntitiesOnGrid();
+        _turnOrder = SetTurnOrder(all);
+        OnTurnOrderUpdate?.Invoke(_turnOrder);
+        
+        SetCurrentEntity(_turnOrder[0]);
+    }
+    
+    // SETUP STAGE ------------------------------------------------------
     public static void SetMovementStage(BaseEntity entity)
     {
         if (entity != TurnEntity) return;
         
         CurrentTurn.SetTurnState(TurnState.Movement);
         
-        TurnEntity.OnEntityMoved.AddListener(GridManager.ClearGrid);
         GridManager.ShowRadiusAsWalkable(TurnEntity);
     }
     public static void MovementAction(Cell cell)
     {
-        TurnEntity.OnEntityMoved.AddListener(() => ActionTaken?.Invoke());
+        TurnEntity.OnEntityMoved.RemoveListener(MovementStageCleanup);
+        TurnEntity.OnEntityMoved.AddListener(MovementStageCleanup);
         TurnEntity.MoveTowards(cell);
+    }
+
+    public static void MovementStageCleanup()
+    {
+        GridManager.ClearGrid();
+        ActionTaken?.Invoke();
     }
 
     public static void SetAttackStage(Skill skill)
@@ -174,7 +180,7 @@ public class CombatManager : MonoBehaviour
         //LoadCombatSettings(GameManager.currentCombatInfo);
 
         if (GameManager.currentCombatInfo is not null){
-            LoadCombatSettings(GameManager.currentCombatInfo);
+            SetCombatSettings(GameManager.currentCombatInfo);
         }
         
         foreach (var e in cSettings.enemieList)
@@ -235,8 +241,11 @@ public class CombatManager : MonoBehaviour
 
     private void CheckActionsAvailable()
     {
-        if (TurnEntity.currentMovement > 0) 
+        if (TurnEntity.currentMovement > 0)
+        {
+            Debug.Log($"Can still walk {TurnEntity.currentMovement}");
             return;
+        }
         if (!CurrentTurn.UsedSkill)
             return;
         
@@ -246,7 +255,8 @@ public class CombatManager : MonoBehaviour
     private void CheckCombatState(BaseEntity entity)
     {
         _turnOrder.Remove(entity);
-        SetTurnOrder(_turnOrder);
+        _turnOrder = SetTurnOrder(_turnOrder);
+        OnTurnOrderUpdate?.Invoke(_turnOrder);
         
         int playableCount = 0, enemieCount = 0;
         foreach (var ent in _turnOrder)

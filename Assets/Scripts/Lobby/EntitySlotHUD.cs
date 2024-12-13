@@ -6,40 +6,42 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class StartGameSlotHUD : MonoBehaviour
+public class EntitySlotHUD : MonoBehaviour
 {
     [SerializeField] private Image icon;
     [SerializeField] private Image blocked;
 
-    [SerializeField] private bool isPartySlot;
-    public bool partySlot => isPartySlot;
+    public bool interactable;
+    public bool isPartySlot;
 
     [SerializeField, HideIf(nameof(isPartySlot))]
-    private ScriptableEntity_Playable entity;
-    public ScriptableEntity_Playable GetEntity() => entity;
-    public void SetEntity(ScriptableEntity_Playable e) => entity = e;
+    private ScriptableEntity entity;
+    public ScriptableEntity GetEntity() => entity;
+    public ScriptableEntity_Playable GetPlayableEntity() => entity as ScriptableEntity_Playable;
+    public void SetEntity(ScriptableEntity e) => entity = e;
     
     private Button interactionBtn;
 
-    public static readonly UnityEvent<StartGameSlotHUD> EntitySelected = new();
+    public static readonly UnityEvent<EntitySlotHUD> EntitySelected = new();
     
     private void Awake()
     {
-        if (!isPartySlot)
+        if (!isPartySlot && interactable)
         {
             SetSlotInfo(entity);
 
-            if (GameManager.Instance.party.Contains(entity)) 
+            if (GameManager.Instance.party.Contains(entity as ScriptableEntity_Playable)) 
                 MarkAsSelected(true);
-
-            if (entity?.entityName == "Jogador") return;
         }
 
-        interactionBtn = GetComponent<Button>();
-        interactionBtn.onClick.AddListener(() => EntitySelected?.Invoke(this));
+        if (interactable)
+        {
+            interactionBtn = GetComponent<Button>();
+            interactionBtn.onClick.AddListener(() => EntitySelected?.Invoke(this));
+        }
     }
     
-    public void SetSlotInfo(ScriptableEntity_Playable e, bool empty = false)
+    public void SetSlotInfo(ScriptableEntity e, bool empty = false)
     {
         if (e is null)
         {
@@ -47,7 +49,7 @@ public class StartGameSlotHUD : MonoBehaviour
             return;
         }
 
-        entity = e;
+        SetEntity(e);
         icon.sprite = e.entityVisuals;
         
         if (empty)
@@ -56,6 +58,8 @@ public class StartGameSlotHUD : MonoBehaviour
             icon.color = Color.white;
         
         if (GameManager.GetUnlock(e.entityName)) return;
+        if (!interactable) return;
+
         blocked.enabled = true;
     }
 

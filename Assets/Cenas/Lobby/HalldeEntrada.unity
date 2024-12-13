@@ -1924,6 +1924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1670647127}
   blocked: {fileID: 343094859}
+  interactable: 1
   isPartySlot: 1
   entity: {fileID: 0}
 --- !u!114 &257797322
@@ -2323,6 +2324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 251144665}
   blocked: {fileID: 1877665753}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 0}
 --- !u!114 &289441140
@@ -3758,6 +3760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 531632885}
   blocked: {fileID: 1873926223}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 0}
 --- !u!114 &612235480
@@ -4934,6 +4937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1650256900}
   blocked: {fileID: 1521515742}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: 68c3f512a77b2a8469b3d102b3b03c12, type: 2}
 --- !u!114 &757454610
@@ -6636,6 +6640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 40629826}
   blocked: {fileID: 1735629687}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: ff5d2ea9ef6b1e640a4341af3fd267cc, type: 2}
 --- !u!114 &1085372299
@@ -6791,6 +6796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 332334746}
   blocked: {fileID: 619594213}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: 754b0f5671458024885ec8ac3bef14c6, type: 2}
 --- !u!114 &1128910263
@@ -8290,6 +8296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 961532689}
   blocked: {fileID: 1870165596}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: 2c40536c00551a5858fe44001cb7aa10, type: 2}
 --- !u!114 &1390406011
@@ -8734,6 +8741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1846148426}
   blocked: {fileID: 1015025564}
+  interactable: 1
   isPartySlot: 1
   entity: {fileID: 0}
 --- !u!114 &1422757191
@@ -9278,6 +9286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2065630796}
   blocked: {fileID: 1205812726}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 0}
 --- !u!114 &1524451295
@@ -9663,6 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 493155152}
   blocked: {fileID: 279465582}
+  interactable: 1
   isPartySlot: 1
   entity: {fileID: 0}
 --- !u!114 &1591323413
@@ -9891,6 +9901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1548543825}
   blocked: {fileID: 1648514672}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 0}
 --- !u!114 &1600292829
@@ -10457,6 +10468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1641310606}
   blocked: {fileID: 953922777}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: 273cf86305b98b2428edee6d6068d935, type: 2}
 --- !u!114 &1693300043
@@ -11851,6 +11863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 850153292}
   blocked: {fileID: 1233116453}
+  interactable: 1
   isPartySlot: 0
   entity: {fileID: 11400000, guid: 2d51ced5c44a25140a281b0325e6c65b, type: 2}
 --- !u!114 &1873307308
@@ -12779,6 +12792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1944227215}
   blocked: {fileID: 1563205476}
+  interactable: 1
   isPartySlot: 1
   entity: {fileID: 0}
 --- !u!114 &2063625091

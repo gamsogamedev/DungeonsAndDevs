@@ -8,8 +8,10 @@ using UnityEngine.UI;
 
 public class StartGameHUD : MonoBehaviour
 {
-    [SerializeField] private List<StartGameSlotHUD> availables;
-    [SerializeField] private List<StartGameSlotHUD> party;
+    private Canvas hudCanvas;
+    
+    [SerializeField] private List<EntitySlotHUD> availables;
+    [SerializeField] private List<EntitySlotHUD> party;
 
     [SerializeField] private Button startButton;
     
@@ -17,22 +19,23 @@ public class StartGameHUD : MonoBehaviour
     {
         startButton.onClick.AddListener(StartRun);
         
-        StartGameSlotHUD.EntitySelected.AddListener(ParseParty);
+        EntitySlotHUD.EntitySelected.AddListener(ParseParty);
         UpdatePartyHUD();
 
+        hudCanvas = GetComponent<Canvas>();
         Close();
     }
     
     public void Open()
     {
-        GetComponent<Canvas>().enabled = true;
+        hudCanvas.enabled = true;
     }
     public void Close()
     {
-        GetComponent<Canvas>().enabled = false;
+        hudCanvas.enabled = false;
     }
 
-    private void ParseParty(StartGameSlotHUD e)
+    private void ParseParty(EntitySlotHUD e)
     {
         if (e.GetEntity() is null) return;
         
@@ -40,7 +43,7 @@ public class StartGameHUD : MonoBehaviour
         if (p.Contains(e.GetEntity()))
         {
             
-            if (e.partySlot)
+            if (e.isPartySlot)
             { 
                 if (e.GetEntity().entityName == "Jogador") return;
                 
@@ -51,15 +54,15 @@ public class StartGameHUD : MonoBehaviour
                 e.MarkAsSelected(false);
             }
         
-            p.Remove(e.GetEntity());
+            p.Remove(e.GetPlayableEntity());
         }
         else
         {
-            if (e.partySlot) return;
+            if (e.isPartySlot) return;
             if (p.Count == GameManager.Instance.CurrentPartySize) return;
             
             e.MarkAsSelected(true);
-            p.Add(e.GetEntity());
+            p.Add(e.GetPlayableEntity());
         }
         
         UpdatePartyHUD();

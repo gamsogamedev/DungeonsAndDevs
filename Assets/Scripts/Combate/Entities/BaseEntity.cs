@@ -108,8 +108,48 @@ public abstract class BaseEntity : MonoBehaviour
         visualRef.sortingOrder = baseSortOrder - currentCell.cellCoord.y;
     }
     
-    // ------- MOVEMENT
-    public abstract void MoveTowards(Cell cellToMove, bool blink = false);
+    public void MoveTowards(Cell cellToMove, bool blink = false) 
+    {
+        if (blink)
+        {
+            var moveSequence = DOTween.Sequence();
+            moveSequence.AppendCallback(() => transform.SetParent(cellToMove.transform));
+            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .5f));
+            moveSequence.AppendCallback(delegate
+            {
+                currentCell._entityInCell = null;
+                currentCell = cellToMove;
+                cellToMove._entityInCell = this;
+                currentMovement--;
+            });
+            return;
+        }
+        StartCoroutine(Move(cellToMove));
+    }
+    
+    private IEnumerator Move(Cell cellToMove)
+    {
+        var path = Pathfinder.GetPath(currentCell, cellToMove, CellState.Idle);
+        foreach (var cell in path)
+        {
+            var moveSequence = DOTween.Sequence();
+            moveSequence.AppendCallback(() => transform.SetParent(cell.transform));
+            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .2f));
+            moveSequence.AppendCallback(delegate
+            {
+                currentCell._entityInCell = null;
+                currentCell = cell;
+                cell._entityInCell = this;
+                currentMovement--;
+
+                var direction = cell.cellCoord - currentCell.cellCoord;
+                FixSort(direction);
+            });
+            yield return new WaitForSeconds(0.25f);
+        }
+        
+        OnEntityMoved?.Invoke();
+    }
     public void ResetMovement() => currentMovement = MovementRange;
 }
 

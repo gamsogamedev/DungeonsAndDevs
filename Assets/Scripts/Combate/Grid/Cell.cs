@@ -2,11 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering;
-using UnityEngine.Serialization;
 
 [Flags] public enum CellState {
     Idle        = 0, 
@@ -37,11 +34,6 @@ public class Cell : MonoBehaviour
             
 
     [HideInInspector] public BaseEntity _entityInCell;
-    
-    // ---- PATHFINDING -----
-    [HideInInspector] public Cell previousCell;
-    [HideInInspector] public int gCost, hCost;
-    public int fCost => gCost + hCost;
     
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
 
@@ -90,7 +82,7 @@ public class Cell : MonoBehaviour
         if (_currentState.HasFlag(CellState.Walkable))
         {
             if (_entityInCell is not null) return;
-            var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
+            var path = Pathfinder.GetPath(CombatManager.TurnEntity.currentCell, this);
             if (path is null) return;
             foreach (var pathCell in path)
             {
@@ -113,7 +105,7 @@ public class Cell : MonoBehaviour
         if (_currentState.HasFlag(CellState.Hover)) ResetState(CellState.Hover);
         if (_currentState.HasFlag(CellState.Path))
         {
-            var path = GridController.GetPath(CombatManager.TurnEntity.currentCell, this);
+            var path = Pathfinder.GetPath(CombatManager.TurnEntity.currentCell, this);
             foreach (var pathCell in path)
             {
                 pathCell.ResetState(CellState.Path);   
@@ -198,19 +190,11 @@ public class Cell : MonoBehaviour
 
         UpdateCell();
     }
-
-
-    public void ClearPath()
-    {
-        previousCell = null;
-        gCost = Int32.MaxValue;
-    }
     
     private void ResetPathing()
     {
         ResetState(CellState.Walkable);
         ResetState(CellState.Path);
-        ClearPath();
     }
 
     
@@ -220,6 +204,7 @@ public class Cell : MonoBehaviour
     {
         if (!play) return;
         if (fxAnimator is null) return;
+        if (skillVisual is null) return;
 
         fxAnimator.gameObject.SetActive(true);
         fxAnimator.transform.Rotate(Vector3.forward, rotation);

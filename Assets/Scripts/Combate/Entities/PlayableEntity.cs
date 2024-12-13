@@ -26,54 +26,10 @@ public class PlayableEntity : BaseEntity, IEntity
         
         FixSort(Vector2Int.right);
     }
-
-
+    
     internal override void Start()
     {
         base.Start();
         ResetMovement();
-    }
-
-    public override void MoveTowards(Cell cellToMove, bool blink = false) 
-    {
-        if (blink)
-        {
-            var moveSequence = DOTween.Sequence();
-            moveSequence.AppendCallback(() => transform.SetParent(cellToMove.transform));
-            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .5f));
-            moveSequence.AppendCallback(delegate
-            {
-                currentCell = cellToMove;
-                cellToMove._entityInCell = this;
-                currentMovement--;
-            });
-            return;
-        }
-        
-        StartCoroutine(Move(cellToMove));
-    }
-    
-    private IEnumerator Move(Cell cellToMove)
-    {
-        var path = GridController.GetPath(currentCell, cellToMove);
-        foreach (var cell in path)
-        {
-            var moveSequence = DOTween.Sequence();
-            moveSequence.AppendCallback(() => transform.SetParent(cell.transform));
-            moveSequence.Append(transform.DOLocalMove(Vector3.zero, .2f));
-            moveSequence.AppendCallback(delegate
-            {
-                currentCell._entityInCell = null;
-                currentCell = cell;
-                cell._entityInCell = this;
-                currentMovement--;
-
-                var direction = cell.cellCoord - currentCell.cellCoord;
-                FixSort(direction);
-            });
-            yield return new WaitForSeconds(0.25f);
-        }
-        
-        OnEntityMoved?.Invoke();
     }
 }

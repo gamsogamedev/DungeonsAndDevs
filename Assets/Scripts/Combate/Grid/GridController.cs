@@ -6,7 +6,11 @@ using UnityEngine;
 public static class GridController
 {
     private static GridManager grid;
-    public static void SetGrid(GridManager manager) => grid = manager;
+    public static void SetGrid(GridManager manager)
+    {
+        grid = manager;
+        Pathfinder.Init(manager);
+    }
 
     public static Cell GetCellAt(Vector2Int coord)
     {
@@ -110,87 +114,11 @@ public static class GridController
     {
         return GetLine(center, 1, neighborDirection)[0];
     }
-    
-    #region Pathfinding
-    public static List<Cell> GetPath(Cell startPoint, Cell finishPoint, CellState stateFilter = CellState.Walkable, bool avoidEntitites = true)
-    {
-        var openList = new List<Cell> { startPoint };
-        var closedList = new List<Cell>();
-                    
-        startPoint.gCost = 0;
-        startPoint.hCost = Distance(startPoint, finishPoint);
-            
-        while(openList.Count > 0)
-        {
-            Cell currentCell = openList.OrderBy(node => node.fCost).First();
-            
-            if (currentCell == finishPoint)
-            {
-                var path = RetrievePath(finishPoint);
-                
-                var cellsRead = new List<Cell>();
-                cellsRead.AddRange(openList);
-                cellsRead.AddRange(closedList);
-                foreach (var c in cellsRead) 
-                    c.ClearPath();
-                
-                return path;
-            }
-
-            openList.Remove(currentCell);
-            closedList.Add(currentCell);
-
-            foreach(Cell neighbor in GetRadius(currentCell, 1))
-            {
-                if (closedList.Contains(neighbor)) continue;
-                if (!neighbor._currentState.HasFlag(stateFilter)) continue;
-                if (avoidEntitites && neighbor._entityInCell is not null) continue;
-                
-                var newGcost = currentCell.gCost + 1;
-                if (newGcost >= neighbor.gCost) continue;
-
-                neighbor.previousCell = currentCell;
-                neighbor.gCost = newGcost;
-                neighbor.hCost = Distance(neighbor, finishPoint);
-
-                if(!openList.Contains(neighbor))
-                    openList.Add(neighbor);
-            }
-        }
-        
-        var errorPath = RetrievePath(finishPoint);
-                
-        var errorCellsRead = new List<Cell>();
-        errorCellsRead.AddRange(openList);
-        errorCellsRead.AddRange(closedList);
-        foreach (var c in errorCellsRead) 
-            c.ClearPath();
-        return null;
-    }
-    
-    public static int Distance(Cell a, Cell b) => Mathf.Abs(b.cellCoord.x - a.cellCoord.x) + Mathf.Abs(b.cellCoord.y - a.cellCoord.y);
-    
-    private static List<Cell> RetrievePath(Cell finishPoint)
-    {
-        List<Cell> path = new() { finishPoint };
-
-        var currentNode = finishPoint;
-            
-        while(currentNode.previousCell is not null)
-        {
-            path.Add(currentNode.previousCell);
-            currentNode = currentNode.previousCell;
-        }
-
-        path.Reverse();
-        path.RemoveAt(0);
-        return path;
-    }
-
-    #endregion
 
     #region Auxiliar
 
+    public static int Distance(Cell a, Cell b) => Mathf.Abs(b.cellCoord.x - a.cellCoord.x) + Mathf.Abs(b.cellCoord.y - a.cellCoord.y);
+    
     public static List<BaseEntity> GetEntitiesOnGrid(EntityType type = EntityType.All)
     {
         var entities = new List<BaseEntity>();
@@ -211,6 +139,6 @@ public static class GridController
         else
             return entities.Where(e => e.EntityInfo.entityType == type).ToList();
     }
-
+    
     #endregion
 }
