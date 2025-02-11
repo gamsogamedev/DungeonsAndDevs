@@ -8,16 +8,16 @@ public class PathCell
 {
     public Cell cellRef;
     public Vector2Int cellCoord => cellRef.cellCoord;
-    
+
     public PathCell previousCell;
-    
+
     public int gCost, hCost;
     public int fCost => gCost + hCost;
 
     public PathCell(Cell cell)
     {
         this.cellRef = cell;
-        
+
         this.previousCell = null;
         this.gCost = Int32.MaxValue;
     }
@@ -32,7 +32,7 @@ public class PathCell
 public class Pathfinder
 {
     private static Dictionary<Cell, PathCell> pathGrid;
-    
+
     public static void Init(GridManager manager)
     {
         pathGrid = new Dictionary<Cell, PathCell>();
@@ -42,22 +42,41 @@ public class Pathfinder
             pathGrid.Add(cell.Value, new PathCell(cell.Value));
         }
     }
-    
-    public static List<Cell> GetPath(Cell start, Cell finish, CellState stateFilter = CellState.Walkable, bool avoidEntitites = true)
+
+    //So pra ficar mais facil checar se o caminho é valido
+    private static bool IsPositionValidForEntity(Cell primaryCell, int width, int height, CellState stateFilter, bool avoidEntities)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                var cellCoord = primaryCell.cellCoord + new Vector2Int(x, y);
+                var cell = GridController.GetCellAt(cellCoord);
+                if (cell == null /*|| (avoidEntities && cell._entityInCell != primaryCell._entityInCell)*/)
+                {
+                    Debug.LogWarning("Deu bo la mesmo"); // Ele consegue pegar a posição correta, mas ele refaz a comparação ao realizar o movimento e a condicional falha
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static List<Cell> GetPath(Cell start, Cell finish, CellState stateFilter = CellState.Walkable, bool avoidEntities = true, int entityWidth = 1, int entityHeight = 1)
     {
         var startPoint = pathGrid[start];
         var finishPoint = pathGrid[finish];
-        
+
         var openList = new List<PathCell> { startPoint };
         var closedList = new List<PathCell>();
-                    
+
         startPoint.gCost = 0;
         startPoint.hCost = Distance(startPoint, finishPoint);
-            
+
         while(openList.Count > 0)
         {
             var currentCell = openList.OrderBy(node => node.fCost).First();
-            
+
             if (currentCell == finishPoint)
             {
                 var path = RetrievePath(finishPoint);
@@ -71,9 +90,13 @@ public class Pathfinder
             foreach(PathCell neighbor in GetNeighbors(currentCell))
             {
                 if (closedList.Contains(neighbor)) continue;
-                if (!neighbor.cellRef._currentState.HasFlag(stateFilter)) continue;
-                if (avoidEntitites && neighbor.cellRef._entityInCell is not null) continue;
-                
+
+                // Check if the neighbor position is valid for the entity's size
+                if (!IsPositionValidForEntity(neighbor.cellRef, entityWidth, entityHeight, stateFilter, avoidEntities))
+                {
+                    continue;
+                }
+
                 var newGcost = currentCell.gCost + 1;
                 if (newGcost >= neighbor.gCost) continue;
 
@@ -85,36 +108,36 @@ public class Pathfinder
                     openList.Add(neighbor);
             }
         }
-        
+
         ResetPath(openList, closedList);
         return null;
     }
-    
+
     private static int Distance(PathCell a, PathCell b) => Mathf.Abs(b.cellCoord.x - a.cellCoord.x) + Mathf.Abs(b.cellCoord.y - a.cellCoord.y);
 
     private static List<PathCell> GetNeighbors(PathCell cur)
     {
         var grid = GridManager.Instance;
         var dim = grid.GetGridDimensions();
-        
+
         var neighbors = new List<PathCell>();
         var curX = cur.cellCoord.x; var curY = cur.cellCoord.y;
-        
+
         if (curX + 1 < dim.x)
         {
-            neighbors.Add(pathGrid[grid.getCellAtCoord(curX + 1, curY)]);   
+            neighbors.Add(pathGrid[grid.getCellAtCoord(curX + 1, curY)]);
         }
         if (curX - 1 >= 0)
         {
-            neighbors.Add(pathGrid[grid.getCellAtCoord(curX - 1, curY)]);   
+            neighbors.Add(pathGrid[grid.getCellAtCoord(curX - 1, curY)]);
         }
         if (curY + 1 < dim.y)
         {
-            neighbors.Add(pathGrid[grid.getCellAtCoord(curX, curY + 1)]);   
+            neighbors.Add(pathGrid[grid.getCellAtCoord(curX, curY + 1)]);
         }
         if (curY - 1 >= 0)
         {
-            neighbors.Add(pathGrid[grid.getCellAtCoord(curX, curY - 1)]);   
+            neighbors.Add(pathGrid[grid.getCellAtCoord(curX, curY - 1)]);
         }
 
         return neighbors;
@@ -132,17 +155,17 @@ public class Pathfinder
             pCell.ResetPath();
         }
     }
-    
+
     private static List<Cell> RetrievePath(PathCell finishPoint)
     {
         List<Cell> path = new() {finishPoint.cellRef};
 
         var currentNode = finishPoint;
-            
+
         while(currentNode.previousCell is not null)
         {
             var prevCell = currentNode.previousCell;
-            
+
             path.Add(prevCell.cellRef);
             currentNode = prevCell;
         }

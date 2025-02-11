@@ -6,13 +6,13 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [Flags] public enum CellState {
-    Idle        = 0, 
+    Idle        = 0,
     Hover       = 1 << 0,
     Selected    = 1 << 1,
-    
+
     Walkable    = 1 << 2,
     Path        = 1 << 3,
-    
+
     Range       = 1 << 4,
     Target      = 1 << 5
 }
@@ -20,7 +20,7 @@ using UnityEngine.Events;
 public class Cell : MonoBehaviour
 {
     public Vector2Int cellCoord { get; private set; }
-    
+
     public CellState _currentState { get; private set; }
 
     [SerializeField, Foldout("State Indicators")]
@@ -31,25 +31,25 @@ public class Cell : MonoBehaviour
         cellState_Path,
         cellState_Range,
         cellState_Target;
-            
+
 
     [HideInInspector] public BaseEntity _entityInCell;
-    
+
     public readonly UnityEvent CellSelected = new(), CellDeselected = new();
 
     public void InitCell(int xCoord, int yCoord)
     {
         cellCoord = new Vector2Int(xCoord, yCoord);
-        
+
         CellSelected.AddListener(SetCellAsSelected);
         CellDeselected.AddListener(SetCellAsIdle);
 
         GridManager.OnSelect.AddListener((x) => ResetState(CellState.Walkable));
         GridManager.GridClear.AddListener(SetCellAsIdle);
-        
+
         SetCellAsIdle();
     }
-    
+
     private void UpdateCell()
     {
         if (_currentState == CellState.Idle)
@@ -64,7 +64,7 @@ public class Cell : MonoBehaviour
         cellState_Range     .SetActive(_currentState.HasFlag(CellState.Range));
         cellState_Target    .SetActive(_currentState.HasFlag(CellState.Target));
     }
-    
+
     private void ClearCell()
     {
         cellState_Idle.SetActive(true);
@@ -75,7 +75,7 @@ public class Cell : MonoBehaviour
         cellState_Range.SetActive(false);
         cellState_Target.SetActive(false);
     }
-    
+
     private void OnMouseEnter()
     {
         if (_currentState.HasFlag(CellState.Selected)) return;
@@ -94,7 +94,7 @@ public class Cell : MonoBehaviour
             var areaOfEffect = CombatManager.TurnSkill.PreviewSkill(this);
             foreach (var aoeCell in areaOfEffect)
             {
-                aoeCell.SetCellAsTarget();     
+                aoeCell.SetCellAsTarget();
             }
         }
         else SetCellAsHover();
@@ -108,7 +108,7 @@ public class Cell : MonoBehaviour
             var path = Pathfinder.GetPath(CombatManager.TurnEntity.currentCell, this);
             foreach (var pathCell in path)
             {
-                pathCell.ResetState(CellState.Path);   
+                pathCell.ResetState(CellState.Path);
             }
         }
         if (_currentState.HasFlag(CellState.Target))
@@ -116,7 +116,7 @@ public class Cell : MonoBehaviour
             var areaOfEffect = CombatManager.TurnSkill.PreviewSkill(this);
             foreach (var aoeCell in areaOfEffect)
             {
-                aoeCell.ResetState(CellState.Target);     
+                aoeCell.ResetState(CellState.Target);
             }
         }
     }
@@ -165,7 +165,7 @@ public class Cell : MonoBehaviour
             CombatManager.TurnEntity.MoveTowards(this);
             return;
         }
-        
+
         SetState(CellState.Selected);
         GridManager.OnSelect?.Invoke(this);
     }
@@ -174,13 +174,13 @@ public class Cell : MonoBehaviour
         //if (!_currentState.HasFlag(CellState.Range)) return;
         SetState(CellState.Target, flag: true);
     }
-    
-    
+
+
     private void SetState(CellState state, bool flag = false)
     {
         if (flag) _currentState |= state;
         else _currentState = state;
-        
+
         UpdateCell();
     }
     private void ResetState(CellState state)
@@ -190,14 +190,14 @@ public class Cell : MonoBehaviour
 
         UpdateCell();
     }
-    
+
     private void ResetPathing()
     {
         ResetState(CellState.Walkable);
         ResetState(CellState.Path);
     }
 
-    
+
     // VISUALS -------------------------------------------------------------------------------------------
     [Space(10), SerializeField] private Animator fxAnimator;
     public void ActivateVisual(AnimatorOverrideController skillVisual, bool play, int rotation = 0)
@@ -208,10 +208,10 @@ public class Cell : MonoBehaviour
 
         fxAnimator.gameObject.SetActive(true);
         fxAnimator.transform.Rotate(Vector3.forward, rotation);
-        
+
         fxAnimator.runtimeAnimatorController = skillVisual;
         fxAnimator.Play("_FX");
-        
+
         Invoke(nameof(ResetVisual), .5f);
     }
 

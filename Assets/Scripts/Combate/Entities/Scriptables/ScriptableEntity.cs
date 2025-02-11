@@ -9,7 +9,7 @@ public enum EntityType
     All,
     Playable,
     Hostile
-} 
+}
 
 public abstract class ScriptableEntity : ScriptableObject
 {
@@ -20,7 +20,7 @@ public abstract class ScriptableEntity : ScriptableObject
     // ------ Prefab
     [SerializeField] protected BaseEntity entityPrefab;
     public Sprite entityVisuals;
-    
+
     // ------ Stats
     [Header("Stats")]
     [SerializeField] protected int maxHealth;
@@ -29,10 +29,12 @@ public abstract class ScriptableEntity : ScriptableObject
     public int GetInitiative() => initiative;
     [SerializeField] protected int speed;
     public int GetSpeed() => speed;
+    [SerializeField] public int width; //Ah vou usar get nao man, mo role
+    [SerializeField] public int height;
     // ------ Converters
-    public abstract ScriptableEntity_Playable ToPlayable(); 
+    public abstract ScriptableEntity_Playable ToPlayable();
     public abstract ScriptableEntity_Hostile ToHostile();
-    
+
     // ------ Instance
     public abstract BaseEntity GenerateEntity();
 }

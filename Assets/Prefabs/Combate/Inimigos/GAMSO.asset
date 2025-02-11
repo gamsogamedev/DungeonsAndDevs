@@ -19,6 +19,7 @@ MonoBehaviour:
   maxHealth: 200
   initiative: 3
   speed: 5
+  size: 2
   Behaviour: 0
   basicAttackRange:
     rangeType: 4

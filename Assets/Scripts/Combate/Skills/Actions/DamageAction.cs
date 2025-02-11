@@ -9,25 +9,31 @@ using UnityEngine.Serialization;
 public class DamageAction : ICombatAction
 {
     public Range areaOfEffect;
-    
     public int damage;
 
     public bool useDirection;
     public bool collides;
-    
+
     [Space(10)] public SkillFX skillVisuals;
-    
+
     public Cell ExecuteAction(BaseEntity caster, Cell target)
     {
         var aoe = areaOfEffect.GetRange(target);
         BaseEntity entity;
-        //caster.currentCell.ActivateVisual(skillVisuals.entityCasterFX, skillVisuals.hasCasterFX);
-        
+
         var finalTarget = target;
         if (useDirection)
         {
-            var path = Pathfinder.GetPath(caster.currentCell, target, stateFilter: CellState.Idle | CellState.Range, avoidEntitites: false);
-            
+            // Get the path for the caster (assuming single-tile entity for simplicity)
+            var path = Pathfinder.GetPath(
+                caster.currentCell,
+                target,
+                stateFilter: CellState.Idle | CellState.Range,
+                avoidEntities: false,
+                entityWidth: 1, // Assuming caster is single-tile
+                entityHeight: 1 // Assuming caster is single-tile
+            );
+
             var direction = caster.currentCell.cellCoord - path[0].cellCoord;
             var rotation = 0;
             if (direction.x != 0)
@@ -38,7 +44,7 @@ public class DamageAction : ICombatAction
             {
                 rotation = (direction.y < 0) ? 75 : -105;
             }
-            
+
             foreach (var pathCell in path)
             {
                 if (collides && pathCell._entityInCell is not null || pathCell == path.Last())
@@ -51,18 +57,23 @@ public class DamageAction : ICombatAction
                     pathCell == path[0] ? skillVisuals.manyCellFX_nearCaster : skillVisuals.manyCellFX_midway,
                     skillVisuals.hasManyCellFX, rotation);
             }
-            
+
             finalTarget.ActivateVisual(skillVisuals.manyCellFX_nearTarget, skillVisuals.hasManyCellFX, rotation);
         }
-        
-        //finalTarget.ActivateVisual(skillVisuals.singleCellFX, skillVisuals.hasSingleCellFX);
+
+        // Track entities that have already been damaged to avoid duplicate damage
+        HashSet<BaseEntity> damagedEntities = new HashSet<BaseEntity>();
+
         foreach (var cell in aoe)
         {
-            // Debug.Log($"Aplicando {damage} de dano em {cell.name}");
-            if ((entity = cell._entityInCell) is not null)
+            if ((entity = cell._entityInCell) is not null && !damagedEntities.Contains(entity))
             {
-                entity.currentCell.ActivateVisual(skillVisuals.entityTargetFX, skillVisuals.hasTargetFX);
+                // Apply visual effects to the target cell (skill visuals, not entity visuals)
+                cell.ActivateVisual(skillVisuals.entityTargetFX, skillVisuals.hasTargetFX);
+
+                // Apply damage to the entity
                 entity.DoDamage(damage);
+                damagedEntities.Add(entity); // Mark the entity as damaged
             }
         }
 
